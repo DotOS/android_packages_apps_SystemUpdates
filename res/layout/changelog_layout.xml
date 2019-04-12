@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/google_sans_bold"
-        android:text="Securtiy Patch"
+        android:text="Security Patch"
         android:textColor="?android:attr/colorAccent"
         android:textSize="20sp"
         android:visibility="gone" />
