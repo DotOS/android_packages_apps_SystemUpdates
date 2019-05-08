@@ -30,6 +30,7 @@ public class UpdateBase implements UpdateBaseInfo {
     private String c_Misc;
     private String c_Device;
     private String c_SecPatch;
+    private String maintainerName, maintainerXDA, maintainerOther;
 
     public UpdateBase() {
     }
@@ -47,6 +48,9 @@ public class UpdateBase implements UpdateBaseInfo {
         c_Misc = update.getMiscChangelog();
         c_Device = update.getDeviceChangelog();
         c_SecPatch = update.getSecurityPatchChangelog();
+        maintainerName = update.getMaintainerName();
+        maintainerOther = update.getMaintainerOther();
+        maintainerXDA = update.getMaintainerXDA();
     }
 
     @Override
@@ -151,6 +155,33 @@ public class UpdateBase implements UpdateBaseInfo {
     @Override
     public String getSecurityPatchChangelog() {
         return c_SecPatch;
+    }
+
+    @Override
+    public String getMaintainerName() {
+        return maintainerName;
+    }
+
+    @Override
+    public String getMaintainerXDA() {
+        return maintainerXDA;
+    }
+
+    @Override
+    public String getMaintainerOther() {
+        return maintainerOther;
+    }
+
+    public void setMaintainerOther(String maintainerOther) {
+        this.maintainerOther = maintainerOther;
+    }
+
+    public void setMaintainerName(String maintainerName) {
+        this.maintainerName = maintainerName;
+    }
+
+    public void setMaintainerXDA(String maintainerXDA) {
+        this.maintainerXDA = maintainerXDA;
     }
 
     public void setFileSize(long fileSize) {

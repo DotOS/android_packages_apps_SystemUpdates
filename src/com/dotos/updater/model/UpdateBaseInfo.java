@@ -40,4 +40,10 @@ public interface UpdateBaseInfo {
     String getMiscChangelog();
 
     String getSecurityPatchChangelog();
+
+    String getMaintainerName();
+
+    String getMaintainerXDA();
+
+    String getMaintainerOther();
 }
