@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        app:cardCornerRadius="43dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/mtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/mtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/google_sans_bold"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance_Material2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/mtDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance_Material2"
+        android:textColor="?android:attr/textColorSecondary" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="64dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/report_bugs_maintainer"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance_Material2"
+        android:textColor="?android:attr/textColorSecondary" />
+
+    <Button
+        android:id="@+id/opentTG"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_ripple"
+        android:fontFamily="@font/google_sans_bold"
+        android:text="@string/telegram"
+        android:textAppearance="@style/TextAppearance_Material2"
+        android:textColor="?android:attr/colorAccent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="64dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/closeDialog"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/google_sans_bold"
+        android:text="@string/close"
+        android:textAppearance="@style/TextAppearance_Material2"
+        android:textColor="?android:attr/textColorSecondary" />
+
+</LinearLayout>
