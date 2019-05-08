@@ -3,9 +3,14 @@
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#eaeaea</color>
     <color name="theme_accent">@color/dot_blue</color>
+    <color name="colorPrimaryD">#212121</color>
+    <color name="colorPrimaryDDark">#212121</color>
 
     <color name="inverted">#212121</color>
     <color name="ic_background">#333333</color>
+
+    <color name="colorBackgroundDLight">#E9E9E9</color>
+    <color name="colorBackgroundDDark">#353535</color>
 
     <!-- Custom colours for dot -->
     <color name="dot_blue">#3C85ED</color>

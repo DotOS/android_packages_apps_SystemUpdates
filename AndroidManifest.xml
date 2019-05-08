@@ -26,7 +26,8 @@
             android:name=".UpdatesActivity"
             android:excludeFromRecents="true"
             android:label="@string/display_name"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
@@ -42,6 +43,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChannelSwitchActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".controller.UpdaterService" />
         <service android:name=".ExportUpdateService" />

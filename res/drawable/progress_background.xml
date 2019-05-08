@@ -2,9 +2,9 @@
     <item android:id="@android:id/background"
         android:top="4dp"
         android:bottom="6dp">
-        <shape>
+        <shape android:tint="?android:attr/colorAccent">
             <corners android:radius="8dp"/>
-            <solid android:color="#7d3c85ed"/>
+            <solid android:color="#31FFFFFF"/>
         </shape>
     </item>
 

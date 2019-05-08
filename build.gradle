@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0-alpha11'
+        classpath 'com.android.tools.build:gradle:3.4.0'
     }
 }
 
@@ -22,15 +22,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.2'
 
     defaultConfig {
-        minSdkVersion 27
+        minSdkVersion 28
         targetSdkVersion 28
     }
 
     lintOptions {
         ignore 'ProtectedPermissions'
+        // checkReleaseBuilds false
         // These depend on translations
         ignore 'ExtraTranslation', 'ImpliedQuantity', 'MissingQuantity', 'MissingTranslation'
     }
@@ -60,10 +60,16 @@ android {
 
 dependencies {
     compileOnly fileTree(dir: 'system_libs/', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.preference:preference:1.0.0-rc02'
+    implementation 'androidx.preference:preference:1.1.0-alpha04'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

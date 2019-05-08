@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/b_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/b_changelog"
+        android:icon="@drawable/ic_changelog"
+        android:title="Changelog" />
+    <item
+        android:id="@+id/b_settings"
+        android:icon="@drawable/ic_preferences"
+        android:title="Settings" />
+</menu>
