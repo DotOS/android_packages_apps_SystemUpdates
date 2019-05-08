@@ -31,15 +31,20 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.dotos.updater.R;
 import com.dotos.updater.UpdatesDbHelper;
 import com.dotos.updater.controller.UpdaterService;
+import com.dotos.updater.model.UpdateBase;
 import com.dotos.updater.model.UpdateBaseInfo;
 import com.dotos.updater.model.Update;
 import com.dotos.updater.model.UpdateInfo;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -53,6 +58,8 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class Utils {
 
@@ -80,6 +87,10 @@ public class Utils {
         return new File(context.getCacheDir(), "updates.json");
     }
 
+    public static File getCachedNightlyUpdateList(Context context) {
+        return new File(context.getCacheDir(), "updates_nightly.json");
+    }
+
     // This should really return an UpdateBaseInfo object, but currently this only
     // used to initialize UpdateInfo objects
     private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
@@ -104,6 +115,31 @@ public class Utils {
         return update;
     }
 
+    private static UpdateInfo parseNightlyJsonUpdate(JSONObject object) throws JSONException {
+        Update update = new Update();
+        update.setTimestamp(object.getLong("datetime"));
+        update.setName(object.getString("filename"));
+        update.setDownloadId(object.getString("id"));
+        update.setType(object.getString("romtype"));
+        update.setFileSize(object.getLong("size"));
+        update.setDownloadUrl(object.getString("url"));
+        update.setVersion(object.getString("version"));
+        if (!object.getString("changelog_system").isEmpty())
+            update.setC_System(object.getString("changelog_system"));
+        if (!object.getString("changelog_device").isEmpty())
+            update.setC_Device(object.getString("changelog_device"));
+        if (!object.getString("changelog_misc").isEmpty())
+            update.setC_Misc(object.getString("changelog_misc"));
+        if (!object.getString("changelog_settings").isEmpty())
+            update.setC_Settings(object.getString("changelog_settings"));
+        if (!object.getString("changelog_securitypatch").isEmpty())
+            update.setC_SecPatch(object.getString("changelog_securitypatch"));
+        update.setMaintainerName(object.getString("maintainer_name"));
+        update.setMaintainerXDA(object.getString("maintainer_xda"));
+        update.setMaintainerOther(object.getString("maintainer_other"));
+        return update;
+    }
+
     public static boolean isCompatible(UpdateBaseInfo update) {
         if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) &&
                 update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
@@ -118,10 +154,11 @@ public class Utils {
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) ||
-                update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
-                update.getVersion().equalsIgnoreCase(
-                        SystemProperties.get(Constants.PROP_BUILD_VERSION));
+        String nonstringupdate = update.getVersion().replace("v", "").replace(".", "");
+        String nonstringcurrent = SystemProperties.get(Constants.PROP_BUILD_VERSION).replace("v", "").replace(".", "");
+        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
+                (update.getVersion().equalsIgnoreCase(SystemProperties.get(Constants.PROP_BUILD_VERSION))
+                || Integer.parseInt(nonstringupdate) > Integer.parseInt(nonstringcurrent));
     }
 
     public static List<UpdateInfo> parseJson(File file, boolean compatibleOnly)
@@ -156,17 +193,59 @@ public class Utils {
         return updates;
     }
 
+    public static List<UpdateInfo> parseNightlyJson(File file, boolean compatibleOnly)
+            throws IOException, JSONException {
+        List<UpdateInfo> updates = new ArrayList<>();
+
+        StringBuilder json = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            for (String line; (line = br.readLine()) != null;) {
+                json.append(line);
+            }
+        }
+
+        JSONObject obj = new JSONObject(json.toString());
+        JSONArray updatesList = obj.getJSONArray("response");
+        for (int i = 0; i < updatesList.length(); i++) {
+            if (updatesList.isNull(i)) {
+                continue;
+            }
+            try {
+                UpdateInfo update = parseNightlyJsonUpdate(updatesList.getJSONObject(i));
+                if (!compatibleOnly || isCompatible(update)) {
+                    updates.add(update);
+                } else {
+                    Log.d(TAG, "Ignoring incompatible update " + update.getName());
+                }
+            } catch (JSONException e) {
+                Log.e(TAG, "Could not parse update object, index=" + i, e);
+            }
+        }
+
+        return updates;
+    }
+
     public static String getServerURL(Context context) {
         String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
+        String device = SystemProperties.get("ro.product.device");
         String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
 
         String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
         if (serverUrl.trim().isEmpty()) {
             serverUrl = context.getString(R.string.updater_server_url);
         }
+        return serverUrl.replace("{device}", device);
+    }
 
+    public static String getNightlyServerURL(Context context) {
+        String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
+        String device = SystemProperties.get("ro.product.device");
+        String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
+
+        String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI_NIGHTLY);
+        if (serverUrl.trim().isEmpty()) {
+            serverUrl = context.getString(R.string.updater_nightly_server_url);
+        }
         return serverUrl.replace("{device}", device);
     }
 
@@ -376,5 +455,57 @@ public class Utils {
     public static boolean isEncrypted(Context context, File file) {
         StorageManager sm = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
         return sm.isEncrypted(file);
+    }
+
+    public static ArrayList<UpdateBase> getChangelog(FragmentActivity activity) {
+        SharedPreferences prefs = activity.getSharedPreferences("changelog", MODE_PRIVATE);
+        String json = prefs.getString("changelogData", "");
+        ArrayList<UpdateBase> list = new Gson().fromJson(json, new TypeToken<ArrayList<UpdateBase>>(){}.getType());
+        return list;
+    }
+
+    public static void pushChangelog(FragmentActivity activity, ArrayList<UpdateBase> changes) {
+        SharedPreferences prefs = activity.getSharedPreferences("changelog", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("changelogData", new Gson().toJson(changes));
+        editor.apply();
+    }
+
+    public static ArrayList<UpdateBase> getNightlyChangelog(FragmentActivity activity) {
+        SharedPreferences prefs = activity.getSharedPreferences("changelog", MODE_PRIVATE);
+        String json = prefs.getString("changelogData_nightly", "");
+        ArrayList<UpdateBase> list = new Gson().fromJson(json, new TypeToken<ArrayList<UpdateBase>>(){}.getType());
+        return list;
+    }
+
+    public static void pushNightlyChangelog(FragmentActivity activity, ArrayList<UpdateBase> changes) {
+        SharedPreferences prefs = activity.getSharedPreferences("changelog", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("changelogData_nightly", new Gson().toJson(changes));
+        editor.apply();
+    }
+
+    public static void setChannelID(Context context, int id) {
+        SharedPreferences prefs = context.getSharedPreferences("channelID", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("ID", id);
+        editor.apply();
+    }
+
+    public static int getChannelID(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences("channelID", MODE_PRIVATE);
+        return prefs.getInt("ID", 0);
+    }
+
+    public static void setThemeID(Context context, int id) {
+        SharedPreferences prefs = context.getSharedPreferences("styleID", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("dark", id);
+        editor.apply();
+    }
+
+    public static int getThemeID(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences("styleID", MODE_PRIVATE);
+        return prefs.getInt("dark", 0);
     }
 }
