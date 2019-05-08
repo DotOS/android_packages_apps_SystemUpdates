@@ -16,377 +16,222 @@
  */
 package com.dotos.updater;
 
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
-import android.icu.text.DateFormat;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.IBinder;
 
-import com.dotos.updater.ui.ChangelogLayout;
-import com.dotos.updater.ui.ChangelogSheet;
-import com.dotos.updater.ui.RoundedDialog;
+import com.dotos.updater.fragments.official.ChangelogFragment;
+import com.dotos.updater.fragments.official.HomeFragment;
+import com.dotos.updater.fragments.SettingsFragment;
+import com.dotos.updater.misc.Utils;
+import com.dotos.updater.ui.CustomViewPager;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.chip.Chip;
 import com.google.android.material.snackbar.Snackbar;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.preference.PreferenceManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SimpleItemAnimator;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import org.json.JSONException;
-
-import com.dotos.updater.controller.UpdaterController;
-import com.dotos.updater.controller.UpdaterService;
-import com.dotos.updater.download.DownloadClient;
-import com.dotos.updater.misc.BuildInfoUtils;
-import com.dotos.updater.misc.Constants;
-import com.dotos.updater.misc.StringGenerator;
-import com.dotos.updater.misc.Utils;
-import com.dotos.updater.model.UpdateInfo;
-import com.dotos.updater.ui.PreferencesSheet;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 public class UpdatesActivity extends UpdatesListActivity {
 
-    private static final String TAG = "UpdatesActivity";
-    private UpdaterService mUpdaterService;
-    private BroadcastReceiver mBroadcastReceiver;
+    /*
+     * 0 - Official
+     * 1 - Nightly
+     * 2 - Custom {url}
+     */
 
-    private UpdatesListAdapter mAdapter;
-
-    private View mRefreshIconView;
-    private RotateAnimation mRefreshAnimation;
-    private ChangelogSheet mChangelogSheet = new ChangelogSheet();
+    private TextView dashboardText;
+    private CustomViewPager Opager, Npager;
+    private int tempID = 0;
+    private RelativeLayout confirmLayout;
+    private TextView confirmtxt;
+    String official;
+    String nightly;
+    BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onResume() {
+        super.onResume();
+        if (tempID != Utils.getChannelID(this)) {
+            confirmLayout.setVisibility(View.VISIBLE);
+            confirmtxt.setText(getString(R.string.changed_channel_summary, Utils.getChannelID(this) == 0 ? official : nightly));
+        }
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_updates);
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        mAdapter = new UpdatesListAdapter(this);
-        recyclerView.setAdapter(mAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        RecyclerView.ItemAnimator animator = recyclerView.getItemAnimator();
-        if (animator instanceof SimpleItemAnimator) {
-            ((SimpleItemAnimator) animator).setSupportsChangeAnimations(false);
-        }
-
-        mBroadcastReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (UpdaterController.ACTION_UPDATE_STATUS.equals(intent.getAction())) {
-                    String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
-                    handleDownloadStatusChange(downloadId);
-                    mAdapter.notifyDataSetChanged();
-                } else if (UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction()) ||
-                        UpdaterController.ACTION_INSTALL_PROGRESS.equals(intent.getAction())) {
-                    String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
-                    mAdapter.notifyItemChanged(downloadId);
-                } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
-                    String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
-                    mAdapter.removeItem(downloadId);
-                }
-            }
-        };
-
-
-        TextView headerTitle = findViewById(R.id.header_title);
-        headerTitle.setText(getString(R.string.header_title_text));
-
-        TextView headerVersion = findViewById(R.id.header_version);
-        String build_version = BuildInfoUtils.getBuildVersion();
-        if (build_version.equals("v3.0")) {
-            headerVersion.setText(String.format("version %s", build_version));
-        } else {
-            headerVersion.setText(String.format("version %s", "null"));
-            RoundedDialog dialog = new RoundedDialog(this, R.style.Theme_RoundedDialog);
-            View view = View.inflate(this, R.layout.rom_validator, null);
-            Button cancel_dialog = view.findViewById(R.id.dialog_cancel);
-            cancel_dialog.setOnClickListener(v -> dialog.cancel());
-            dialog.setContentView(view);
-            dialog.setCancelable(false);
-            dialog.show();
-        }
-
-        updateLastCheckedString();
-
-        ImageButton refresh = findViewById(R.id.updater_refresh);
-        refresh.setOnClickListener(v -> downloadUpdatesList(true));
-
-        ImageButton changelog = findViewById(R.id.updater_changelog);
-        changelog.setOnClickListener(v -> mChangelogSheet.show(getSupportFragmentManager(), mChangelogSheet.getTag()));
-
-        ImageButton preferences_Start = findViewById(R.id.updater_preferences);
-        preferences_Start.setOnClickListener(v -> showPreferencesDialog());
-
-
-        mRefreshAnimation = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f);
-        mRefreshAnimation.setInterpolator(new LinearInterpolator());
-        mRefreshAnimation.setDuration(1000);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Intent intent = new Intent(this, UpdaterService.class);
-        startService(intent);
-        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
-
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
-        intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
-        intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
-        intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
-        LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
-    }
-
-    @Override
-    public void onStop() {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mBroadcastReceiver);
-        if (mUpdaterService != null) {
-            unbindService(mConnection);
-        }
-        super.onStop();
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
-
-    private ServiceConnection mConnection = new ServiceConnection() {
-
-        @Override
-        public void onServiceConnected(ComponentName className,
-                                       IBinder service) {
-            UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
-            mUpdaterService = binder.getService();
-            mAdapter.setUpdaterController(mUpdaterService.getUpdaterController());
-            getUpdatesList();
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName componentName) {
-            mAdapter.setUpdaterController(null);
-            mUpdaterService = null;
-            mAdapter.notifyDataSetChanged();
-        }
-    };
-
-    public String deviceC, miscC, SEc, settingsC, systemC;
-
-    private void loadUpdatesList(File jsonFile, boolean manualRefresh)
-            throws IOException, JSONException {
-        Log.d(TAG, "Adding remote updates");
-        UpdaterController controller = mUpdaterService.getUpdaterController();
-        boolean newUpdates = false;
-
-        mChangelogSheet.setChangelogLayout(new ChangelogLayout(this));
-
-        List<UpdateInfo> updates = Utils.parseJson(jsonFile, true);
-        List<String> updatesOnline = new ArrayList<>();
-        for (UpdateInfo update : updates) {
-            newUpdates |= controller.addUpdate(update);
-            updatesOnline.add(update.getDownloadId());
-            deviceC = update.getDeviceChangelog();
-            miscC = update.getMiscChangelog();
-            SEc = update.getSecurityPatchChangelog();
-            settingsC = update.getSettingsChangelog();
-            systemC = update.getSystemChangelog();
-            mChangelogSheet.setDevice(update.getDeviceChangelog());
-            mChangelogSheet.setMisc(update.getMiscChangelog());
-            mChangelogSheet.setSecurityPatch(update.getSecurityPatchChangelog());
-            mChangelogSheet.setSettings(update.getSettingsChangelog());
-            mChangelogSheet.setSystem(update.getSystemChangelog());
-        }
-
-        controller.setUpdatesAvailableOnline(updatesOnline, true);
-
-        if (manualRefresh) {
-            showSnackbar(
-                    newUpdates ? R.string.snack_updates_found : R.string.snack_no_updates_found,
-                    Snackbar.LENGTH_SHORT);
-        }
-
-        List<String> updateIds = new ArrayList<>();
-        List<UpdateInfo> sortedUpdates = controller.getUpdates();
-        if (sortedUpdates.isEmpty()) {
-            findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
-            findViewById(R.id.recycler_view).setVisibility(View.GONE);
-        } else {
-            findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
-            findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
-            sortedUpdates.sort((u1, u2) -> Long.compare(u2.getTimestamp(), u1.getTimestamp()));
-            for (UpdateInfo update : sortedUpdates) {
-                updateIds.add(update.getDownloadId());
-            }
-            mAdapter.setData(updateIds);
-            mAdapter.notifyDataSetChanged();
-        }
-    }
-
-    private void getUpdatesList() {
-        File jsonFile = Utils.getCachedUpdateList(this);
-        if (jsonFile.exists()) {
-            try {
-                loadUpdatesList(jsonFile, false);
-                Log.d(TAG, "Cached list parsed");
-            } catch (IOException | JSONException e) {
-                Log.e(TAG, "Error while parsing json list", e);
-            }
-        } else {
-            downloadUpdatesList(false);
-        }
-    }
-
-    private void processNewJson(File json, File jsonNew, boolean manualRefresh) {
-        try {
-            loadUpdatesList(jsonNew, manualRefresh);
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-            long millis = System.currentTimeMillis();
-            preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, millis).apply();
-            updateLastCheckedString();
-            if (json.exists() && preferences.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true) &&
-                    Utils.checkForNewUpdates(json, jsonNew)) {
-                UpdatesCheckReceiver.updateRepeatingUpdatesCheck(this);
-            }
-            // In case we set a one-shot check because of a previous failure
-            UpdatesCheckReceiver.cancelUpdatesCheck(this);
-            jsonNew.renameTo(json);
-        } catch (IOException | JSONException e) {
-            Log.e(TAG, "Could not read json", e);
-            showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
-        }
-    }
-
-    private void downloadUpdatesList(final boolean manualRefresh) {
-        final File jsonFile = Utils.getCachedUpdateList(this);
-        final File jsonFileTmp = new File(jsonFile.getAbsolutePath() + UUID.randomUUID());
-        String url = Utils.getServerURL(this);
-        Log.d(TAG, "Checking " + url);
-
-        DownloadClient.DownloadCallback callback = new DownloadClient.DownloadCallback() {
-            @Override
-            public void onFailure(final boolean cancelled) {
-                Log.e(TAG, "Could not download updates list");
-                runOnUiThread(() -> {
-                    if (!cancelled) {
-                        showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
-                    }
-                    refreshAnimationStop();
-                });
-            }
-
-            @Override
-            public void onResponse(int statusCode, String url,
-                                   DownloadClient.Headers headers) {
-            }
-
-            @Override
-            public void onSuccess(File destination) {
-                runOnUiThread(() -> {
-                    Log.d(TAG, "List downloaded");
-                    processNewJson(jsonFile, jsonFileTmp, manualRefresh);
-                    refreshAnimationStop();
-                });
-            }
-        };
-
-        final DownloadClient downloadClient;
-        try {
-            downloadClient = new DownloadClient.Builder()
-                    .setUrl(url)
-                    .setDestination(jsonFileTmp)
-                    .setDownloadCallback(callback)
-                    .build();
-        } catch (IOException exception) {
-            Log.e(TAG, "Could not build download client");
-            showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
-            return;
-        }
-
-        refreshAnimationStart();
-        downloadClient.start();
-    }
-
-    private void updateLastCheckedString() {
-        final SharedPreferences preferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        long lastCheck = preferences.getLong(Constants.PREF_LAST_UPDATE_CHECK, -1) / 1000;
-        String lastCheckString = getString(R.string.header_last_updates_check,
-                StringGenerator.getDateLocalized(this, DateFormat.LONG, lastCheck),
-                StringGenerator.getTimeLocalized(this, lastCheck));
-        mChangelogSheet.initDetailsText(new TextView(this));
-        mChangelogSheet.setDetails(
-                getString(R.string.header_android_version, Build.VERSION.RELEASE),
-                StringGenerator.getDateLocalizedUTC(this, DateFormat.LONG, BuildInfoUtils.getBuildDateTimestamp()),
-                lastCheckString);
-    }
-
-    private void handleDownloadStatusChange(String downloadId) {
-        UpdateInfo update = mUpdaterService.getUpdaterController().getUpdate(downloadId);
-        switch (update.getStatus()) {
-            case PAUSED_ERROR:
-                showSnackbar(R.string.snack_download_failed, Snackbar.LENGTH_LONG);
+        switch (Utils.getThemeID(this)) {
+            case 0:
+                setTheme(R.style.AppTheme);
                 break;
-            case VERIFICATION_FAILED:
-                showSnackbar(R.string.snack_download_verification_failed, Snackbar.LENGTH_LONG);
-                break;
-            case VERIFIED:
-                showSnackbar(R.string.snack_download_verified, Snackbar.LENGTH_LONG);
+            case 1:
+                setTheme(R.style.AppThemeDark);
                 break;
         }
+        setContentView(R.layout.activity_base);
+        official = getString(R.string.channel_offical);
+        nightly = getString(R.string.channel_nightly);
+        dashboardText = findViewById(R.id.header_title);
+        confirmLayout = findViewById(R.id.confirmlayout);
+        confirmtxt = findViewById(R.id.ch_changed);
+        Button confirmbtn = findViewById(R.id.confirmbtn);
+        setDashboardTitle(getString(R.string.title_updates));
+        Chip ota_switch = findViewById(R.id.channel_selector);
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        tempID = Utils.getChannelID(this);
+        confirmbtn.setOnClickListener(v -> {
+            confirmLayout.setVisibility(View.GONE);
+            tempID = Utils.getChannelID(this);
+            if (tempID == 1) {
+                Opager.setVisibility(View.GONE);
+                Npager.setVisibility(View.VISIBLE);
+                bottomNavigationView.setOnNavigationItemSelectedListener(this::onNNavigationItemSelected);
+            } else {
+                Opager.setVisibility(View.VISIBLE);
+                Npager.setVisibility(View.GONE);
+                bottomNavigationView.setOnNavigationItemSelectedListener(this::onONavigationItemSelected);
+            }
+            setDashboardTitle(getString(R.string.title_updates));
+        });
+        ota_switch.setOnClickListener(v -> startActivity(new Intent(this, ChannelSwitchActivity.class)));
+        Opager = findViewById(R.id.ota_official);
+        Npager = findViewById(R.id.ota_nightly);
+        Opager.setAdapter(new OfficialAdapter(getSupportFragmentManager()));
+        Npager.setAdapter(new NightlyAdapter(getSupportFragmentManager()));
+        Npager.setScroll(false);
+        Opager.setScroll(false);
+        bottomNavigationView.inflateMenu(R.menu.menu_bottom);
+        bottomNavigationView.setItemTextAppearanceActive(R.style.TextAppearance_Active);
+        bottomNavigationView.setItemTextAppearanceInactive(R.style.TextAppearance_Inactive);
+        bottomNavigationView.setItemIconTintList(getColorStateList(R.color.bottom_image_color));
+        if (tempID == 0) {
+            Opager.setVisibility(View.VISIBLE);
+            Npager.setVisibility(View.GONE);
+            bottomNavigationView.setOnNavigationItemSelectedListener(this::onONavigationItemSelected);
+        } else {
+            Opager.setVisibility(View.GONE);
+            Npager.setVisibility(View.VISIBLE);
+            bottomNavigationView.setOnNavigationItemSelectedListener(this::onNNavigationItemSelected);
+        }
+    }
+
+    private boolean onONavigationItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.b_home:
+                Opager.setCurrentItem(0, false);
+                setDashboardTitle(getString(R.string.title_updates));
+                return true;
+            case R.id.b_changelog:
+                Opager.setCurrentItem(1, false);
+                setDashboardTitle(R.string.title_changelog);
+                return true;
+            case R.id.b_settings:
+                Opager.setCurrentItem(2, false);
+                setDashboardTitle(R.string.title_settings);
+                return true;
+        }
+        return false;
+    }
+
+    private boolean onNNavigationItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.b_home:
+                Npager.setCurrentItem(0, false);
+                setDashboardTitle(getString(R.string.title_updates));
+                return true;
+            case R.id.b_changelog:
+                Npager.setCurrentItem(1, false);
+                setDashboardTitle(R.string.title_changelog);
+                return true;
+            case R.id.b_settings:
+                Npager.setCurrentItem(2, false);
+                setDashboardTitle(R.string.title_settings);
+                return true;
+        }
+        return false;
+    }
+
+    public void setDashboardTitle(int resID) {
+        dashboardText.setText(resID);
+    }
+
+    public void setDashboardTitle(String str) {
+        dashboardText.setText(str);
     }
 
     @Override
     public void showSnackbar(int stringId, int duration) {
-        Snackbar.make(findViewById(R.id.main_container), stringId, duration).show();
+        Snackbar snack = Snackbar.make(findViewById(R.id.foocontainer),
+                stringId, duration);
+        CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams)
+                snack.getView().getLayoutParams();
+        params.setMargins(24,0, 24, bottomNavigationView.getHeight() + 24);
+        snack.getView().setLayoutParams(params);
+        snack.show();
     }
 
-    private void refreshAnimationStart() {
-        if (mRefreshIconView == null) {
-            mRefreshIconView = findViewById(R.id.menu_refresh);
+    public class OfficialAdapter extends FragmentPagerAdapter {
+
+        OfficialAdapter(@NonNull FragmentManager fm) {
+            super(fm);
         }
-        if (mRefreshIconView != null) {
-            mRefreshAnimation.setRepeatCount(Animation.INFINITE);
-            mRefreshIconView.startAnimation(mRefreshAnimation);
-            mRefreshIconView.setEnabled(false);
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new HomeFragment();
+                case 1:
+                    return new ChangelogFragment();
+                case 2:
+                    return new SettingsFragment();
+                default:
+                    return new HomeFragment();
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
         }
     }
 
-    private void refreshAnimationStop() {
-        if (mRefreshIconView != null) {
-            mRefreshAnimation.setRepeatCount(0);
-            mRefreshIconView.setEnabled(true);
+    public class NightlyAdapter extends FragmentPagerAdapter {
+
+        NightlyAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new com.dotos.updater.fragments.nightly.HomeFragment();
+                case 1:
+                    return new com.dotos.updater.fragments.nightly.ChangelogFragment();
+                case 2:
+                    return new SettingsFragment();
+                default:
+                    return new com.dotos.updater.fragments.nightly.HomeFragment();
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
         }
     }
 
-    private void showPreferencesDialog() {
-        PreferencesSheet rs = new PreferencesSheet();
-        rs.setUpdaterService(mUpdaterService);
-        rs.show(getSupportFragmentManager(), rs.getTag());
-    }
 }

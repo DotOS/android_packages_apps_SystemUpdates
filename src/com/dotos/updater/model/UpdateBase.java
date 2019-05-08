@@ -30,6 +30,7 @@ public class UpdateBase implements UpdateBaseInfo {
     private String c_Misc;
     private String c_Device;
     private String c_SecPatch;
+    private String maintainerName, maintainerXDA, maintainerOther, maintainerTelegram, maintainerDevice, maintainerImageUrl;
 
     public UpdateBase() {
     }
@@ -47,6 +48,12 @@ public class UpdateBase implements UpdateBaseInfo {
         c_Misc = update.getMiscChangelog();
         c_Device = update.getDeviceChangelog();
         c_SecPatch = update.getSecurityPatchChangelog();
+        maintainerName = update.getMaintainerName();
+        maintainerOther = update.getMaintainerOther();
+        maintainerXDA = update.getMaintainerXDA();
+        maintainerTelegram = update.getMaintainerTelegram();
+        maintainerDevice = update.getMaintainerDevice();
+        maintainerImageUrl = update.getMaintainerImageUrl();
     }
 
     @Override
@@ -151,6 +158,60 @@ public class UpdateBase implements UpdateBaseInfo {
     @Override
     public String getSecurityPatchChangelog() {
         return c_SecPatch;
+    }
+
+    @Override
+    public String getMaintainerName() {
+        return maintainerName;
+    }
+
+    @Override
+    public String getMaintainerXDA() {
+        return maintainerXDA;
+    }
+
+    @Override
+    public String getMaintainerOther() {
+        return maintainerOther;
+    }
+
+    @Override
+    public String getMaintainerTelegram() {
+        return maintainerTelegram;
+    }
+
+    @Override
+    public String getMaintainerDevice() {
+        return maintainerDevice;
+    }
+
+    @Override
+    public String getMaintainerImageUrl() {
+        return maintainerImageUrl;
+    }
+
+    public void setMaintainerImageUrl(String maintainerImageUrl) {
+        this.maintainerImageUrl = maintainerImageUrl;
+    }
+
+    public void setMaintainerDevice(String maintainerDevice) {
+        this.maintainerDevice = maintainerDevice;
+    }
+
+    public void setMaintainerTelegram(String maintainerTelegram) {
+        this.maintainerTelegram = maintainerTelegram;
+    }
+
+    public void setMaintainerOther(String maintainerOther) {
+        this.maintainerOther = maintainerOther;
+    }
+
+    public void setMaintainerName(String maintainerName) {
+        this.maintainerName = maintainerName;
+    }
+
+    public void setMaintainerXDA(String maintainerXDA) {
+        this.maintainerXDA = maintainerXDA;
     }
 
     public void setFileSize(long fileSize) {
