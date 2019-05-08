@@ -5,19 +5,28 @@
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/theme_accent</item>
         <item name="windowActionModeOverlay">true</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar">true</item>
-    </style>
-
-    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance_Material2</item>
+        <item name="darkerBackgroundColor">@color/colorBackgroundDLight</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryD</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDDark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryD</item>
+        <item name="android:textAppearance">@style/TextAppearance_Material2</item>
+        <item name="darkerBackgroundColor">@color/colorBackgroundDDark</item>
+    </style>
 
     <style name="TextAppearanceInverted" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/inverted</item>
@@ -56,5 +65,26 @@
     <style name="Theme.RoundedDialog" parent="@style/Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="SpinnerCompat" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:textAppearance">@style/TextAppearance_Material2</item>
+    </style>
+
+    <style name="TextAppearance_Material2" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/google_sans</item>
+    </style>
+
+    <style name="TextAppearance_Toolbar" parent="TextAppearance_Material2">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance_Active" parent="TextAppearance_Material2">
+        <item name="android:fontFamily">@font/google_sans_bold</item>
+        <item name="android:textColor">?android:attr/colorAccent</item>
+    </style>
+    <style name="TextAppearance_Inactive" parent="TextAppearance_Material2">
+        <item name="android:fontFamily">@font/google_sans_bold</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
 </resources>
