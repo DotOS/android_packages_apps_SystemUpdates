@@ -8,14 +8,23 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_USE_AAPT2 := true
 
-LOCAL_STATIC_ANDROID_LIBRARIES += androidx.recyclerview_recyclerview
-LOCAL_STATIC_ANDROID_LIBRARIES += androidx.cardview_cardview
-LOCAL_STATIC_ANDROID_LIBRARIES += androidx.preference_preference
-LOCAL_STATIC_ANDROID_LIBRARIES += androidx.appcompat_appcompat
-LOCAL_STATIC_ANDROID_LIBRARIES += androidx.annotation_annotation
-LOCAL_STATIC_ANDROID_LIBRARIES += com.google.android.material_material
+LOCAL_STATIC_ANDROID_LIBRARIES := \
+	androidx.recyclerview_recyclerview \
+	androidx.cardview_cardview \
+	androidx.preference_preference \
+	androidx.appcompat_appcompat \
+	androidx.annotation_annotation \
+	com.google.android.material_material \
+	androidx.legacy_legacy-support-v4 \
+	androidx.viewpager_viewpager
 
-LOCAL_STATIC_JAVA_LIBRARIES += guava
+
+LOCAL_STATIC_JAVA_LIBRARIES := \
+	guava \
+	gson
+
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
+	gson:libs/gson-2.8.2.jar
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
