@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -13,7 +13,7 @@
         <item name="android:textAppearance">@style/TextAppearance_Material2</item>
         <item name="darkerBackgroundColor">@color/colorBackgroundDLight</item>
     </style>
-
+    
     <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryD</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDDark</item>
@@ -27,58 +27,58 @@
         <item name="android:textAppearance">@style/TextAppearance_Material2</item>
         <item name="darkerBackgroundColor">@color/colorBackgroundDDark</item>
     </style>
-
+    
     <style name="TextAppearanceInverted" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/inverted</item>
     </style>
     <style name="TextAppearanceTransparent" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@android:color/transparent</item>
     </style>
-
+    
     <style name="AppTheme.PopupMenuOverlapAnchor">
         <item name="android:overlapAnchor">true</item>
         <item name="android:dropDownVerticalOffset">8dp</item>
         <item name="android:dropDownHorizontalOffset">-16dp</item>
     </style>
-
+    
     <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bg_bottom_sheet_dialog_fragment</item>
     </style>
-
+    
     <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="bottomSheetStyle">@style/BottomSheet</item>
     </style>
-
+    
     <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
         <item name="colorAccent">@color/dot_blue</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">?colorPrimary</item>
     </style>
-
+    
     <style name="RoundedDialog">
         <item name="android:background">@drawable/dialog_bg</item>
         <item name="android:elevation">@dimen/dialog_elevation</item>
     </style>
-
+    
     <style name="Theme.RoundedDialog" parent="@style/Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-
+    
     <style name="SpinnerCompat" parent="Widget.AppCompat.Spinner.DropDown">
         <item name="android:textAppearance">@style/TextAppearance_Material2</item>
     </style>
-
+    
     <style name="TextAppearance_Material2" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">@font/google_sans</item>
     </style>
-
+    
     <style name="TextAppearance_Toolbar" parent="TextAppearance_Material2">
         <item name="android:textSize">16sp</item>
     </style>
-
+    
     <style name="TextAppearance_Active" parent="TextAppearance_Material2">
         <item name="android:fontFamily">@font/google_sans_bold</item>
         <item name="android:textColor">?android:attr/colorAccent</item>
@@ -86,5 +86,10 @@
     <style name="TextAppearance_Inactive" parent="TextAppearance_Material2">
         <item name="android:fontFamily">@font/google_sans_bold</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    
+    <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
     </style>
 </resources>
