@@ -21,10 +21,12 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
 	guava \
-	gson
+	gson \
+	glide
 
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
-	gson:libs/gson-2.8.2.jar
+	gson:libs/gson-2.8.2.jar \
+	glide:libs/glide-4.9.0.jar
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
@@ -35,7 +37,6 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 include $(BUILD_PACKAGE)
-
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := UpdaterStudio
