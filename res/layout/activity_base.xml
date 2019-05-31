@@ -28,7 +28,7 @@
                 android:clickable="true"
                 android:text="@string/channel_chip"
                 android:textAppearance="@style/TextAppearance_Material2"
-                app:checkedIconVisible="false"
+                style="@style/ChipCustomStyle"
                 app:chipBackgroundColor="?attr/colorPrimary"
                 app:chipIcon="@drawable/ic_dropdown"
                 app:chipStrokeColor="?attr/colorButtonNormal"
