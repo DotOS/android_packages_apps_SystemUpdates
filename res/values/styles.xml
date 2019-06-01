@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/theme_accent</item>
@@ -14,7 +14,7 @@
         <item name="darkerBackgroundColor">@color/colorBackgroundDLight</item>
     </style>
     
-    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppThemeDark" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryD</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDDark</item>
         <item name="colorAccent">@color/theme_accent</item>
@@ -88,7 +88,7 @@
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
     
-    <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Action">
+    <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Choice">
         <item name="checkedIconEnabled">false</item>
         <item name="checkedIcon">@null</item>
     </style>
