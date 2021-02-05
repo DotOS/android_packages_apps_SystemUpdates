@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Oppdaterer</string>
-    <string name="display_name">Oppdaterer</string>
     <string name="verification_failed_notification">Bekreftelse mislyktes</string>
     <string name="verifying_download_notification">Bekrefter oppdatering</string>
     <string name="downloading_notification">Laster ned</string>
@@ -50,12 +48,12 @@
     <string name="snack_download_verification_failed">Oppdateringsbekreftelsen mislyktes.</string>
     <string name="snack_download_verified">Nedlasting fullført.</string>
     <string name="snack_update_not_installable">Denne oppdateringen kan ikke installeres over gjeldende installasjon.</string>
-    <string name="header_title_text">LineageOS\n%1$s</string>
+    <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Sist sjekket: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LineageOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">LineageOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> av <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> av <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> </string>
     <string name="list_verifying_update">Bekrefter oppdatering</string>
     <string name="list_no_updates">Ingen nye programvareoppdateringer funnet. For å se etter oppdateringer manuelt, bruk Oppdater-knappen.</string>
     <string name="action_download">Last ned</string>

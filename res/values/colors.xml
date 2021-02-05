@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="theme_primary">#f5f5f5</color>
-    <color name="theme_primary_dark">#e0e0e0</color>
-    <color name="theme_accent">@*android:color/accent_device_default_light</color>
+    <color name="colorPrimary">#FFF</color>
+    <color name="colorPrimaryDark">#FFF</color>
+    <color name="colorAccent">@*android:color/accent_device_default_light</color>
+    <color name="colorPrimaryBackground">#E6E6E6</color>
+    <color name="colorPrimaryTranslucent">#B3FFFFFF</color>
+    <color name="colorPrimaryScrim">#59FFFFFF</color>
+    <color name="colorError">#66F44336</color>
+
+    <color name="ic_launcher_background">@color/colorPrimary</color>
+
+    <color name="cardBackground">#F3F3F3</color>
+
+    <!-- QS Custom Colors -->
+    <color name="default_qs_transparency">#BFffffff</color> <!-- 75% Alpha -->
+    <color name="default_volume_transparency">#33FFFFFF</color> <!-- 20% Alpha -->
+    <!-- FOD icon picker -->
+    <color name="fod_item_background_stroke_color">#D6D6D6</color>
+
+    <color name="defaultEdgeLightningColor">#3980FF</color>
 
     <color name="inverted">#212121</color>
     <color name="ic_background">#333333</color>

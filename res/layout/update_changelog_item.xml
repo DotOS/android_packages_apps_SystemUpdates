@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/updateChangelogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/updateChangelogIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                app:tint="?android:attr/textColorPrimary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/updateChangelogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
+                tools:text="droid on time 5.0" />
+
+            <TextView
+                android:id="@+id/updateChangelogSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="15sp"
+                tools:text="New Notification Panel" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp"
+        app:cardBackgroundColor="@color/cardBackground"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/updateChangelogSummary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu nisi, malesuada non dui non, porta ultrices leo. Vivamus suscipit sit amet lacus id varius. Nulla tempor turpis metus, non luctus erat gravida sit amet." />
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

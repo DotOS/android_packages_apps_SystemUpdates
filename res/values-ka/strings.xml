@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">განმაახლებელი</string>
-    <string name="display_name">განმაახლებელი</string>
     <string name="downloading_notification">ჩამოიტვირთება</string>
     <string name="new_updates_found_title">ბოლო განახლებები</string>
     <string name="pause_button">შეჩერება</string>

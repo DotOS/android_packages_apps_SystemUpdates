@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="theme_primary">#212121</color>
-    <color name="theme_primary_dark">#1c1c1c</color>
-    <color name="theme_accent">@*android:color/accent_device_default_dark</color>
+    <color name="colorPrimary">#131313</color>
+    <color name="colorPrimaryDark">#131313</color>
+    <color name="colorAccent">@*android:color/accent_device_default_dark</color>
+    <color name="colorPrimaryBackground">#232323</color>
+    <color name="colorPrimaryTranslucent">#B3131313</color>
+    <color name="colorPrimaryScrim">#73131313</color>
+
+    <color name="cardBackground">#191919</color>
 
     <color name="inverted">#f5f5f5</color>
 </resources>

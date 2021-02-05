@@ -1,0 +1,39 @@
+android_app {
+    name: "SystemUpdates",
+    manifest: "AndroidManifest.xml",
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java",
+    ],
+
+    static_libs: [
+        "com.google.android.material_material",
+        "androidx.core_core",
+        "androidx.appcompat_appcompat",
+        "androidx.cardview_cardview",
+        "androidx.preference_preference",
+        "androidx.recyclerview_recyclerview",
+    ],
+
+    resource_dirs: ["res"],
+
+    optimize: {
+        optimize: true,
+        obfuscate: true,
+        proguard_flags_files: ["proguard.flags"],
+    },
+
+    required: ["privapp_whitelist_com.dot.updater.xml"],
+
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.dot.updater.xml",
+
+    src: "privapp_whitelist_com.dot.updater.xml",
+    sub_dir: "permissions",
+
+}
