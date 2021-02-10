@@ -19,26 +19,34 @@
         android:fontFamily="sans-serif-medium"
         tools:text="512MB out of 1GB" />
 
-    <ProgressBar
-        android:id="@+id/updateProgressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/updateProgressBarCard"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_below="@id/updateStats"
         android:layout_marginEnd="16dp"
         android:layout_toStartOf="@id/updatePause"
-        android:indeterminateDrawable="@drawable/progress_bg"
-        android:progress="50"
-        android:progressDrawable="@drawable/progress_bg" />
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp">
+
+        <ProgressBar
+            android:id="@+id/updateProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_bg" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/updateProgressText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/updateStats"
-        android:layout_alignTop="@id/updateProgressBar"
-        android:layout_alignEnd="@id/updateProgressBar"
-        android:layout_alignBottom="@id/updateProgressBar"
+        android:layout_alignTop="@id/updateProgressBarCard"
+        android:layout_alignEnd="@id/updateProgressBarCard"
+        android:layout_alignBottom="@id/updateProgressBarCard"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_vertical"
