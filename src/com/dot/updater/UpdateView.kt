@@ -112,6 +112,7 @@ class UpdateView : LinearLayout {
     fun lateInit() {
         if (mDownloadId == null) {
             actionCheck.visibility = VISIBLE
+            noUpdates.visibility = VISIBLE
             return
         }
         update = mUpdaterController!!.getUpdate(mDownloadId)
@@ -121,6 +122,7 @@ class UpdateView : LinearLayout {
             actionStart.visibility = VISIBLE
             return
         }
+        noUpdates.visibility = GONE
         val activeLayout: Boolean = when (update!!.persistentStatus) {
             UpdateStatus.Persistent.UNKNOWN -> update!!.status == UpdateStatus.STARTING
             UpdateStatus.Persistent.VERIFIED -> update!!.status == UpdateStatus.INSTALLING
@@ -214,42 +216,44 @@ class UpdateView : LinearLayout {
         val recycler: RecyclerView = findViewById(R.id.updateChangelogRecycler)
         val list: ArrayList<ChangelogItem> = ArrayList()
         val changelog = update!!.changelog
-        if (changelog.hasSystem) {
-            val item = ChangelogItem()
-            item.iconRes = R.drawable.ic_system
-            item.title = context.getString(R.string.system)
-            item.subtitle = changelog.systemTitle
-            item.summary = changelog.systemSummary
-            list.add(item)
+        if (changelog != null) {
+            if (changelog.hasSystem) {
+                val item = ChangelogItem()
+                item.iconRes = R.drawable.ic_system
+                item.title = context.getString(R.string.system)
+                item.subtitle = changelog.systemTitle
+                item.summary = changelog.systemSummary
+                list.add(item)
+            }
+            if (changelog.hasSecurity) {
+                val item = ChangelogItem()
+                item.iconRes = R.drawable.ic_security
+                item.title = context.getString(R.string.security)
+                item.subtitle = changelog.securityTitle
+                item.summary = changelog.securitySummary
+                list.add(item)
+            }
+            if (changelog.hasSettings) {
+                val item = ChangelogItem()
+                item.iconRes = R.drawable.ic_settings
+                item.title = context.getString(R.string.settings)
+                item.subtitle = changelog.settingsTitle
+                item.summary = changelog.settingsSummary
+                list.add(item)
+            }
+            if (changelog.hasMisc) {
+                val item = ChangelogItem()
+                item.iconRes = R.drawable.ic_misc
+                item.title = context.getString(R.string.misc)
+                item.subtitle = changelog.miscTitle
+                item.summary = changelog.miscSummary
+                list.add(item)
+            }
+            val adapter = ChangelogAdapter(list)
+            recycler.isNestedScrollingEnabled = false
+            recycler.adapter = adapter
+            recycler.layoutManager = LinearLayoutManager(context)
         }
-        if (changelog.hasSecurity) {
-            val item = ChangelogItem()
-            item.iconRes = R.drawable.ic_security
-            item.title = context.getString(R.string.security)
-            item.subtitle = changelog.securityTitle
-            item.summary = changelog.securitySummary
-            list.add(item)
-        }
-        if (changelog.hasSettings) {
-            val item = ChangelogItem()
-            item.iconRes = R.drawable.ic_settings
-            item.title = context.getString(R.string.settings)
-            item.subtitle = changelog.settingsTitle
-            item.summary = changelog.settingsSummary
-            list.add(item)
-        }
-        if (changelog.hasMisc) {
-            val item = ChangelogItem()
-            item.iconRes = R.drawable.ic_misc
-            item.title = context.getString(R.string.misc)
-            item.subtitle = changelog.miscTitle
-            item.summary = changelog.miscSummary
-            list.add(item)
-        }
-        val adapter = ChangelogAdapter(list)
-        recycler.isNestedScrollingEnabled = false
-        recycler.adapter = adapter
-        recycler.layoutManager = LinearLayoutManager(context)
     }
 
     fun setDownloadId(downloadId: String?) {
@@ -301,7 +305,7 @@ class UpdateView : LinearLayout {
                 setButtonAction(actionProgressPause, Action.PAUSE, true)
                 actionProgressBar.isIndeterminate = update.status == UpdateStatus.STARTING
                 actionProgressBar.progress = update.progress
-                actionProgressText.text = String.format("%S%", percentage)
+                actionProgressText.text = "$percentage"
             }
             mUpdaterController!!.isInstallingUpdate(downloadId) -> {
                 actionProgress.visibility = VISIBLE
@@ -330,7 +334,7 @@ class UpdateView : LinearLayout {
                         update.progress / 100f).toDouble())
                 actionProgressStats.text = mActivity!!.getString(R.string.list_download_progress_new,
                         downloaded, total)
-                actionProgressText.text = String.format("%S%", percentage)
+                actionProgressText.text = "$percentage"
                 actionProgressBar.isIndeterminate = false
                 actionProgressBar.progress = update.progress
             }
