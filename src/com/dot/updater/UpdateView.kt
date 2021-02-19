@@ -123,6 +123,7 @@ class UpdateView : LinearLayout {
             return
         }
         noUpdates.visibility = GONE
+        actionCheck.visibility = GONE
         val activeLayout: Boolean = when (update!!.persistentStatus) {
             UpdateStatus.Persistent.UNKNOWN -> update!!.status == UpdateStatus.STARTING
             UpdateStatus.Persistent.VERIFIED -> update!!.status == UpdateStatus.INSTALLING
