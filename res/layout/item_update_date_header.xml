@@ -5,6 +5,9 @@
     android:id="@+id/updateChipHeader"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:requiresFadingEdge="horizontal"
+    android:fadingEdgeLength="156dp"
+    android:overScrollMode="always"
     android:scrollbars="none">
 
     <LinearLayout
@@ -16,6 +19,7 @@
             android:id="@+id/chipDateCurrent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="16sp"
             app:chipEndPadding="8dp"

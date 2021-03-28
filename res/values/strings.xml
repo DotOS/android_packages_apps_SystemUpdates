@@ -32,7 +32,8 @@
           {type} - Build type
           {incr} - Incremental version
     -->
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/DotOS/services_apps_ota/dot11/{device}_{type}.json</string>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/DotOS/official_devices/master/builds/{device}/builds.json</string>
+    <string name="updater_server_url_gapps" translatable="false">https://raw.githubusercontent.com/DotOS/official_devices/master/builds/{device}/builds_gapps.json</string>
 
     <string name="verification_failed_notification">Verification failed</string>
     <string name="verifying_download_notification">Verifying update</string>

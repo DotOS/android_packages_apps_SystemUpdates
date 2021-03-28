@@ -22,9 +22,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
+import com.dot.updater.misc.ObjectSerializer;
+import com.dot.updater.model.Changelog;
 import com.dot.updater.model.Update;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +44,8 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                     UpdateEntry.COLUMN_NAME_TIMESTAMP + " INTEGER," +
                     UpdateEntry.COLUMN_NAME_TYPE + " TEXT," +
                     UpdateEntry.COLUMN_NAME_VERSION + " TEXT," +
-                    UpdateEntry.COLUMN_NAME_SIZE + " INTEGER)";
+                    UpdateEntry.COLUMN_NAME_SIZE + " INTEGER," +
+                    UpdateEntry.COLUMN_NAME_CHANGELOG + " TEXT)";
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + UpdateEntry.TABLE_NAME;
 
@@ -57,6 +61,11 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         values.put(UpdateEntry.COLUMN_NAME_TYPE, update.getType());
         values.put(UpdateEntry.COLUMN_NAME_VERSION, update.getVersion());
         values.put(UpdateEntry.COLUMN_NAME_SIZE, update.getFileSize());
+        try {
+            values.put(UpdateEntry.COLUMN_NAME_CHANGELOG, ObjectSerializer.serialize(update.getChangelog()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onCreate(SQLiteDatabase db) {
@@ -148,6 +157,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 UpdateEntry.COLUMN_NAME_VERSION,
                 UpdateEntry.COLUMN_NAME_STATUS,
                 UpdateEntry.COLUMN_NAME_SIZE,
+                UpdateEntry.COLUMN_NAME_CHANGELOG,
         };
         String sort = UpdateEntry.COLUMN_NAME_TIMESTAMP + " DESC";
         Cursor cursor = db.query(UpdateEntry.TABLE_NAME, projection, selection, selectionArgs,
@@ -171,6 +181,12 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 update.setPersistentStatus(cursor.getInt(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_SIZE);
                 update.setFileSize(cursor.getLong(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_CHANGELOG);
+                try {
+                    update.setChangelog((Changelog) ObjectSerializer.deserialize(cursor.getString(index)));
+                } catch (ClassNotFoundException | IOException e) {
+                    e.printStackTrace();
+                }
                 updates.add(update);
             }
             cursor.close();
@@ -187,5 +203,6 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         public static final String COLUMN_NAME_TYPE = "type";
         public static final String COLUMN_NAME_VERSION = "version";
         public static final String COLUMN_NAME_SIZE = "size";
+        public static final String COLUMN_NAME_CHANGELOG = "changelog";
     }
 }

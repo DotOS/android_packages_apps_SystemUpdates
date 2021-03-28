@@ -13,7 +13,6 @@
         layout="@layout/item_update_date_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:visibility="gone"
         tools:visibility="visible" />
 
@@ -32,7 +31,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="48dp"
-        android:paddingBottom="124dp"
+        android:paddingBottom="104dp"
         tools:itemCount="2"
         tools:listitem="@layout/update_changelog_item" />
 </LinearLayout>

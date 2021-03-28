@@ -1,6 +1,8 @@
 package com.dot.updater.model
 
-class Changelog {
+import java.io.Serializable
+
+class Changelog : Serializable {
     var hasSystem = false
     var hasSecurity = false
     var hasSettings = false

@@ -39,6 +39,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public class UpdaterController {
@@ -145,7 +146,7 @@ public class UpdaterController {
 
             @Override
             public void onResponse(int statusCode, String url, DownloadClient.Headers headers) {
-                final Update update = mDownloads.get(downloadId).mUpdate;
+                final Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
                 String contentLength = headers.get("Content-Length");
                 if (contentLength != null) {
                     try {
@@ -167,9 +168,9 @@ public class UpdaterController {
             @Override
             public void onSuccess(File destination) {
                 Log.d(TAG, "Download complete");
-                Update update = mDownloads.get(downloadId).mUpdate;
+                Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
                 update.setStatus(UpdateStatus.VERIFYING);
-                removeDownloadClient(mDownloads.get(downloadId));
+                removeDownloadClient(Objects.requireNonNull(mDownloads.get(downloadId)));
                 verifyUpdateAsync(downloadId);
                 notifyUpdateChange(downloadId);
                 tryReleaseWakelock();
@@ -177,13 +178,13 @@ public class UpdaterController {
 
             @Override
             public void onFailure(boolean cancelled) {
-                Update update = mDownloads.get(downloadId).mUpdate;
+                Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
                 if (cancelled) {
                     Log.d(TAG, "Download cancelled");
                     // Already notified
                 } else {
                     Log.e(TAG, "Download failed");
-                    removeDownloadClient(mDownloads.get(downloadId));
+                    removeDownloadClient(Objects.requireNonNull(mDownloads.get(downloadId)));
                     update.setStatus(UpdateStatus.PAUSED_ERROR);
                     notifyUpdateChange(downloadId);
                 }
@@ -200,7 +201,7 @@ public class UpdaterController {
             @Override
             public void update(long bytesRead, long contentLength, long speed, long eta,
                                boolean done) {
-                Update update = mDownloads.get(downloadId).mUpdate;
+                Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
                 if (contentLength <= 0) {
                     if (update.getFileSize() <= 0) {
                         return;
@@ -228,7 +229,7 @@ public class UpdaterController {
     private void verifyUpdateAsync(final String downloadId) {
         mVerifyingUpdates.add(downloadId);
         new Thread(() -> {
-            Update update = mDownloads.get(downloadId).mUpdate;
+            Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
             File file = update.getFile();
             if (file.exists() && verifyPackage(file)) {
                 file.setReadable(true, false);
@@ -315,7 +316,7 @@ public class UpdaterController {
         Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         if (mDownloads.containsKey(updateInfo.getDownloadId())) {
             Log.d(TAG, "Download (" + updateInfo.getDownloadId() + ") already added");
-            Update updateAdded = mDownloads.get(updateInfo.getDownloadId()).mUpdate;
+            Update updateAdded = Objects.requireNonNull(mDownloads.get(updateInfo.getDownloadId())).mUpdate;
             updateAdded.setAvailableOnline(availableOnline && updateAdded.getAvailableOnline());
             updateAdded.setDownloadUrl(updateInfo.getDownloadUrl());
             return false;
@@ -337,7 +338,7 @@ public class UpdaterController {
         if (!mDownloads.containsKey(downloadId) || isDownloading(downloadId)) {
             return false;
         }
-        Update update = mDownloads.get(downloadId).mUpdate;
+        Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
         File destination = new File(mDownloadRoot, update.getName());
         if (destination.exists()) {
             destination = Utils.appendSequentialNumber(destination);
@@ -359,7 +360,7 @@ public class UpdaterController {
             notifyUpdateChange(downloadId);
             return false;
         }
-        addDownloadClient(mDownloads.get(downloadId), downloadClient);
+        addDownloadClient(Objects.requireNonNull(mDownloads.get(downloadId)), downloadClient);
         update.setStatus(UpdateStatus.STARTING);
         notifyUpdateChange(downloadId);
         downloadClient.start();
@@ -372,7 +373,7 @@ public class UpdaterController {
         if (!mDownloads.containsKey(downloadId) || isDownloading(downloadId)) {
             return false;
         }
-        Update update = mDownloads.get(downloadId).mUpdate;
+        Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
         File file = update.getFile();
         if (file == null || !file.exists()) {
             Log.e(TAG, "The destination file of " + downloadId + " doesn't exist, can't resume");
@@ -401,7 +402,7 @@ public class UpdaterController {
                 notifyUpdateChange(downloadId);
                 return false;
             }
-            addDownloadClient(mDownloads.get(downloadId), downloadClient);
+            addDownloadClient(Objects.requireNonNull(mDownloads.get(downloadId)), downloadClient);
             update.setStatus(UpdateStatus.STARTING);
             notifyUpdateChange(downloadId);
             downloadClient.resume();
@@ -417,6 +418,7 @@ public class UpdaterController {
         }
 
         DownloadEntry entry = mDownloads.get(downloadId);
+        assert entry != null;
         entry.mDownloadClient.cancel();
         removeDownloadClient(entry);
         entry.mUpdate.setStatus(UpdateStatus.PAUSED);
@@ -441,7 +443,7 @@ public class UpdaterController {
         if (!mDownloads.containsKey(downloadId) || isDownloading(downloadId)) {
             return false;
         }
-        Update update = mDownloads.get(downloadId).mUpdate;
+        Update update = Objects.requireNonNull(mDownloads.get(downloadId)).mUpdate;
         update.setStatus(UpdateStatus.DELETED);
         update.setProgress(0);
         update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
@@ -482,7 +484,7 @@ public class UpdaterController {
 
     public boolean isDownloading(String downloadId) {
         return mDownloads.containsKey(downloadId) &&
-                mDownloads.get(downloadId).mDownloadClient != null;
+                Objects.requireNonNull(mDownloads.get(downloadId)).mDownloadClient != null;
     }
 
     public boolean hasActiveDownloads() {
@@ -522,7 +524,7 @@ public class UpdaterController {
         ABUpdateInstaller.getInstance(mContext, this).setPerformanceMode(enable);
     }
 
-    private class DownloadEntry {
+    private static class DownloadEntry {
         final Update mUpdate;
         DownloadClient mDownloadClient;
 

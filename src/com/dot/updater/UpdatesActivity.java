@@ -126,15 +126,11 @@ public class UpdatesActivity extends UpdatesListActivity {
         updateLastCheckedString();
 
         ImageButton mainIcon = findViewById(R.id.mainIcon);
-        new Handler().postDelayed(() -> {
+        new Handler(getMainLooper()).postDelayed(() -> {
             mainIcon.setImageResource(R.drawable.ic_settings);
-            new Handler().postDelayed(() -> mainIcon.setImageResource(R.drawable.ic_system_update), 2000);
+            new Handler(getMainLooper()).postDelayed(() -> mainIcon.setImageResource(R.drawable.ic_system_update), 2000);
         }, 3000);
         mainIcon.setOnClickListener(v -> showPreferencesDialog());
-
-        //TextView headerBuildDate = findViewById(R.id.header_build_date);
-        //headerBuildDate.setText(StringGenerator.getDateLocalizedUTC(this,
-        //        DateFormat.LONG, BuildInfoUtils.getBuildDateTimestamp()));
 
         bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 

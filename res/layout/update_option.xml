@@ -7,8 +7,10 @@
     android:layout_gravity="bottom"
     android:background="@drawable/header_gradient"
     android:orientation="horizontal"
-    android:padding="48dp"
-    android:translationZ="10dp">
+    android:paddingStart="48dp"
+    android:paddingTop="64dp"
+    android:paddingEnd="48dp"
+    android:paddingBottom="48dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"

@@ -91,7 +91,13 @@ public class Utils {
         update.setDownloadId(object.getString("id"));
         update.setType(object.getString("romtype"));
         update.setFileSize(object.getLong("size"));
-        update.setDownloadUrl(object.getString("url"));
+        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
+                SystemProperties.get(Constants.PROP_DEVICE));
+        String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
+        String downloadUrl = Constants.DOWNLOAD_URL.replace("${device}", device)
+                .replace("${type}", type.equals("gapps") ? "gapps" : "vanilla")
+                .replace("${file_name}", update.getName());
+        update.setDownloadUrl(downloadUrl);
         update.setVersion(object.getString("version"));
         Changelog changelog = new Changelog();
         JSONObject item = object.getJSONArray("changelog").getJSONObject(0);
@@ -99,25 +105,25 @@ public class Utils {
             changelog.setHasSystem(true);
             changelog.setSystemTitle(item.getString("systemTitle"));
             changelog.setSystemSummary(item.getString("systemSummary"));
-            Log.d("Changelog", "We have system");
+            Log.d("Changelog", "We have system changes");
         }
         if (!item.getString("securityTitle").equals("") || !item.getString("securitySummary").equals("")) {
             changelog.setHasSecurity(true);
             changelog.setSecurityTitle(item.getString("securityTitle"));
             changelog.setSecuritySummary(item.getString("securitySummary"));
-            Log.d("Changelog", "We have security");
+            Log.d("Changelog", "We have security changes");
         }
         if (!item.getString("settingsTitle").equals("") || !item.getString("settingsSummary").equals("")) {
             changelog.setHasSettings(true);
             changelog.setSettingsTitle(item.getString("settingsTitle"));
             changelog.setSettingsSummary(item.getString("settingsSummary"));
-            Log.d("Changelog", "We have settings");
+            Log.d("Changelog", "We have settings changes");
         }
         if (!item.getString("miscTitle").equals("") || !item.getString("miscSummary").equals("")) {
             changelog.setHasMisc(true);
             changelog.setMiscTitle(item.getString("miscTitle"));
             changelog.setMiscSummary(item.getString("miscSummary"));
-            Log.d("Changelog", "We have misc");
+            Log.d("Changelog", "We have misc changes");
         }
         update.setChangelog(changelog);
         return update;
@@ -151,14 +157,14 @@ public class Utils {
             throws IOException, JSONException {
         List<UpdateInfo> updates = new ArrayList<>();
 
-        String json = "";
+        StringBuilder json = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             for (String line; (line = br.readLine()) != null; ) {
-                json += line;
+                json.append(line);
             }
         }
 
-        JSONObject obj = new JSONObject(json);
+        JSONObject obj = new JSONObject(json.toString());
         JSONArray updatesList = obj.getJSONArray("response");
         try {
             UpdateInfo update = parseJsonUpdate(updatesList.getJSONObject(0));
@@ -174,31 +180,29 @@ public class Utils {
     }
 
     public static String getServerURL(Context context) {
-        String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
         String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
                 SystemProperties.get(Constants.PROP_DEVICE));
         String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
 
+        String gappsServerUrl = SystemProperties.get(Constants.PROP_UPDATER_GAPPS_URI);
         String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
         if (serverUrl.trim().isEmpty()) {
             serverUrl = context.getString(R.string.updater_server_url);
         }
+        if (gappsServerUrl.trim().isEmpty()) {
+            gappsServerUrl = context.getString(R.string.updater_server_url_gapps);
+        }
+        if (type.equals("gapps"))
+            return gappsServerUrl.replace("{device}", device);
+        else
+            return serverUrl.replace("{device}", device);
 
-        return serverUrl.replace("{device}", device)
-                .replace("{type}", type)
-                .replace("{incr}", incrementalVersion);
     }
 
     public static String getUpgradeBlockedURL(Context context) {
         String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
                 SystemProperties.get(Constants.PROP_DEVICE));
         return context.getString(R.string.blocked_update_info_url, device);
-    }
-
-    public static String getChangelogURL(Context context) {
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
-        return context.getString(R.string.menu_changelog_url, device);
     }
 
     public static void triggerUpdate(Context context, String downloadId) {

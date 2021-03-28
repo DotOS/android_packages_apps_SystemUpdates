@@ -40,6 +40,7 @@ public final class Constants {
     public static final String PROP_RELEASE_TYPE = "ro.dot.releasetype";
     public static final String PROP_UPDATER_ALLOW_DOWNGRADING = "dot.updater.allow_downgrading";
     public static final String PROP_UPDATER_URI = "dot.updater.uri";
+    public static final String PROP_UPDATER_GAPPS_URI = "dot.updater.gapps.uri";
     public static final String PREF_INSTALL_OLD_TIMESTAMP = "install_old_timestamp";
     public static final String PREF_INSTALL_NEW_TIMESTAMP = "install_new_timestamp";
     public static final String PREF_INSTALL_PACKAGE_PATH = "install_package_path";
@@ -47,6 +48,7 @@ public final class Constants {
     public static final String PREF_INSTALL_NOTIFIED = "install_notified";
     public static final String UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh";
     public static final String UPDATE_RECOVERY_PROPERTY = "persist.vendor.recovery_update";
+    public static final String DOWNLOAD_URL = "https://sourceforge.net/projects/dotos-downloads/files/dot11/${device}/${type}/${file_name}/download";
 
     private Constants() {
     }

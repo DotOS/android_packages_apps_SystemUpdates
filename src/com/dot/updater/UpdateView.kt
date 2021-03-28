@@ -123,7 +123,6 @@ class UpdateView : LinearLayout {
             return
         }
         noUpdates.visibility = GONE
-        actionCheck.visibility = GONE
         val activeLayout: Boolean = when (update!!.persistentStatus) {
             UpdateStatus.Persistent.UNKNOWN -> update!!.status == UpdateStatus.STARTING
             UpdateStatus.Persistent.VERIFIED -> update!!.status == UpdateStatus.INSTALLING
@@ -142,6 +141,7 @@ class UpdateView : LinearLayout {
         } else {
             handleNotActiveStatus(update!!)
         }
+        parseChangelog()
     }
 
     private fun createDate(timestamp: Long): CharSequence? {
@@ -169,14 +169,16 @@ class UpdateView : LinearLayout {
 
     private fun initListeners() {
         actionProgressPause.setOnClickListener {
-            mUpdaterController!!.pauseDownload(mDownloadId)
-            actionProgress.visibility = GONE
-            actionOptions.visibility = VISIBLE
+            if (!actionProgressBar.isIndeterminate) {
+                mUpdaterController!!.pauseDownload(mDownloadId)
+                hideEverythingBut(actionOptions)
+                actionOptions.visibility = VISIBLE
+            }
         }
         actionStartButton.setOnClickListener {
             mDownloadId?.let { it1 ->
                 startDownloadWithWarning(it1)
-                actionStart.visibility = GONE
+                hideEverythingBut(actionProgress)
                 actionProgress.visibility = VISIBLE
             }
         }
@@ -186,7 +188,7 @@ class UpdateView : LinearLayout {
                     update.file.length() == update.fileSize
             if (canInstall) {
                 mUpdaterController!!.resumeDownload(mDownloadId)
-                actionOptions.visibility = GONE
+                hideEverythingBut(actionProgress)
                 actionProgress.visibility = VISIBLE
             } else {
                 mActivity!!.showSnackbar(R.string.snack_update_not_installable,
@@ -211,6 +213,19 @@ class UpdateView : LinearLayout {
             val pm = mActivity!!.getSystemService(Context.POWER_SERVICE) as PowerManager
             pm.reboot(null)
         }
+    }
+
+    private fun hideEverythingBut(view: View) {
+        if (view.id != actionCheck.id)
+            actionCheck.visibility = View.GONE
+        if (view.id != actionInstall.id)
+            actionInstall.visibility = View.GONE
+        if (view.id != actionOptions.id)
+            actionOptions.visibility = View.GONE
+        if (view.id != actionProgress.id)
+            actionProgress.visibility = View.GONE
+        if (view.id != actionReboot.id)
+            actionReboot.visibility = View.GONE
     }
 
     private fun parseChangelog() {
@@ -254,6 +269,8 @@ class UpdateView : LinearLayout {
             recycler.isNestedScrollingEnabled = false
             recycler.adapter = adapter
             recycler.layoutManager = LinearLayoutManager(context)
+        } else {
+            Log.w("Changelog", "is Null")
         }
     }
 
@@ -261,7 +278,6 @@ class UpdateView : LinearLayout {
         mDownloadId = downloadId
         lateInit()
         invalidate()
-        parseChangelog()
     }
 
     fun setUpdaterController(updaterController: UpdaterController?) {
@@ -423,8 +439,9 @@ class UpdateView : LinearLayout {
             Action.REBOOT -> {
 
             }
-            else -> {
-
+            Action.PAUSE -> {
+                actionCheck.visibility = GONE
+                actionStart.visibility = GONE
             }
         }
         // button!!.alpha = if (enabled) 1f else mAlphaDisabledValue
