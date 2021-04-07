@@ -34,70 +34,76 @@
     <string name="installing_update_finished">Update installed</string>
     <string name="finalizing_package">Finalizing package installation</string>
     <string name="preparing_ota_first_boot">Preparing for first boot</string>
-    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
-    <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_preferences">Preferences</string>
-    <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
-    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
-    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
-    <string name="menu_show_changelog">Show changelog</string>
-    <string name="menu_ab_perf_mode">Prioritize update process</string>
-    <string name="menu_update_recovery">Update recovery</string>
-    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
-    <string name="snack_updates_found">New updates found</string>
-    <string name="snack_no_updates_found">No new updates found</string>
-    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_verification_failed">The update verification failed.</string>
-    <string name="snack_download_verified">Download completed.</string>
-    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
+    <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
+    <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
+    <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas. Jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos įkrovos, kad galėtumėte tęsti, <xliff:g id="percent_charging">%2$d</xliff:g>%%, jei įkraunama.</string>
+    <string name="reboot">Perkrauti</string>
+    <string name="menu_refresh">Atnaujinti</string>
+    <string name="menu_preferences">Nustatymai</string>
+    <string name="menu_auto_updates_check">Automatinis naujinimų tikrinimas</string>
+    <string name="menu_auto_updates_check_interval_daily">Kasdien</string>
+    <string name="menu_auto_updates_check_interval_weekly">Kartą per savaitę</string>
+    <string name="menu_auto_updates_check_interval_monthly">Kartą per mėnesį</string>
+    <string name="menu_auto_updates_check_interval_never">Niekada</string>
+    <string name="menu_auto_delete_updates">Pašalinti naujinimą įdiegus</string>
+    <string name="menu_delete_update">Pašalinti</string>
+    <string name="menu_copy_url">Kopijuoti URL</string>
+    <string name="menu_export_update">Eksportuoti naujinimą</string>
+    <string name="menu_show_changelog">Rodyti pakeitimus</string>
+    <string name="menu_ab_perf_mode">Suteikti prioritetą atnaujinimo procesui</string>
+    <string name="menu_update_recovery">Atnaujinti atkūrimą</string>
+    <string name="toast_forced_update_recovery">šiame įrenginyje yra neįmanoma išjungti atnaujinimus \"lineage\" atkūrimo režimui</string>
+    <string name="snack_updates_found">Rasti nauji atnaujinimai</string>
+    <string name="snack_no_updates_found">Nerasta jokių naujinių</string>
+    <string name="snack_updates_check_failed">Atnaujinimų rasti nepavyko. Prašome patikrinti savo interneto ryšį ir bandyti dar kartą.</string>
+    <string name="snack_download_failed">Nepavyko atsisiųsti. Patikrinkite interneto ryšį ir bandykite dar kartą vėliau.</string>
+    <string name="snack_download_verification_failed">Atnaujinimo tikrinimas nepavyko.</string>
+    <string name="snack_download_verified">Atsisiuntimas baigtas.</string>
+    <string name="snack_update_not_installable">Šis atnaujinimas negali būti įdiegtas ant esamos versijos.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="header_last_updates_check">Paskutinis tikrinimas: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
     <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
-    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
-    <string name="apply_update_dialog_title">Apply update</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
-    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
+    <string name="list_verifying_update">Tikrinamas atnaujinimas</string>
+    <string name="list_no_updates">Nerasta jokių naujinių. Jei norite patikrinti naujus naujinimus, naudokite mygtuką Atnaujinti.</string>
+    <string name="action_download">Atsisiųsti</string>
+    <string name="action_pause">Pristabdyti</string>
+    <string name="action_resume">Tęsti</string>
+    <string name="action_install">Įdiegti</string>
+    <string name="action_info">Informacija</string>
+    <string name="action_delete">Pašalinti</string>
+    <string name="action_cancel">Atšaukti</string>
+    <string name="confirm_delete_dialog_title">Ištrinti failą</string>
+    <string name="confirm_delete_dialog_message">Ruošiatės ištrinti atsiųstą atnaujinimą, tęsti?</string>
+    <string name="apply_update_dialog_title">Įdiegti atnaujinimą</string>
+    <string name="apply_update_dialog_message">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nPastaba: Ši funkcija reikalauja suderinamos atkūrimo programos, arba atnaujinimą teks diegti rankiniu būdu.</string>
+    <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nPastaba: Ši funkcija reikalauja suderinamos atkūrimo programos, arba atnaujinimą teks diegti rankiniu būdu.</string>
+    <string name="cancel_installation_dialog_message">Nutraukti diegimą</string>
     <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
+    <string name="toast_download_url_copied">URL nukopijuotas</string>
     <string name="dialog_export_title">Exporting update</string>
     <string name="notification_export_success">Update exported</string>
     <string name="notification_export_fail">Export error</string>
     <string name="toast_already_exporting">Already exporting an update</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 second left</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
     </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">1 minute left</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
     </plurals>
     <plurals name="eta_hours">
         <item quantity="one">1 hour left</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> hours left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
     </plurals>
     <string name="update_on_mobile_data_title">Warning</string>

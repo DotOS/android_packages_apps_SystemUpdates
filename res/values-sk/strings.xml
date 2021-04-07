@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,54 +23,58 @@
     <string name="download_completed_notification">Sťahovanie dokončené</string>
     <string name="download_starting_notification">Spúšťam sťahovanie</string>
     <string name="update_failed_notification">Aktualizácia zlyhala</string>
+    <string name="installation_suspended_notification">Inštalácia bola odložená</string>
     <string name="new_updates_found_title">Nové aktualizácie</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pozastaviť</string>
-    <string name="resume_button">Obnoviť</string>
+    <string name="pause_button">&amp;Pozastaviť</string>
+    <string name="resume_button">Pokračovať</string>
+    <string name="suspend_button">Prerušiť</string>
     <string name="installing_update">Inštalácia balíka aktualizácií</string>
     <string name="installing_update_error">Chyba pri inštalácii</string>
     <string name="installing_update_finished">Aktualizácia nainštalovaná</string>
-    <string name="finalizing_package">Dokončuje sa inštalácia balíka</string>
+    <string name="finalizing_package">Dokončuje sa inštalácia balíčka</string>
     <string name="preparing_ota_first_boot">Príprava na prvé spustenie</string>
     <string name="dialog_prepare_zip_message">Predbežná príprava aktualizácie</string>
-    <string name="dialog_battery_low_title">Vybitá batéria</string>
+    <string name="dialog_battery_low_title">Slabá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
     <string name="reboot">Reštartovať</string>
     <string name="menu_refresh">Obnoviť</string>
     <string name="menu_preferences">Predvoľby</string>
     <string name="menu_auto_updates_check">Automatická kontrola aktualizácií</string>
-    <string name="menu_auto_updates_check_interval_daily">Denne</string>
-    <string name="menu_auto_updates_check_interval_weekly">Týždenne</string>
-    <string name="menu_auto_updates_check_interval_monthly">Mesačne</string>
+    <string name="menu_auto_updates_check_interval_daily">Raz denne</string>
+    <string name="menu_auto_updates_check_interval_weekly">Raz za týždeň</string>
+    <string name="menu_auto_updates_check_interval_monthly">Raz za mesiac</string>
     <string name="menu_auto_updates_check_interval_never">Nikdy</string>
     <string name="menu_auto_delete_updates">Vymazať aktualizácie po nainštalovaní</string>
     <string name="menu_delete_update">Vymazať</string>
-    <string name="menu_copy_url">Kopírovať URL</string>
+    <string name="menu_copy_url">Skopírovať adresu URL</string>
     <string name="menu_export_update">Export aktualizácie</string>
     <string name="menu_show_changelog">Zobraziť zoznam zmien</string>
     <string name="menu_ab_perf_mode">Uprednostňovať proces aktualizácie</string>
+    <string name="menu_update_recovery">Aktualizovať recovery</string>
+    <string name="toast_forced_update_recovery">Na tomto zariadení nie je možné zakázať aktualizácie oddielu Lineage recovery.</string>
     <string name="snack_updates_found">Našli sa nové aktualizácie</string>
     <string name="snack_no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
-    <string name="snack_updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím vaše internetové pripojenie a skúste to znova neskôr.</string>
+    <string name="snack_updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím vaše internetové pripojenie a skúste to neskôr.</string>
     <string name="snack_download_failed">Sťahovanie zlyhalo. Skontrolujte vaše pripojenie a skúste to znovu.</string>
     <string name="snack_download_verification_failed">Overovanie aktualizácie zlyhalo.</string>
     <string name="snack_download_verified">Sťahovanie dokončené.</string>
     <string name="snack_update_not_installable">Táto aktualizácia sa nedá nainštalovať na aktuálnu zostavu.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
+    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Posledná kontrola: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> </string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) </string>
-    <string name="list_verifying_update">Overujem aktualizáciu</string>
-    <string name="list_no_updates">Neboli nájdené žiadne nové aktualizácie. Ak chcete ručne vyhľadať nové aktualizácie, použite tlačítko Aktualizovať.</string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">Overovanie aktualizácie</string>
+    <string name="list_no_updates">Neboli nájdené žiadne nové aktualizácie. Ak chcete manuálne vyhľadať nové aktualizácie, použite tlačidlo Obnoviť.</string>
     <string name="action_download">Stiahnuť</string>
-    <string name="action_pause">Pauza</string>
+    <string name="action_pause">&amp;Pozastaviť</string>
     <string name="action_resume">Pokračovať</string>
     <string name="action_install">Nainštalovať</string>
     <string name="action_info">Informácie</string>
-    <string name="action_delete">Odstrániť</string>
+    <string name="action_delete">Vymazať</string>
     <string name="action_cancel">Zrušiť</string>
     <string name="confirm_delete_dialog_title">Vymazať súbor</string>
     <string name="confirm_delete_dialog_message">Vymazať vybraný súbor aktualizácie?</string>
@@ -78,11 +82,11 @@
     <string name="apply_update_dialog_message">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>
     <string name="apply_update_dialog_message_ab">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie začne inštaláciu v pozadí.\n\nPo ukončení budete vyzvaný na reštart.</string>
     <string name="cancel_installation_dialog_message">Zrušiť inštaláciu?</string>
-    <string name="label_download_url">URL adresa</string>
+    <string name="label_download_url">URL stránky pre stiahnutie</string>
     <string name="toast_download_url_copied">URL skopírované</string>
     <string name="dialog_export_title">Export aktualizácie</string>
     <string name="notification_export_success">Aktualizácia exportovaná</string>
-    <string name="notification_export_fail">Chyba exportu</string>
+    <string name="notification_export_fail">Chyba pri exporte</string>
     <string name="toast_already_exporting">Aktualizácia sa už exportuje</string>
     <plurals name="eta_seconds">
         <item quantity="one">Zostáva 1 sekunda</item>
@@ -102,8 +106,8 @@
         <item quantity="many">Zostáva <xliff:g id="count">%d</xliff:g> hodín</item>
         <item quantity="other">Zostáva <xliff:g id="count">%d</xliff:g> hodín</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Upozornenie</string>
-    <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľký prenos mobilných dát. Prajete si pokračovať?</string>
+    <string name="update_on_mobile_data_title">Varovanie</string>
+    <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľkú spotrebu mobilných dát. Prajete si pokračovať?</string>
     <string name="checkbox_mobile_data_warning">Nabudúce nezobrazovať</string>
     <string name="menu_mobile_data_warning">Upozornenie mobilných dát</string>
     <string name="blocked_update_dialog_title">Aktualizácia bola zablokovaná</string>
@@ -112,4 +116,13 @@
     <string name="new_updates_channel_title">Nové aktualizácie</string>
     <string name="ongoing_channel_title">Prebiehajúce sťahovania</string>
     <string name="update_failed_channel_title">Aktualizácia zlyhala</string>
+    <string name="update_available">Aktualizácia dostupná</string>
+    <string name="system">Systém</string>
+    <string name="security">Zabezpečenie</string>
+    <string name="settings">Nastavenia</string>
+    <string name="misc">Rôzne</string>
+    <string name="maybe_later">Možno neskôr</string>
+    <string name="bunny">Nikdy sa nenudíte?</string>
+    <string name="nothing">Zatiaľ nie..</string>
+    <string name="hit">Máte zásah.</string>
 </resources>

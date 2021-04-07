@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,61 +15,114 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Не вдалося виконати перевірку</string>
+    <string name="verification_failed_notification">Перевірку не виконано</string>
     <string name="verifying_download_notification">Перевірка оновлення</string>
     <string name="downloading_notification">Завантаження</string>
     <string name="download_paused_notification">Завантаження призупинено</string>
     <string name="download_paused_error_notification">Помилка завантаження</string>
     <string name="download_completed_notification">Завантаження завершено</string>
     <string name="download_starting_notification">Початок завантаження</string>
+    <string name="update_failed_notification">Оновлення не вдалося</string>
+    <string name="installation_suspended_notification">Встановлення призупинено</string>
     <string name="new_updates_found_title">Нові оновлення</string>
-    <string name="text_download_speed">%1$s, %2$s/с</string>
-    <string name="pause_button">Пауза</string>
-    <string name="resume_button">Продовжити</string>
-    <string name="installing_update">Пакунок оновлення встановлюється</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="pause_button">Призупинити</string>
+    <string name="resume_button">Відновити</string>
+    <string name="suspend_button">Призупинити</string>
+    <string name="installing_update">Інсталяція пакету оновлення</string>
     <string name="installing_update_error">Помилка встановлення</string>
     <string name="installing_update_finished">Оновлення встановлено</string>
-    <string name="finalizing_package">Завершення встановлення</string>
-    <string name="preparing_ota_first_boot">Підготовка до першого завантаження</string>
+    <string name="finalizing_package">Завершення встановлення пакету</string>
+    <string name="preparing_ota_first_boot">Підготовка до першого запкску</string>
     <string name="dialog_prepare_zip_message">Підготовка оновлення</string>
-    <string name="reboot">Перезавантаження</string>
+    <string name="dialog_battery_low_title">Низький заряд батареї</string>
+    <string name="dialog_battery_low_message_pct">Рівень заряду батареї занизький, для продовження необхідно хоча б <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряду або <xliff:g id="percent_charging">%2$d</xliff:g>%% під час зарядки.</string>
+    <string name="reboot">Перезавантажити</string>
     <string name="menu_refresh">Оновити</string>
+    <string name="menu_preferences">Налаштування</string>
     <string name="menu_auto_updates_check">Автоматична перевірка оновлень</string>
+    <string name="menu_auto_updates_check_interval_daily">Раз на день</string>
+    <string name="menu_auto_updates_check_interval_weekly">Раз на тиждень</string>
+    <string name="menu_auto_updates_check_interval_monthly">Раз на місяць</string>
+    <string name="menu_auto_updates_check_interval_never">Ніколи</string>
     <string name="menu_auto_delete_updates">Видалити файли оновлення після інсталяції</string>
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_copy_url">Копіювати URL</string>
-    <string name="menu_export_update">Експорт оновлення</string>
-    <string name="snack_updates_found">Знайдено оновлення</string>
+    <string name="menu_export_update">Експортувати оновлення</string>
+    <string name="menu_show_changelog">Показати журнал змін</string>
+    <string name="menu_ab_perf_mode">Пріоритет процесу оновлення</string>
+    <string name="menu_update_recovery">Оновити Recovery</string>
+    <string name="toast_forced_update_recovery">Неможливо вимкнути оновлення Lineage Recovery на цьому пристрої.</string>
+    <string name="snack_updates_found">Доступні нові оновлення</string>
     <string name="snack_no_updates_found">Оновлень не знайдено</string>
-    <string name="snack_updates_check_failed">Перевірка оновлення не вдалася. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>
+    <string name="snack_updates_check_failed">Не вдалося перевірити оновлення. Будь-ласка, перевірте підключення до Інтернету і повторіть спробу пізніше.</string>
     <string name="snack_download_failed">Завантаження оновлення не вдалось. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>
-    <string name="snack_download_verification_failed">Не пройшла перевірка оновлення.</string>
+    <string name="snack_download_verification_failed">Помилка перевірки оновлення.</string>
     <string name="snack_download_verified">Завантаження завершено.</string>
-    <string name="snack_update_not_installable">Це оновлення не можна інсталювати на поточну збірку.</string>
-    <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
+    <string name="snack_update_not_installable">Це оновлення не можна інсталювати на вже встановлену збірку.</string>
+    <string name="header_title_text">DotOS %1$s</string>
+    <string name="header_android_version">Android <xliff:g id="Version">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Остання перевірка: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Перевірка оновлення</string>
     <string name="list_no_updates">Оновлень не знайдено. Щоб вручну перевірити наявність оновлень, натисніть кнопку Оновити.</string>
     <string name="action_download">Завантажити</string>
+    <string name="action_pause">Призупинити</string>
+    <string name="action_resume">Відновити</string>
+    <string name="action_install">Встановити</string>
+    <string name="action_info">Інформація</string>
+    <string name="action_delete">Видалити</string>
+    <string name="action_cancel">Скасувати</string>
     <string name="confirm_delete_dialog_title">Видалити файл</string>
     <string name="confirm_delete_dialog_message">Видалити обраний файл оновлення?</string>
     <string name="apply_update_dialog_title">Застосувати оновлення</string>
-    <string name="apply_update_dialog_message">Ви збираєтесь оновитись на <xliff:g id="update_name">%1$s</xliff:g>.\n\nЯкщо Ви натиснете <xliff:g id="ok">%2$s</xliff:g>, пристрій перезавантажиться у Recovery для встановлення.\n\nПримітка: ця функція потребує сумісне Recovery, в іншому випадку оновлення необхідно встановити вручну.</string>
-    <string name="apply_update_dialog_message_ab">Ви збираєтесь оновитись на <xliff:g id="update_name">%1$s</xliff:g>.\n\nЯкщо ви натиснети на <xliff:g id="ok">%2$s</xliff:g>, пристрій почне встановлення у фоновому режимі.\n\nПісля встановлення вам буде запропоновано перезавантажити пристрій.</string>
-    <string name="label_download_url">URL-адреса завантаження</string>
-    <string name="toast_download_url_copied">URL-адресу скопійовано</string>
-    <string name="dialog_export_title">Експорт оновлення</string>
+    <string name="apply_update_dialog_message">Ви збираєтесь оновитися до <xliff:g id="filename">%s</xliff:g>.\n\nКоли ви натиснете кнопку \"Оновити\", пристрій перезавантажиться в Recovery для встановлення оновлення.\n\nЗауважте, ця функція вимагає сумісний Recovery, інакше відновлення доведеться встановити вручну.</string>
+    <string name="apply_update_dialog_message_ab">Ви маєте намір перейти на <xliff:g id="update_name">%1$s</xliff:g>.\n\nЯкщо натиснути <xliff:g id="ok">-%2$s-</xliff:g>, пристрій розпочне установку у фоновому режимі.\n\nпісля завершення, вам буде запропоновано перезавантажити.</string>
+    <string name="cancel_installation_dialog_message">Скасувати встановлення?</string>
+    <string name="label_download_url">Завантажити URL</string>
+    <string name="toast_download_url_copied">Адресу скопійовано</string>
+    <string name="dialog_export_title">Експортувати оновлення</string>
     <string name="notification_export_success">Оновлення експортовано</string>
     <string name="notification_export_fail">Помилка експорту</string>
-    <string name="update_on_mobile_data_title">Попередження</string>
-    <string name="update_on_mobile_data_message">Ви збираєтесь завантажити пакет оновлень за допомогою мобільних даних, що ймовірно призведе до високого використання мобільного трафіку. Хочете продовжити?</string>
+    <string name="toast_already_exporting">Оновлення вже експортується</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">залишилась одна секунда</item>
+        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> секунди</item>
+        <item quantity="many">залишилось <xliff:g id="count">%d</xliff:g> секунди</item>
+        <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> секунди</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">Залишилась одна хвилина</item>
+        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="many">залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">залишилась одна година</item>
+        <item quantity="few">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="many">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="other">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Увага</string>
+    <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що, ймовірно, призведе до високого використання даних. Ви хочете продовжити?</string>
     <string name="checkbox_mobile_data_warning">Не показувати знову</string>
     <string name="menu_mobile_data_warning">Попередження про мобільні дані</string>
-    <string name="blocked_update_dialog_title">Оновлення заблоковане</string>
+    <string name="blocked_update_dialog_title">Оновлення заблоковано</string>
     <string name="blocked_update_dialog_message">Це оновлення не можна інсталювати за допомогою штатного оновлювача.  Будь ласка, прочитайте <xliff:g id="info_url">%1$s</xliff:g> для отримання додаткової інформації.</string>
+    <string name="export_channel_title">Експорт завершено</string>
     <string name="new_updates_channel_title">Нові оновлення</string>
     <string name="ongoing_channel_title">Поточні завантаження</string>
+    <string name="update_failed_channel_title">Оновлення не вдалося</string>
+    <string name="update_available">Доступні оновлення</string>
+    <string name="system">Система</string>
+    <string name="security">Безпека</string>
+    <string name="settings">Налаштування</string>
+    <string name="misc">Різне</string>
+    <string name="maybe_later">Мабуть, пізніше</string>
+    <string name="bunny">Ви ніколи не починаєте нудьгувати?</string>
+    <string name="nothing">Ще нічого..</string>
+    <string name="hit">В точку.</string>
 </resources>

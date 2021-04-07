@@ -44,11 +44,11 @@
     <string name="menu_auto_updates_check_interval_daily">Once a day</string>
     <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
     <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
+    <string name="menu_auto_updates_check_interval_never">कहिले पनि होइन</string>
     <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
+    <string name="menu_delete_update">मेटाउन</string>
+    <string name="menu_copy_url">URL प्रतिलिपि गर्नुहोस्</string>
+    <string name="menu_export_update">निर्यात अपडेट</string>
     <string name="menu_show_changelog">Show changelog</string>
     <string name="menu_ab_perf_mode">Prioritize update process</string>
     <string name="menu_update_recovery">Update recovery</string>

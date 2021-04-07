@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,25 +19,25 @@
     <string name="verifying_download_notification">Ověření aktualizace</string>
     <string name="downloading_notification">Stahování</string>
     <string name="download_paused_notification">Stahování pozastaveno</string>
-    <string name="download_paused_error_notification">Chyba při stahování</string>
-    <string name="download_completed_notification">Stahování úspěšné</string>
+    <string name="download_paused_error_notification">Chyba stahování</string>
+    <string name="download_completed_notification">Stahování dokončeno</string>
     <string name="download_starting_notification">Zahajování stahování</string>
-    <string name="update_failed_notification">Aktualizace se nezdařila</string>
-    <string name="installation_suspended_notification">Instalace odložena</string>
+    <string name="update_failed_notification">Aktualizace selhala</string>
+    <string name="installation_suspended_notification">Instalace byla odložena</string>
     <string name="new_updates_found_title">Nové aktualizace</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="pause_button">Pozastavit</string>
-    <string name="resume_button">Obnovit</string>
-    <string name="suspend_button">Pozastavit</string>
+    <string name="resume_button">Pokračovat</string>
+    <string name="suspend_button">Přerušit</string>
     <string name="installing_update">Instalace balíčku aktualizace</string>
     <string name="installing_update_error">Chyba instalace</string>
-    <string name="installing_update_finished">Aktualizace byla nainstalována</string>
+    <string name="installing_update_finished">Aktualizace nainstalována</string>
     <string name="finalizing_package">Dokončování instalace balíčku</string>
     <string name="preparing_ota_first_boot">Příprava na první spuštění</string>
     <string name="dialog_prepare_zip_message">Příprava předběžné aktualizace</string>
-    <string name="dialog_battery_low_title">Slabá baterie</string>
+    <string name="dialog_battery_low_title">Nízký stav baterie</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabití baterie je příliš nízká, potřebujete alespoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterie pro pokračování, <xliff:g id="percent_charging">%2$d</xliff:g>%% při nabíjení.</string>
-    <string name="reboot">Reboot</string>
+    <string name="reboot">Restartovat</string>
     <string name="menu_refresh">Obnovit</string>
     <string name="menu_preferences">Předvolby</string>
     <string name="menu_auto_updates_check">Automatická kontrola aktualizací</string>
@@ -51,31 +51,33 @@
     <string name="menu_export_update">Export aktualizace</string>
     <string name="menu_show_changelog">Zobrazit seznam změn</string>
     <string name="menu_ab_perf_mode">Upřednostňovat proces aktualizace</string>
+    <string name="menu_update_recovery">Aktualizovat recovery oddíl</string>
+    <string name="toast_forced_update_recovery">Na tomto zařízení není možné zakázat aktualizace oddílu Lineage recovery.</string>
     <string name="snack_updates_found">Nalezeny nové aktualizace</string>
     <string name="snack_no_updates_found">Nové aktualizace nenalezeny</string>
-    <string name="snack_updates_check_failed">Zjištění nové verze selhalo. Prosím zkontrolujte připojení k internetu a pokus opakujte.</string>
-    <string name="snack_download_failed">Stahování selhalo. Prosím zkontrolujte připojení k internetu a pokus opakujte.</string>
+    <string name="snack_updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
+    <string name="snack_download_failed">Stahování selhalo. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
     <string name="snack_download_verification_failed">Ověření aktualizace se nezdařilo.</string>
-    <string name="snack_download_verified">Stahování úspěšné.</string>
+    <string name="snack_download_verified">Stahování dokončeno.</string>
     <string name="snack_update_not_installable">Tuto aktualizaci nelze nainstalovat přes aktuální sestavení.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
+    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Poslední kontrola: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Ověření aktualizace</string>
+    <string name="list_verifying_update">Ověřování aktualizace</string>
     <string name="list_no_updates">Nebyly nalezeny žádné nové aktualizace. Chcete-li ručně vyhledat nové aktualizace, použijte tlačítko „Obnovit“.</string>
     <string name="action_download">Stáhnout</string>
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
     <string name="action_install">Instalovat</string>
-    <string name="action_info">Informace</string>
+    <string name="action_info">Info</string>
     <string name="action_delete">Odstranit</string>
     <string name="action_cancel">Zrušit</string>
-    <string name="confirm_delete_dialog_title">Smazat soubor</string>
-    <string name="confirm_delete_dialog_message">Smazat zvolený soubor aktualizace?</string>
+    <string name="confirm_delete_dialog_title">Odstranit soubor</string>
+    <string name="confirm_delete_dialog_message">Odstranit vybraný soubor aktualizace?</string>
     <string name="apply_update_dialog_title">Použít aktualizaci</string>
     <string name="apply_update_dialog_message">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>.\n\nPokud stisknete <xliff:g id="ok">%2$s</xliff:g>, telefon se restartuje do režimu Recovery, kde budete pokračovat v instalaci aktualizace.\n\nPoznámka: tato funkce vyžaduje nainstalovaný kompatibilní režim Recovery nebo je nutné instalaci provést ručně.</string>
     <string name="apply_update_dialog_message_ab">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>.\n\nPokud stisknete <xliff:g id="ok">%2$s</xliff:g>, spustí se instalace na pozadí.\n\nPo dokončení budete vyzváni k restartu.</string>
@@ -113,5 +115,14 @@
     <string name="export_channel_title">Dokončení exportu</string>
     <string name="new_updates_channel_title">Nové aktualizace</string>
     <string name="ongoing_channel_title">Probíhající stahování</string>
-    <string name="update_failed_channel_title">Aktualizace se nezdařila</string>
+    <string name="update_failed_channel_title">Aktualizace selhala</string>
+    <string name="update_available">Je dostupná aktualizace</string>
+    <string name="system">Systém</string>
+    <string name="security">Zabezpečení</string>
+    <string name="settings">Nastavení</string>
+    <string name="misc">Různé</string>
+    <string name="maybe_later">Možná později</string>
+    <string name="bunny">Nikdy se nenudíte?</string>
+    <string name="nothing">Zatím ne..</string>
+    <string name="hit">Máte zásah.</string>
 </resources>

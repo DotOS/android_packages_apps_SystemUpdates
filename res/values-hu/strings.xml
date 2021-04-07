@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -35,12 +35,12 @@
     <string name="finalizing_package">A csomagtelepítés véglegesítése</string>
     <string name="preparing_ota_first_boot">Felkészülés az első indításra</string>
     <string name="dialog_prepare_zip_message">A frissítés előzetes előkészítése</string>
-    <string name="dialog_battery_low_title">Alacsony akkumulátorszint</string>
+    <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
 illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <string name="reboot">Újraindítás</string>
     <string name="menu_refresh">Frissítés</string>
-    <string name="menu_preferences">Testreszabás</string>
+    <string name="menu_preferences">Tulajdonságok</string>
     <string name="menu_auto_updates_check">Automatikus frissítésellenőrzés</string>
     <string name="menu_auto_updates_check_interval_daily">Naponta egyszer</string>
     <string name="menu_auto_updates_check_interval_weekly">Hetente egyszer</string>
@@ -48,35 +48,37 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="menu_auto_updates_check_interval_never">Soha</string>
     <string name="menu_auto_delete_updates">A frissítőcsomag törlése telepítés után</string>
     <string name="menu_delete_update">Törlés</string>
-    <string name="menu_copy_url">A webcím másolása</string>
-    <string name="menu_export_update">A frissítés exportálása</string>
-    <string name="menu_show_changelog">A változások listájának megjelenítése</string>
-    <string name="menu_ab_perf_mode">Állítsa fontossági sorrendbe a frissítési folyamatot</string>
+    <string name="menu_copy_url">Webcím-másolás</string>
+    <string name="menu_export_update">Frissítés-exportálás</string>
+    <string name="menu_show_changelog">Változáslista</string>
+    <string name="menu_ab_perf_mode">A frissítési folyamat fontossági sorrendbe állítása</string>
+    <string name="menu_update_recovery">Recovery-frissítés</string>
+    <string name="toast_forced_update_recovery">Ezen a készüléken nem lehet letiltani a Lineage Recovery frissítéseket.</string>
     <string name="snack_updates_found">Új frissítés érhető el</string>
     <string name="snack_no_updates_found">Nem található új frissítés</string>
     <string name="snack_updates_check_failed">Nem sikerült a frissítéskeresés. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
     <string name="snack_download_failed">A letöltés meghiúsult. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
-    <string name="snack_download_verification_failed">A frissítés ellenőrzése sikertelen.</string>
+    <string name="snack_download_verification_failed">A frissítés ellenőrzése meghiúsult.</string>
     <string name="snack_download_verified">A letöltés befejeződött.</string>
     <string name="snack_update_not_installable">Ez a frissítés nem telepíthető a jelenlegi verzióra.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Utolsó ellenőrzés: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g>-ból (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">Legutóbb ellenőrizve: <xliff:g id="date" example="11 September 1971">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g>-ból</string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g>-ból - (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Frissítésellenőrzés</string>
-    <string name="list_no_updates">Nem található új frissítés. A manuális ellenőrzéshez használja a Frissítés gombot.</string>
+    <string name="list_no_updates">Nincsenek új frissítések. A manuális ellenőrzéséhez, használja a Frissítés gombot.</string>
     <string name="action_download">Letöltés</string>
     <string name="action_pause">Szüneteltetés</string>
     <string name="action_resume">Folytatás</string>
     <string name="action_install">Telepítés</string>
     <string name="action_info">Információ</string>
     <string name="action_delete">Törlés</string>
-    <string name="action_cancel">Mégse</string>
+    <string name="action_cancel">Visszavonás</string>
     <string name="confirm_delete_dialog_title">Fájltörlés</string>
-    <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a letöltött frissítőfájlt?</string>
+    <string name="confirm_delete_dialog_message">Törölni szeretné a kiválasztott frissítőfájlt?</string>
     <string name="apply_update_dialog_title">A frissítés telepítése</string>
     <string name="apply_update_dialog_message">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.</string>
     <string name="apply_update_dialog_message_ab">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék elkezdi a telepítést a háttérben.\n\nAmint kész, újraindításra lesz szükség.</string>
@@ -85,7 +87,7 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="toast_download_url_copied">Az URL másolva</string>
     <string name="dialog_export_title">A frissítés exportálása</string>
     <string name="notification_export_success">A frissítés exportálva</string>
-    <string name="notification_export_fail">Exportálás hiba</string>
+    <string name="notification_export_fail">Exportálási hiba</string>
     <string name="toast_already_exporting">Egy frissítés exportálása már folyamatban van</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 másodperc van hátra</item>
@@ -107,6 +109,15 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="blocked_update_dialog_message">Ez a frissítés nem telepíthető a Frissítés alkalmazással. További információért olvassa el a következőt: <xliff:g id="info_url">%1$s</xliff:g></string>
     <string name="export_channel_title">Exportálás-véglegesítés</string>
     <string name="new_updates_channel_title">Új frissítések</string>
-    <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
-    <string name="update_failed_channel_title">A frissítés sikertelen</string>
+    <string name="ongoing_channel_title">Ongoing downloads</string>
+    <string name="update_failed_channel_title">Update failed</string>
+    <string name="update_available">Update Available</string>
+    <string name="system">System</string>
+    <string name="security">Security</string>
+    <string name="settings">Settings</string>
+    <string name="misc">Miscellaneous</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="bunny">You\'re never get bored?</string>
+    <string name="nothing">Nothing yet..</string>
+    <string name="hit">You got a hit.</string>
 </resources>

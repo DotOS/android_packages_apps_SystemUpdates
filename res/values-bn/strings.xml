@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017-2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="verification_failed_notification">যাচাইকরণ ব্যর্থ হয়েছে</string>
+    <string name="verifying_download_notification">আপডেট যাচাইকরণ হচ্ছে</string>
+    <string name="downloading_notification">ডাউনলোড হচ্ছে</string>
+    <string name="download_paused_notification">ডাউনলোড থামানো হয়েছে</string>
+    <string name="download_paused_error_notification">ডাউনলোডে ত্রুটি হয়েছে</string>
+    <string name="download_completed_notification">ডাউনলোড সম্পূর্ণ হয়েছে</string>
+    <string name="download_starting_notification">ডাউনলোড শুরু হচ্ছে</string>
+    <string name="update_failed_notification">আপডেট ব্যর্থ</string>
+    <string name="installation_suspended_notification">ইনস্টল স্থগিত</string>
+    <string name="new_updates_found_title">নতুন আপডেট গুলো</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="pause_button">বিরতি দিন</string>
+    <string name="resume_button">পুনঃসূচনা</string>
+    <string name="suspend_button">স্থগিত করা</string>
+    <string name="installing_update">আপডেট প্যাকেজটি ইনস্টল করা হচ্ছে</string>
+    <string name="installing_update_error">ইনস্টলে ত্রুটি</string>
+    <string name="installing_update_finished">আপডেট ইনস্টল করা হয়েছে</string>
+    <string name="finalizing_package">প্যাকেজ সংস্থাপন চূড়ান্ত করা হচ্ছে</string>
+    <string name="preparing_ota_first_boot">প্রথম বুটের জন্য তৈরি হচ্ছে</string>
+    <string name="dialog_prepare_zip_message">প্রারম্ভিক আপডেটের প্রস্তুতি</string>
+    <string name="dialog_battery_low_title">সল্প ব্যাটারি</string>
+    <string name="dialog_battery_low_message_pct">ব্যাটারির কার্যশক্তি খুবই কম, বহাল রাখার জন্য পুরো ব্যাটারির অন্তত শতকরা <xliff:g id="percent_discharging">%1$d</xliff:g>%% অংশ, এবং চার্জিং হলে <xliff:g id="percent_charging">%2$d</xliff:g>%% অংশ প্রয়োজন.</string>
+    <string name="reboot">রিবুট</string>
+    <string name="menu_refresh">রিফ্রেশ</string>
+    <string name="menu_preferences">পছন্দ</string>
+    <string name="menu_auto_updates_check">স্বয়ংক্রিয় হালনাগাদ চেক করা</string>
+    <string name="menu_auto_updates_check_interval_daily">প্রতিদিনে একবার</string>
+    <string name="menu_auto_updates_check_interval_weekly">সপ্তাহে একবার</string>
+    <string name="menu_auto_updates_check_interval_monthly">মাসে একবার</string>
+    <string name="menu_auto_updates_check_interval_never">কখনো না</string>
+    <string name="menu_auto_delete_updates">ইনস্টল শেষে আপডেট ফাইল মুছে ফেলুন</string>
+    <string name="menu_delete_update">মুছে ফেলুন</string>
+    <string name="menu_copy_url">ইউআরএল-টার অনুলিপি করুন</string>
+    <string name="menu_export_update">হালনাগাদ এক্সপোর্ট করুন</string>
+    <string name="menu_show_changelog">পরিবর্তনসূচী দেখান</string>
+    <string name="menu_ab_perf_mode">উন্নোতিকরনের প্রক্রিয়ায় অগ্রাধিকার</string>
+    <string name="menu_update_recovery">রিকভারি আপডেট</string>
+    <string name="toast_forced_update_recovery">এই ডিভাইসে লিনিয়েজ রিকভারি এর আপডেট বন্ধ করা সম্ভব নয়</string>
+    <string name="snack_updates_found">নতুন আপডেট পাওয়া গিয়েছে</string>
+    <string name="snack_no_updates_found">কোনো নতুন আপডেট পাওয়া যায়নি</string>
+    <string name="snack_updates_check_failed">আপডেট চেক ব্যর্থ হয়েছে। অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন এবং পরে আবার চেষ্টা করুন।</string>
+    <string name="snack_download_failed">ডাউনলোড ব্যর্থ। আপনার ইন্টারনেট সংযোগ চেক করে আবার চেষ্টা করুন</string>
+    <string name="snack_download_verification_failed">আপডেট যাচাইকরণ ব্যর্থ হয়েছে</string>
+    <string name="snack_download_verified">ডাউনলোড সম্পন্ন.</string>
+    <string name="snack_update_not_installable">বর্তমান বিল্ড এর ওপর এই আপডেটটি ইনস্টল করা যাবে না.</string>
+    <string name="header_title_text">ডট ওএস\n%1$s</string>
+    <string name="header_android_version">এন্ড্রোয়েড <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">সর্বশেষ নিয়ন্ত্রিত <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">ডট ওএস<xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="ভার্সন" example="5.0">%1$s</xliff:g> - <xliff:g id="তারিখ" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">Verifying update</string>
+    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
+    <string name="action_download">Download</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_install">Install</string>
+    <string name="action_info">Info</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="confirm_delete_dialog_title">Delete file</string>
+    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
+    <string name="apply_update_dialog_title">Apply update</string>
+    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
+    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
+    <string name="label_download_url">Download URL</string>
+    <string name="toast_download_url_copied">URL Copied</string>
+    <string name="dialog_export_title">Exporting update</string>
+    <string name="notification_export_success">Update exported</string>
+    <string name="notification_export_fail">Export error</string>
+    <string name="toast_already_exporting">Already exporting an update</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 hour left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
+    <string name="menu_mobile_data_warning">Mobile data warning</string>
+    <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
+    <string name="export_channel_title">Export completion</string>
+    <string name="new_updates_channel_title">New updates</string>
+    <string name="ongoing_channel_title">Ongoing downloads</string>
+    <string name="update_failed_channel_title">Update failed</string>
+    <string name="update_available">Update Available</string>
+    <string name="system">System</string>
+    <string name="security">Security</string>
+    <string name="settings">Settings</string>
+    <string name="misc">Miscellaneous</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="bunny">You\'re never get bored?</string>
+    <string name="nothing">Nothing yet..</string>
+    <string name="hit">You got a hit.</string>
+</resources>

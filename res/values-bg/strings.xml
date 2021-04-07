@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,97 +15,108 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Неуспешна проверка</string>
-    <string name="verifying_download_notification">Проверено обновяване</string>
-    <string name="downloading_notification">Сваляне</string>
-    <string name="download_paused_notification">Пауза на сваляне</string>
-    <string name="download_paused_error_notification">Грешка при изтегляне</string>
-    <string name="download_completed_notification">Изтеглянето приключи</string>
-    <string name="download_starting_notification">Започни сваляне</string>
-    <string name="update_failed_notification">Актуализацията прекратена</string>
-    <string name="installation_suspended_notification">Инсталацията е прекратена</string>
-    <string name="new_updates_found_title">Нови актуализации</string>
+    <string name="verification_failed_notification">Verification failed</string>
+    <string name="verifying_download_notification">Verifying update</string>
+    <string name="downloading_notification">Downloading</string>
+    <string name="download_paused_notification">Download paused</string>
+    <string name="download_paused_error_notification">Download error</string>
+    <string name="download_completed_notification">Download completed</string>
+    <string name="download_starting_notification">Starting download</string>
+    <string name="update_failed_notification">Update failed</string>
+    <string name="installation_suspended_notification">Installation suspended</string>
+    <string name="new_updates_found_title">New updates</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Пауза</string>
-    <string name="resume_button">Възобнови</string>
-    <string name="suspend_button">Прекратено</string>
-    <string name="installing_update">Инсталиране на пакета за актуализация</string>
-    <string name="installing_update_error">Грешка при инсталиране</string>
-    <string name="installing_update_finished">Актуализацията е инсталирана</string>
-    <string name="finalizing_package">Финализиране на пакетната инсталация</string>
-    <string name="preparing_ota_first_boot">Подготовка за първо зареждане</string>
-    <string name="dialog_prepare_zip_message">Предварителна подготовка на актуализацията</string>
-    <string name="dialog_battery_low_title">Изтощена батерия</string>
-    <string name="dialog_battery_low_message_pct">Нивото на батерията е прекалено ниско, необходимо е най-малко <xliff:g id="percent_discharging">%1$d</xliff:g>%% за да продължите, <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
-    <string name="reboot">Рестартиране</string>
-    <string name="menu_refresh">Опресняване</string>
-    <string name="menu_preferences">Настройки</string>
-    <string name="menu_auto_updates_check">Автоматична проверка за актуализациите</string>
-    <string name="menu_auto_updates_check_interval_daily">Ежедневно</string>
-    <string name="menu_auto_updates_check_interval_weekly">Ежеседмично</string>
-    <string name="menu_auto_updates_check_interval_monthly">Ежемесечно</string>
-    <string name="menu_auto_updates_check_interval_never">Никога</string>
-    <string name="menu_auto_delete_updates">Изтриване на актуализациите след инсталиране</string>
-    <string name="menu_delete_update">Изтриване</string>
-    <string name="menu_copy_url">Копирай адреса</string>
-    <string name="menu_export_update">Експортиране на актуализация</string>
-    <string name="menu_show_changelog">Покажи промените</string>
-    <string name="menu_ab_perf_mode">Приоритет на процеса на актуализиране</string>
-    <string name="snack_updates_found">Намерена е нова актуализация</string>
-    <string name="snack_no_updates_found">Няма нови актуализации</string>
-    <string name="snack_updates_check_failed">Проверката за актуализации се провали. Моля проверете връзката с интернет и опитайте отново по-късно.</string>
-    <string name="snack_download_failed">Неуспешно изтегляне. Моля проверете вашата интернет връзка и опитайте отново по-късно.</string>
-    <string name="snack_download_verification_failed">Проверката на актуализацията е неуспешна.</string>
-    <string name="snack_download_verified">Изтеглянето приключи.</string>
-    <string name="snack_update_not_installable">Тази актуализация не може да бъде инсталирана на текущата версия.</string>
+    <string name="pause_button">Pause</string>
+    <string name="resume_button">Resume</string>
+    <string name="suspend_button">Suspend</string>
+    <string name="installing_update">Installing update package</string>
+    <string name="installing_update_error">Install error</string>
+    <string name="installing_update_finished">Update installed</string>
+    <string name="finalizing_package">Finalizing package installation</string>
+    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
+    <string name="dialog_battery_low_title">Low battery</string>
+    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
+    <string name="reboot">Reboot</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_auto_updates_check">Auto updates check</string>
+    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
+    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
+    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
+    <string name="menu_auto_updates_check_interval_never">Never</string>
+    <string name="menu_auto_delete_updates">Delete updates when installed</string>
+    <string name="menu_delete_update">Delete</string>
+    <string name="menu_copy_url">Copy URL</string>
+    <string name="menu_export_update">Export update</string>
+    <string name="menu_show_changelog">Show changelog</string>
+    <string name="menu_ab_perf_mode">Prioritize update process</string>
+    <string name="menu_update_recovery">Update recovery</string>
+    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
+    <string name="snack_updates_found">New updates found</string>
+    <string name="snack_no_updates_found">No new updates found</string>
+    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
+    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
+    <string name="snack_download_verification_failed">The update verification failed.</string>
+    <string name="snack_download_verified">Download completed.</string>
+    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Последна проверка: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> от <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Проверка на актуализацията</string>
-    <string name="list_no_updates">Не са намерени нови актуализации. За да проверите ръчно за нови актуализации, използвайте бутона за обновяване.</string>
-    <string name="action_download">Изтегли</string>
-    <string name="action_pause">Пауза</string>
-    <string name="action_resume">Възобнови</string>
-    <string name="action_install">Инсталиране</string>
-    <string name="action_info">Информация</string>
-    <string name="action_delete">Изтриване</string>
-    <string name="action_cancel">Отказ</string>
-    <string name="confirm_delete_dialog_title">Изтриване на файл</string>
-    <string name="confirm_delete_dialog_message">Да бъде ли изтрит файлът на избраната актуализация?</string>
-    <string name="apply_update_dialog_title">Приложи актуализацията</string>
-    <string name="apply_update_dialog_message">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nако натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще се рестартира в режим на възстановяване, за да инсталира актуализацията. \ n \ nЗабележка: Тази функция изисква съвместимо Recovery или актуализации трябва да бъдат инсталирани ръчно.</string>
-    <string name="apply_update_dialog_message_ab">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще започне инсталирането във фонов режим.\n\nКогато завърши, ще бъдете подканени да рестартирате.</string>
-    <string name="cancel_installation_dialog_message">Анулиране на инсталирането?</string>
-    <string name="label_download_url">Изтеглете URL</string>
-    <string name="toast_download_url_copied">URL Копиран</string>
-    <string name="dialog_export_title">Експортиране на актуализация</string>
-    <string name="notification_export_success">Актуализацията е експортирана</string>
-    <string name="notification_export_fail">Грешка при експортиране</string>
-    <string name="toast_already_exporting">Вече изнася актуализация</string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">Verifying update</string>
+    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
+    <string name="action_download">Download</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_install">Install</string>
+    <string name="action_info">Info</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="confirm_delete_dialog_title">Delete file</string>
+    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
+    <string name="apply_update_dialog_title">Apply update</string>
+    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
+    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
+    <string name="label_download_url">Download URL</string>
+    <string name="toast_download_url_copied">URL Copied</string>
+    <string name="dialog_export_title">Exporting update</string>
+    <string name="notification_export_success">Update exported</string>
+    <string name="notification_export_fail">Export error</string>
+    <string name="toast_already_exporting">Already exporting an update</string>
     <plurals name="eta_seconds">
-        <item quantity="one">остава 1 секунда</item>
-        <item quantity="other">остават <xliff:g id="count">%d</xliff:g> секунди</item>
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">остава 1 минута</item>
-        <item quantity="other">остават <xliff:g id="count">%d</xliff:g> минути</item>
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">остава 1 час</item>
-        <item quantity="other">остават <xliff:g id="count">%d</xliff:g> часа</item>
+        <item quantity="one">1 hour left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Внимание</string>
-    <string name="update_on_mobile_data_message">На път сте да изтеглите пакет за актуализиране, използвайки мобилни данни, което вероятно ще доведе до високо използване на данните. Искате ли да продължите?</string>
-    <string name="checkbox_mobile_data_warning">Не показвай отново</string>
-    <string name="menu_mobile_data_warning">Предупреждение за мобилни данни</string>
-    <string name="blocked_update_dialog_title">Актуализацията е блокирана</string>
-    <string name="blocked_update_dialog_message">Тази актуализация не може да бъде инсталирана посредством приложението за актуализации. Моля прочетете <xliff:g id="info_url">%1$s</xliff:g> за повече информация.</string>
-    <string name="export_channel_title">Експортирането приключи</string>
-    <string name="new_updates_channel_title">Нови актуализации</string>
-    <string name="ongoing_channel_title">Текущи изтегляния</string>
-    <string name="update_failed_channel_title">Актуализацията прекратена</string>
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
+    <string name="menu_mobile_data_warning">Mobile data warning</string>
+    <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
+    <string name="export_channel_title">Export completion</string>
+    <string name="new_updates_channel_title">New updates</string>
+    <string name="ongoing_channel_title">Ongoing downloads</string>
+    <string name="update_failed_channel_title">Update failed</string>
+    <string name="update_available">Update Available</string>
+    <string name="system">System</string>
+    <string name="security">Security</string>
+    <string name="settings">Settings</string>
+    <string name="misc">Miscellaneous</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="bunny">You\'re never get bored?</string>
+    <string name="nothing">Nothing yet..</string>
+    <string name="hit">You got a hit.</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,97 +15,114 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">האימות נכשל</string>
-    <string name="verifying_download_notification">מאמת עדכון</string>
-    <string name="downloading_notification">מוריד</string>
-    <string name="download_paused_notification">ההורדה מושהית</string>
-    <string name="download_paused_error_notification">ההורדה נכשלה</string>
-    <string name="download_completed_notification">ההורדה הושלמה</string>
-    <string name="download_starting_notification">מתחיל להוריד</string>
-    <string name="update_failed_notification">העדכון נכשל</string>
-    <string name="new_updates_found_title">עדכונים חדשים</string>
-    <string name="text_download_speed">%2$s,%1$s לשניה</string>
-    <string name="pause_button">השהה</string>
-    <string name="resume_button">המשך</string>
-    <string name="installing_update">מתקין חבילת עדכון</string>
-    <string name="installing_update_error">ההתקנה נכשלה</string>
-    <string name="installing_update_finished">העדכון הותקן</string>
-    <string name="finalizing_package">משלים את התקנת החבילה</string>
-    <string name="preparing_ota_first_boot">מתכונן להפעלה ראשונה</string>
-    <string name="dialog_prepare_zip_message">מתכונן להתקנת העדכון</string>
-    <string name="dialog_battery_low_title">סוללה חלשה</string>
-    <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>
-    <string name="reboot">הפעלה מחדש</string>
-    <string name="menu_refresh">ריענון</string>
-    <string name="menu_preferences">העדפות</string>
-    <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
-    <string name="menu_auto_delete_updates">מחק קובצי עדכון לאחר התקנתם</string>
-    <string name="menu_delete_update">מחק</string>
-    <string name="menu_copy_url">העתק כתובת אינטרנט</string>
-    <string name="menu_export_update">יצא עדכון</string>
-    <string name="menu_show_changelog">הצג רשימת שינויים</string>
-    <string name="menu_ab_perf_mode">תעדף תהליכי עדכון</string>
-    <string name="snack_updates_found">נמצאו עדכונים חדשים</string>
-    <string name="snack_no_updates_found">לא נמצאו עדכונים חדשים</string>
-    <string name="snack_updates_check_failed">בדיקת העדכונים נכשלה. בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
-    <string name="snack_download_failed">ההורדה נכשלה. בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
-    <string name="snack_download_verification_failed">אימות העדכון נכשל.</string>
-    <string name="snack_download_verified">ההורדה הושלמה.</string>
-    <string name="snack_update_not_installable">אין אפשרות להתקין עדכון זה מהגרסה הקיימת.</string>
+    <string name="verification_failed_notification">Verification failed</string>
+    <string name="verifying_download_notification">Verifying update</string>
+    <string name="downloading_notification">Downloading</string>
+    <string name="download_paused_notification">Download paused</string>
+    <string name="download_paused_error_notification">Download error</string>
+    <string name="download_completed_notification">Download completed</string>
+    <string name="download_starting_notification">Starting download</string>
+    <string name="update_failed_notification">Update failed</string>
+    <string name="installation_suspended_notification">Installation suspended</string>
+    <string name="new_updates_found_title">New updates</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="pause_button">Pause</string>
+    <string name="resume_button">Resume</string>
+    <string name="suspend_button">Suspend</string>
+    <string name="installing_update">Installing update package</string>
+    <string name="installing_update_error">Install error</string>
+    <string name="installing_update_finished">Update installed</string>
+    <string name="finalizing_package">Finalizing package installation</string>
+    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
+    <string name="dialog_battery_low_title">Low battery</string>
+    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
+    <string name="reboot">Reboot</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_auto_updates_check">Auto updates check</string>
+    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
+    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
+    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
+    <string name="menu_auto_updates_check_interval_never">Never</string>
+    <string name="menu_auto_delete_updates">Delete updates when installed</string>
+    <string name="menu_delete_update">Delete</string>
+    <string name="menu_copy_url">Copy URL</string>
+    <string name="menu_export_update">Export update</string>
+    <string name="menu_show_changelog">Show changelog</string>
+    <string name="menu_ab_perf_mode">Prioritize update process</string>
+    <string name="menu_update_recovery">Update recovery</string>
+    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
+    <string name="snack_updates_found">New updates found</string>
+    <string name="snack_no_updates_found">No new updates found</string>
+    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
+    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
+    <string name="snack_download_verification_failed">The update verification failed.</string>
+    <string name="snack_download_verified">Download completed.</string>
+    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">אנדרואיד <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">בדיקה אחרונה: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">DotOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> </string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) </string>
-    <string name="list_verifying_update">מאמת עדכון</string>
-    <string name="list_no_updates">לא נמצאו עדכונים חדשים. בכדי לבדוק אם יש עדכונים חדשים, לחץ על רענון.</string>
-    <string name="action_download">הורד</string>
-    <string name="action_pause">השהה</string>
-    <string name="action_resume">המשך</string>
-    <string name="action_install">התקן</string>
-    <string name="action_info">מידע</string>
-    <string name="action_delete">מחיקה</string>
-    <string name="action_cancel">ביטול</string>
-    <string name="confirm_delete_dialog_title">מחק קובץ</string>
-    <string name="confirm_delete_dialog_message">למחוק את קבצי העדכון שנבחרו?</string>
-    <string name="apply_update_dialog_title">החל עדכון</string>
-    <string name="apply_update_dialog_message">אתה עומד לשדרג אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תבחר <xliff:g id="ok">%2$s</xliff:g>, המכשיר יופעל מחדש למצב שחזור (Recovery) להתקנת העדכון.\n\nשים לב: תכונה זו דורשת ריקוברי תואם או שהעדכון לא יותקן אוטומטית.</string>
-    <string name="apply_update_dialog_message_ab">אתה עומד לעדכן אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תלחץ על <xliff:g id="ok">%2$s</xliff:g>, המכשיר יתחיל בהתקנה ברקע.\n\nלאחר שההתקנה תסתיים, תתבקש להפעיל את המכשיר מחדש.</string>
-    <string name="cancel_installation_dialog_message">לבטל את ההתקנה?</string>
-    <string name="label_download_url">כתובת ההורדה</string>
-    <string name="toast_download_url_copied">הכתובת הועתקה</string>
-    <string name="dialog_export_title">מיצא עדכון</string>
-    <string name="notification_export_success">העדכון ייוצא בהצלחה</string>
-    <string name="notification_export_fail">שגיאה בייצוא</string>
-    <string name="toast_already_exporting">כבר באמצע ייצוא עדכון</string>
+    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">Verifying update</string>
+    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
+    <string name="action_download">Download</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_install">Install</string>
+    <string name="action_info">Info</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="confirm_delete_dialog_title">Delete file</string>
+    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
+    <string name="apply_update_dialog_title">Apply update</string>
+    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
+    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
+    <string name="label_download_url">Download URL</string>
+    <string name="toast_download_url_copied">URL Copied</string>
+    <string name="dialog_export_title">Exporting update</string>
+    <string name="notification_export_success">Update exported</string>
+    <string name="notification_export_fail">Export error</string>
+    <string name="toast_already_exporting">Already exporting an update</string>
     <plurals name="eta_seconds">
-        <item quantity="one">שניה אחת נותרה</item>
-        <item quantity="two"><xliff:g id="count">%d</xliff:g> שניות נותרו</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> שניות נותרו</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> שניות נותרו</item>
+        <item quantity="one">1 second left</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">דקה אחת נותרה</item>
-        <item quantity="two"><xliff:g id="count">%d</xliff:g> דקות נותרו</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> דקות נותרו</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> דקות נותרו</item>
+        <item quantity="one">1 minute left</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">שעה אחת נותרה</item>
-        <item quantity="two"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
+        <item quantity="one">1 hour left</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
     </plurals>
-    <string name="update_on_mobile_data_title">אזהרה</string>
-    <string name="update_on_mobile_data_message">אתה עומד להוריד חבילת עדכונים באמצעות האינטרנט הסלולרי שסביר להניח יגרום לבזבוז חלק גדול מחבילת הגלישה שלך. להמשיך?</string>
-    <string name="checkbox_mobile_data_warning">אל תציג שוב</string>
-    <string name="menu_mobile_data_warning">אזהרת אינטרנט סלולרי</string>
-    <string name="blocked_update_dialog_title">העדכון חסום</string>
-    <string name="blocked_update_dialog_message">אין אפשרות להתקין עדכון זה באמצעות יישום המעדכן.  תוכל לקרוא בקישור <xliff:g id="info_url">%1$s</xliff:g> לקבלת מידע נוסף.</string>
-    <string name="export_channel_title">השלמת הייצוא</string>
-    <string name="new_updates_channel_title">עדכונים חדשים</string>
-    <string name="ongoing_channel_title">הורדות בפעולה</string>
-    <string name="update_failed_channel_title">העדכון נכשל</string>
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
+    <string name="menu_mobile_data_warning">Mobile data warning</string>
+    <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
+    <string name="export_channel_title">Export completion</string>
+    <string name="new_updates_channel_title">New updates</string>
+    <string name="ongoing_channel_title">Ongoing downloads</string>
+    <string name="update_failed_channel_title">Update failed</string>
+    <string name="update_available">Update Available</string>
+    <string name="system">System</string>
+    <string name="security">Security</string>
+    <string name="settings">Settings</string>
+    <string name="misc">Miscellaneous</string>
+    <string name="maybe_later">Maybe later</string>
+    <string name="bunny">You\'re never get bored?</string>
+    <string name="nothing">Nothing yet..</string>
+    <string name="hit">You got a hit.</string>
 </resources>
