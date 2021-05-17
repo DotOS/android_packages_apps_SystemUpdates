@@ -17,7 +17,6 @@ class ChangelogAdapter(private val items: ArrayList<ChangelogItem>) :
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val cIcon: ImageView = view.findViewById(R.id.updateChangelogIcon)
         val cTitle: TextView = view.findViewById(R.id.updateChangelogTitle)
         val cSubtitle: TextView = view.findViewById(R.id.updateChangelogSubtitle)
         val cSummary: TextView = view.findViewById(R.id.updateChangelogSummary)
@@ -29,7 +28,6 @@ class ChangelogAdapter(private val items: ArrayList<ChangelogItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val changelog: ChangelogItem = items[position]
-        holder.cIcon.setImageResource(changelog.iconRes!!)
         holder.cTitle.text = changelog.title
         if (changelog.subtitle == "") holder.cSubtitle.visibility = View.GONE
         else holder.cSubtitle.text = changelog.subtitle

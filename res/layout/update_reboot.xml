@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         app:cardBackgroundColor="@color/green_600"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="@dimen/dot_radius">
 
         <RelativeLayout
             android:id="@+id/actionRebootButton"

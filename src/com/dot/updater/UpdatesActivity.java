@@ -50,6 +50,7 @@ import com.dot.updater.misc.Constants;
 import com.dot.updater.misc.StringGenerator;
 import com.dot.updater.misc.Utils;
 import com.dot.updater.model.UpdateInfo;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
@@ -68,7 +69,7 @@ public class UpdatesActivity extends UpdatesListActivity {
     private BroadcastReceiver mBroadcastReceiver;
 
     private Animation bounceAnimation;
-    private TextView headerTitle;
+    private CollapsingToolbarLayout headerTitle;
 
     private UpdateView updateView;
     private RelativeLayout actionCheck;
@@ -121,15 +122,9 @@ public class UpdatesActivity extends UpdatesListActivity {
                 }
             }
         };
-        headerTitle = findViewById(R.id.mainTitle);
+        headerTitle = findViewById(R.id.app_bar);
 
-        updateLastCheckedString();
-
-        ImageButton mainIcon = findViewById(R.id.mainIcon);
-        new Handler(getMainLooper()).postDelayed(() -> {
-            mainIcon.setImageResource(R.drawable.ic_settings);
-            new Handler(getMainLooper()).postDelayed(() -> mainIcon.setImageResource(R.drawable.ic_system_update), 2000);
-        }, 3000);
+        ImageButton mainIcon = findViewById(R.id.launchSettings);
         mainIcon.setOnClickListener(v -> showPreferencesDialog());
 
         bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce);
@@ -199,7 +194,7 @@ public class UpdatesActivity extends UpdatesListActivity {
             for (UpdateInfo update : sortedUpdates) {
                 updateIds.add(update.getDownloadId());
             }
-            headerTitle.setText(getString(R.string.snack_updates_found));
+            headerTitle.setTitle(getString(R.string.snack_updates_found));
             actionCheck.setVisibility(View.GONE);
             updateView.setDownloadId(updateIds.get(0));
         }
@@ -225,7 +220,6 @@ public class UpdatesActivity extends UpdatesListActivity {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
             long millis = System.currentTimeMillis();
             preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, millis).apply();
-            updateLastCheckedString();
             if (json.exists() && Utils.isUpdateCheckEnabled(this) &&
                     Utils.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(this);
@@ -287,17 +281,6 @@ public class UpdatesActivity extends UpdatesListActivity {
 
         refreshAnimationStart();
         downloadClient.start();
-    }
-
-    private void updateLastCheckedString() {
-        final SharedPreferences preferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        long lastCheck = preferences.getLong(Constants.PREF_LAST_UPDATE_CHECK, -1) / 1000;
-        String lastCheckString = getString(R.string.header_last_updates_check,
-                StringGenerator.getDateLocalized(this, DateFormat.LONG, lastCheck),
-                StringGenerator.getTimeLocalized(this, lastCheck));
-        TextView headerLastCheck = findViewById(R.id.header_last_check);
-        headerLastCheck.setText(lastCheckString);
     }
 
     private void handleDownloadStatusChange(String downloadId) {

@@ -4,17 +4,17 @@
     <item android:id="@android:id/background">
         <shape android:tint="@color/cardBackground" android:thickness="12dp">
             <size android:height="12dp" />
-            <corners android:radius="12dp" />
+            <corners android:radius="@dimen/dot_radius" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
-        <scale android:scaleWidth="100%">
+        <clip>
             <shape android:tint="?android:attr/colorAccent" >
                 <solid android:color="@color/default_qs_transparency"/>
                 <size android:height="12dp" />
-                <corners android:topLeftRadius="12dp" android:bottomLeftRadius="12dp" />
+                <corners android:radius="@dimen/dot_radius" />
             </shape>
-        </scale>
+        </clip>
     </item>
 
 </layer-list>

@@ -9,68 +9,50 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center_vertical"
-            app:cardBackgroundColor="@color/cardBackground"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="0dp">
+        <TextView
+            android:id="@+id/updateChangelogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="droid on time 5.0" />
 
-            <ImageView
-                android:id="@+id/updateChangelogIcon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                app:tint="?android:attr/textColorPrimary" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="24dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/updateChangelogTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="18sp"
-                tools:text="droid on time 5.0" />
-
-            <TextView
-                android:id="@+id/updateChangelogSubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="?android:attr/textColorSecondary"
-                android:textSize="15sp"
-                tools:text="New Notification Panel" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/updateChangelogSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="New Notification Panel" />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/cardBackground"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="0dp">
+        app:cardCornerRadius="@dimen/dot_radius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/cardBackgroundStroke"
+        app:strokeWidth="1dp">
 
         <TextView
             android:id="@+id/updateChangelogSummary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="16dp"
-            android:fontFamily="sans-serif-medium"
+            android:padding="16dp"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="15sp"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu nisi, malesuada non dui non, porta ultrices leo. Vivamus suscipit sit amet lacus id varius. Nulla tempor turpis metus, non luctus erat gravida sit amet." />
     </com.google.android.material.card.MaterialCardView>
+
 </LinearLayout>

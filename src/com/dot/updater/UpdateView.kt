@@ -28,8 +28,6 @@ import androidx.appcompat.view.ContextThemeWrapper
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.appcompat.widget.PopupMenu
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dot.updater.changelog.ChangelogAdapter
 import com.dot.updater.controller.UpdaterController
 import com.dot.updater.controller.UpdaterService
@@ -37,6 +35,7 @@ import com.dot.updater.misc.*
 import com.dot.updater.model.ChangelogItem
 import com.dot.updater.model.UpdateInfo
 import com.dot.updater.model.UpdateStatus
+import com.dot.updater.ui.ChangelogSheet
 import com.google.android.material.chip.Chip
 import com.google.android.material.snackbar.Snackbar
 import java.io.File
@@ -83,6 +82,9 @@ class UpdateView : LinearLayout {
     private var chipDateTarget: Chip
     private var update: UpdateInfo? = null
     private var noUpdates: View
+    private var moreChangelog: Button
+    private var summaryChangelog: TextView
+    private var updateContainer: View
 
     constructor(context: Context?) : super(context)
 
@@ -98,6 +100,9 @@ class UpdateView : LinearLayout {
         chipHeader = findViewById(R.id.updateChipHeader)
         chipDateCurrent = findViewById(R.id.chipDateCurrent)
         chipDateTarget = findViewById(R.id.chipDateTarget)
+        moreChangelog = findViewById(R.id.fullChangelog)
+        summaryChangelog = findViewById(android.R.id.summary)
+        updateContainer = findViewById(R.id.update_container)
     }
 
     fun noUpdates() {
@@ -130,6 +135,7 @@ class UpdateView : LinearLayout {
             else -> throw RuntimeException("Unknown update status")
         }
         chipHeader.visibility = VISIBLE
+        updateContainer.visibility = VISIBLE
         val currentDate = createDate(SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0))
         val currentVersion = SystemProperties.get(Constants.PROP_DOT_VERSION)
         val buildDate = createDate(update!!.timestamp)
@@ -229,7 +235,6 @@ class UpdateView : LinearLayout {
     }
 
     private fun parseChangelog() {
-        val recycler: RecyclerView = findViewById(R.id.updateChangelogRecycler)
         val list: ArrayList<ChangelogItem> = ArrayList()
         val changelog = update!!.changelog
         if (changelog != null) {
@@ -266,10 +271,18 @@ class UpdateView : LinearLayout {
                 list.add(item)
             }
             val adapter = ChangelogAdapter(list)
-            recycler.isNestedScrollingEnabled = false
-            recycler.adapter = adapter
-            recycler.layoutManager = LinearLayoutManager(context)
+            var summaryChangelogText = ""
+            for (item in list) {
+                summaryChangelogText += "${item.subtitle}. "
+            }
+            summaryChangelog.text = summaryChangelogText
+            moreChangelog.isEnabled = true
+            moreChangelog.setOnClickListener {
+                ChangelogSheet().setupChangelogSheet(adapter).show(mActivity!!.supportFragmentManager, "changelog")
+            }
         } else {
+            summaryChangelog.text = context.getString(R.string.changelog_error)
+            moreChangelog.isEnabled = false
             Log.w("Changelog", "is Null")
         }
     }

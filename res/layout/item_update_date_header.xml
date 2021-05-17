@@ -19,13 +19,16 @@
             android:id="@+id/chipDateCurrent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="16dp"
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="16sp"
             app:chipEndPadding="8dp"
-            app:chipMinHeight="32dp"
-            app:chipMinTouchTargetSize="36dp"
+            app:chipMinHeight="38dp"
+            app:chipMinTouchTargetSize="38dp"
             app:chipStartPadding="8dp"
+            app:chipStrokeColor="@color/cardBackgroundStroke"
+            app:chipStrokeWidth="1dp"
+            app:chipBackgroundColor="@color/cardBackground"
             tools:text="31 Dec 20 | Beta" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -42,8 +45,8 @@
             android:textSize="16sp"
             app:chipBackgroundColor="@color/colorAccent"
             app:chipEndPadding="8dp"
-            app:chipMinHeight="32dp"
-            app:chipMinTouchTargetSize="36dp"
+            app:chipMinHeight="38dp"
+            app:chipMinTouchTargetSize="38dp"
             app:chipStartPadding="8dp"
             tools:text="16 Jan 21 | v5.0" />
     </LinearLayout>

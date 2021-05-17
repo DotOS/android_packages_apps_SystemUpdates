@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         app:cardBackgroundColor="@color/blue_A700"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="@dimen/dot_radius">
 
         <RelativeLayout
             android:id="@+id/actionInstallButton"
@@ -37,7 +37,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-medium"
                 android:text="@string/action_install"
                 android:textColor="?android:attr/textColorPrimaryInverse"
                 android:textSize="18sp" />

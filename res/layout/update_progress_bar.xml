@@ -21,15 +21,17 @@
         android:fontFamily="sans-serif-medium"
         tools:text="512MB out of 1GB" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/updateProgressBarCard"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_below="@id/updateStats"
         android:layout_marginEnd="16dp"
         android:layout_toStartOf="@id/updatePause"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="0dp">
+        app:cardCornerRadius="@dimen/dot_radius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/cardBackgroundStroke"
+        app:strokeWidth="1dp">
 
         <ProgressBar
             android:id="@+id/updateProgressBar"
@@ -39,7 +41,7 @@
             android:indeterminateDrawable="@drawable/progress_bg"
             android:progress="50"
             android:progressDrawable="@drawable/progress_bg" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/updateProgressText"

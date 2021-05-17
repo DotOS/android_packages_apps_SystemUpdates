@@ -4,9 +4,9 @@
     android:id="@+id/updateBannerCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="16dp"
+    app:cardCornerRadius="@dimen/dot_radius"
     app:cardElevation="0dp"
-    app:strokeColor="@color/grey_400"
+    app:strokeColor="@color/cardBackgroundStroke"
     app:strokeWidth="1dp">
 
     <ImageView
