@@ -18,10 +18,10 @@
     <string name="verification_failed_notification">Falha na verificação</string>
     <string name="verifying_download_notification">Verificando atualização</string>
     <string name="downloading_notification">Baixando</string>
-    <string name="download_paused_notification">Parou de baixar</string>
+    <string name="download_paused_notification">Download pausado</string>
     <string name="download_paused_error_notification">Erro ao baixar</string>
-    <string name="download_completed_notification">Baixado com sucesso</string>
-    <string name="download_starting_notification">Começando a baixar</string>
+    <string name="download_completed_notification">Download concluído</string>
+    <string name="download_starting_notification">Iniciando download</string>
     <string name="update_failed_notification">Falha ao atualizar</string>
     <string name="installation_suspended_notification">Instalação suspensa</string>
     <string name="new_updates_found_title">Novas atualizações</string>
@@ -30,11 +30,11 @@
     <string name="resume_button">Retomar</string>
     <string name="suspend_button">Suspender</string>
     <string name="installing_update">Instalando pacote de atualização</string>
-    <string name="installing_update_error">Erro na instalação</string>
+    <string name="installing_update_error">Erro de instalação</string>
     <string name="installing_update_finished">Atualização instalada</string>
     <string name="finalizing_package">Finalizando instalação de pacote</string>
-    <string name="preparing_ota_first_boot">Preparando-se para a primeira inicialização</string>
-    <string name="dialog_prepare_zip_message">Preparação preliminar de atualização</string>
+    <string name="preparing_ota_first_boot">Preparando para a primeira inicialização</string>
+    <string name="dialog_prepare_zip_message">Preparação de atualização preliminar</string>
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="dialog_battery_low_message_pct">O nível da bateria está muito fraco. Você precisa de pelo menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar ou de <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver carregando.</string>
     <string name="reboot">Reiniciar</string>
@@ -54,11 +54,11 @@
     <string name="menu_update_recovery">Atualizar recuperação</string>
     <string name="toast_forced_update_recovery">É impossível desativar as atualizações do Lineage Recovery neste dispositivo.</string>
     <string name="snack_updates_found">Nova atualização disponível</string>
-    <string name="snack_no_updates_found">Nenhuma nova atualização encontrada</string>
+    <string name="snack_no_updates_found">Nenhuma atualização encontrada</string>
     <string name="snack_updates_check_failed">Falha ao procurar por atualizações. Verifique sua conexão com a internet e tente novamente.</string>
-    <string name="snack_download_failed">O download falhou.  Verifique sua conexão com a Internet e tente novamente mais tarde.</string>
+    <string name="snack_download_failed">O download falhou. Verifique sua conexão com a Internet e tente novamente mais tarde.</string>
     <string name="snack_download_verification_failed">Falha na verificação da atualização.</string>
-    <string name="snack_download_verified">Baixado com sucesso.</string>
+    <string name="snack_download_verified">Download completo.</string>
     <string name="snack_update_not_installable">Esta atualização não pode ser instalada por cima da versão atual.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
@@ -67,8 +67,8 @@
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verificando atualização...</string>
-    <string name="list_no_updates">Nenhuma nova atualização encontrada.  Para verificar manualmente se há novas atualizações, use o botão Atualizar.</string>
+    <string name="list_verifying_update">Verificando atualizações</string>
+    <string name="list_no_updates">Nenhuma nova atualização encontrada. Para verificar manualmente se há novas atualizações, use o botão Atualizar.</string>
     <string name="action_download">Baixar</string>
     <string name="action_pause">Pausar</string>
     <string name="action_resume">Retomar</string>
@@ -81,7 +81,7 @@
     <string name="apply_update_dialog_title">Aplicar atualização</string>
     <string name="apply_update_dialog_message">Você está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe você pressionar <xliff:g id="ok">%2$s</xliff:g>o dispositivo irá reiniciar no modo de recuperação para instalar a atualização.\n\nNota: Esta função requer uma Recuperação compatível ou as atualizações terão de ser instaladas manualmente.</string>
     <string name="apply_update_dialog_message_ab">Você está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe você pressionar <xliff:g id="ok">%2$s</xliff:g>o dispositivo começará a instalar em segundo plano.\n\nUma vez concluído, será solicitado a você reiniciar o dispositivo.</string>
-    <string name="cancel_installation_dialog_message">Cancelar a instalação?</string>
+    <string name="cancel_installation_dialog_message">Deseja cancelar a instalação?</string>
     <string name="label_download_url">Baixar URL</string>
     <string name="toast_download_url_copied">URL copiada</string>
     <string name="dialog_export_title">Exportando atualização</string>
@@ -103,12 +103,12 @@
     <string name="update_on_mobile_data_title">Aviso</string>
     <string name="update_on_mobile_data_message">Você está prestes a baixar um pacote de atualização usando dados móveis, o que provavelmente causará um alto uso de dados.  Gostaria de continuar?</string>
     <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
-    <string name="menu_mobile_data_warning">Aviso de dados móveis</string>
+    <string name="menu_mobile_data_warning">Aviso de uso de dados</string>
     <string name="blocked_update_dialog_title">Atualização bloqueada</string>
     <string name="blocked_update_dialog_message">Esta atualização não pode ser instalada pelo Atualizador. Leia <xliff:g id="info_url">%1$s</xliff:g> para obter mais informações.</string>
     <string name="export_channel_title">Exportação concluída</string>
     <string name="new_updates_channel_title">Novas atualizações</string>
-    <string name="ongoing_channel_title">Baixando</string>
+    <string name="ongoing_channel_title">Downloads em andamento</string>
     <string name="update_failed_channel_title">Atualização falhou</string>
     <string name="update_available">Atualização disponível</string>
     <string name="system">Sistema</string>
@@ -119,4 +119,12 @@
     <string name="bunny">Você nunca fica entediado?</string>
     <string name="nothing">Nada ainda..</string>
     <string name="hit">Você acertou.</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="about_this_update">About this update</string>
+    <string name="close">Close</string>
+    <string name="changelog">Changelog</string>
+    <string name="read_more">Read more</string>
+    <string name="notes">Notes</string>
+    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
+    <string name="changelog_error">Changelog not found</string>
 </resources>

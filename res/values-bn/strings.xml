@@ -67,14 +67,14 @@
     <string name="list_build_version_date"><xliff:g id="ভার্সন" example="5.0">%1$s</xliff:g> - <xliff:g id="তারিখ" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
+    <string name="list_verifying_update">আপডেট ভেরিফাই করা হচ্ছে</string>
+    <string name="list_no_updates">নতুন কোন আপডেট নেই। নিজে নিজে আপডেট খোঁজ করার জন্য রিফ্রেস অপশন এ চাপ দিন।</string>
+    <string name="action_download">ডাউনলোড </string>
+    <string name="action_pause">বিরতি দিন</string>
+    <string name="action_resume">পুনরায় চালু করুন</string>
+    <string name="action_install">ইন্সটল</string>
+    <string name="action_info">তথ্য</string>
+    <string name="action_delete">মুছুন</string>
     <string name="action_cancel">Cancel</string>
     <string name="confirm_delete_dialog_title">Delete file</string>
     <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
@@ -119,4 +119,12 @@
     <string name="bunny">You\'re never get bored?</string>
     <string name="nothing">Nothing yet..</string>
     <string name="hit">You got a hit.</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="about_this_update">About this update</string>
+    <string name="close">Close</string>
+    <string name="changelog">Changelog</string>
+    <string name="read_more">Read more</string>
+    <string name="notes">Notes</string>
+    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
+    <string name="changelog_error">Changelog not found</string>
 </resources>

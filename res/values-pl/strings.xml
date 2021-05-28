@@ -89,15 +89,15 @@
     <string name="notification_export_fail">Błąd eksportowania</string>
     <string name="toast_already_exporting">Eksportowanie aktualizacji jest już w toku</string>
     <plurals name="eta_seconds">
-        <item quantity="one">Pozostała 1 sekunda</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="one">Pozostała jedna sekunda</item>
+        <item quantity="few">Pozostało <xliff:g id="count">%d</xliff:g> sekund</item>
+        <item quantity="many">Pozostało <xliff:g id="count">%d</xliff:g> sekund</item>
+        <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> sekund</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">1 minute left</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> minutes left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="one">Pozostała 1 minuta</item>
+        <item quantity="few">Pozostało <xliff:g id="count">%d</xliff:g> minut</item>
+        <item quantity="many">Pozostało <xliff:g id="count">%d</xliff:g> minut</item>
         <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> minut</item>
     </plurals>
     <plurals name="eta_hours">
@@ -122,7 +122,15 @@
     <string name="settings">Ustawienia</string>
     <string name="misc">Różne</string>
     <string name="maybe_later">Może później</string>
-    <string name="bunny">Nigdy nie jesteś znudzony?</string>
+    <string name="bunny">Czy tobie się nudzi?</string>
     <string name="nothing">Na razie nic.</string>
     <string name="hit">Otrzymano prezent!</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="about_this_update">About this update</string>
+    <string name="close">Close</string>
+    <string name="changelog">Changelog</string>
+    <string name="read_more">Read more</string>
+    <string name="notes">Notes</string>
+    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
+    <string name="changelog_error">Changelog not found</string>
 </resources>

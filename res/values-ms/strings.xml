@@ -15,8 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
+    <string name="verification_failed_notification">Pengesahan gagal</string>
+    <string name="verifying_download_notification">Mengesahkan kemas kini</string>
     <string name="downloading_notification">Downloading</string>
     <string name="download_paused_notification">Download paused</string>
     <string name="download_paused_error_notification">Download error</string>
@@ -116,4 +116,12 @@
     <string name="bunny">You\'re never get bored?</string>
     <string name="nothing">Nothing yet..</string>
     <string name="hit">You got a hit.</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="about_this_update">About this update</string>
+    <string name="close">Close</string>
+    <string name="changelog">Changelog</string>
+    <string name="read_more">Read more</string>
+    <string name="notes">Notes</string>
+    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
+    <string name="changelog_error">Changelog not found</string>
 </resources>
