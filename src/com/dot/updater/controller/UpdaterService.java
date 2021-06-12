@@ -38,7 +38,6 @@ import androidx.preference.PreferenceManager;
 import com.dot.updater.R;
 import com.dot.updater.UpdaterReceiver;
 import com.dot.updater.UpdatesActivity;
-import com.dot.updater.misc.BuildInfoUtils;
 import com.dot.updater.misc.Constants;
 import com.dot.updater.misc.StringGenerator;
 import com.dot.updater.misc.Utils;
@@ -483,7 +482,7 @@ public class UpdaterService extends Service {
         String buildDate = StringGenerator.getDateLocalizedUTC(this,
                 DateFormat.MEDIUM, update.getTimestamp());
         String buildInfo = getString(R.string.list_build_version_date,
-                BuildInfoUtils.getBuildVersion(), buildDate);
+                update.getName(), buildDate);
         mNotificationStyle.setBigContentTitle(buildInfo);
         mNotificationBuilder.setContentTitle(buildInfo);
     }

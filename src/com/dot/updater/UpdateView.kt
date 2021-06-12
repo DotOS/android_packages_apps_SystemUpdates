@@ -499,8 +499,7 @@ class UpdateView : LinearLayout {
                     .setPositiveButton(android.R.string.ok, null)
         }
         val update = mUpdaterController!!.getUpdate(downloadId)
-        val resId: Int
-        resId = try {
+        val resId: Int = try {
             if (Utils.isABUpdate(update.file)) {
                 R.string.apply_update_dialog_message_ab
             } else {
@@ -513,7 +512,7 @@ class UpdateView : LinearLayout {
         val buildDate = StringGenerator.getDateLocalizedUTC(mActivity,
                 DateFormat.MEDIUM, update.timestamp)
         val buildInfoText = mActivity!!.getString(R.string.list_build_version_date,
-                BuildInfoUtils.getBuildVersion(), buildDate)
+                update.name, buildDate)
         return AlertDialog.Builder(mActivity!!)
                 .setTitle(R.string.apply_update_dialog_title)
                 .setMessage(mActivity!!.getString(resId, buildInfoText,
