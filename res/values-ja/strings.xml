@@ -116,12 +116,12 @@
     <string name="bunny">飽きてきませんか?</string>
     <string name="nothing">まだです..</string>
     <string name="hit">ヒットしましたよ。</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">アップデートの確認</string>
+    <string name="about_this_update">このアップデートについて</string>
+    <string name="close">閉じる</string>
+    <string name="changelog">更新履歴</string>
+    <string name="read_more">詳細へ</string>
+    <string name="notes">注意</string>
+    <string name="update_notes">∘ アップデート中は端末のインターネット接続を維持して下さい。\n∘ 端末の充電量が30%以上であることを確認して下さい。\n∘ アップデートが完了するまでは端末を使用しないで下さい。</string>
+    <string name="changelog_error">更新履歴が見つかりません</string>
 </resources>

@@ -15,116 +15,120 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
-    <string name="downloading_notification">Downloading</string>
-    <string name="download_paused_notification">Download paused</string>
-    <string name="download_paused_error_notification">Download error</string>
-    <string name="download_completed_notification">Download completed</string>
-    <string name="download_starting_notification">Starting download</string>
-    <string name="update_failed_notification">Update failed</string>
-    <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="new_updates_found_title">New updates</string>
+    <string name="verification_failed_notification">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="verifying_download_notification">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="downloading_notification">ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
+    <string name="download_paused_notification">ಡೌನ್‌ಲೋಡ್‌ ವಿರಾಮಗೊಳಿಸಿದೆ</string>
+    <string name="download_paused_error_notification">ಡೌನ್‌ಲೋಡ್ ದೋಷವಾಗಿದೆ</string>
+    <string name="download_completed_notification">ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
+    <string name="download_starting_notification">ಡೌನ್‌ಲೋಡ್ ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="update_failed_notification">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="installation_suspended_notification">ಸ್ಥಾಪನೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="new_updates_found_title">ಹೊಸ ನವೀಕರಣೆಗಳು</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pause</string>
-    <string name="resume_button">Resume</string>
-    <string name="suspend_button">Suspend</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
-    <string name="preparing_ota_first_boot">Preparing for first boot</string>
-    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
-    <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_preferences">Preferences</string>
-    <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
-    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
-    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
-    <string name="menu_show_changelog">Show changelog</string>
-    <string name="menu_ab_perf_mode">Prioritize update process</string>
-    <string name="menu_update_recovery">Update recovery</string>
-    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
-    <string name="snack_updates_found">New updates found</string>
-    <string name="snack_no_updates_found">No new updates found</string>
-    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_verification_failed">The update verification failed.</string>
-    <string name="snack_download_verified">Download completed.</string>
-    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
-    <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="pause_button">ವಿರಾಮಗೊಳಿಸು</string>
+    <string name="resume_button">ಮುಂದುವರಿಸಿ</string>
+    <string name="suspend_button">ಅಮಾನತ್ತುಗೊಳಿಸು</string>
+    <string name="installing_update">ನವೀಕರಣದ ಪ್ಯಾಕೇಜ್‌ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="installing_update_error">ಸ್ಥಾಪನೆಯಲ್ಲಿ ದೋಷವಾಗಿದೆ</string>
+    <string name="installing_update_finished">ನವೀಕರಣ ಸ್ಥಾಪಿಸಲಾಗಿದೆ</string>
+    <string name="finalizing_package">ಪ್ಯಾಕೇಜ್‌ ಅಳವಡಿಕೆಯನ್ನು ಅಂತಿಮಗೊಳಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="preparing_ota_first_boot">ಮೊದಲ ಬೂಟ್‌ಗಾಗಿ ಸಿದ್ಧತೆಗೊಳಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="dialog_prepare_zip_message">ಪ್ರಾಥಮಿಕ ನವೀಕರಣ ಸಿದ್ಧತೆ</string>
+    <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
+    <string name="dialog_battery_low_message_pct">ಬ್ಯಾಟರಿ ಮಟ್ಟವು ತುಂಬ ಕಡಿಮೆ ಇದೆ, ಮುಂದುವರೆಯಲು, ಒಂದು ವೇಳೆ ಚಾರ್ಜ ಮಾಡುತ್ತಿದ್ದಲ್ಲಿ ನಿಮಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ <xliff:g id="percent_discharging"> ಬ್ಯಾಟರಿಯ ಅಗತ್ಯವಿದೆ%1$d</xliff:g>%%<xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
+    <string name="reboot">ಪುನರಾರಂಭಿಸು</string>
+    <string name="menu_refresh">ಹೊಸತಾಗಿಸಿ</string>
+    <string name="menu_preferences">ಆದ್ಯತೆಗಳು</string>
+    <string name="menu_auto_updates_check">ಸ್ವಯಂ ನವೀಕರಣ ಪರಿಶೀಲನೆ</string>
+    <string name="menu_auto_updates_check_interval_daily">ದಿನಕ್ಕೊಮ್ಮೆ</string>
+    <string name="menu_auto_updates_check_interval_weekly">ವಾರಕ್ಕೊಮ್ಮೆ</string>
+    <string name="menu_auto_updates_check_interval_monthly">ತಿಂಗಳಿಗೊಮ್ಮೆ</string>
+    <string name="menu_auto_updates_check_interval_never">ಎಂದಿಗೂ ಬೇಡ</string>
+    <string name="menu_auto_delete_updates">ಸ್ಥಾಪಿಸಿದ ನಂತರ ನವೀಕರಣಗಳನ್ನು ಅಳಿಸು</string>
+    <string name="menu_delete_update">ಅಳಿಸು</string>
+    <string name="menu_copy_url">URL ನಕಲಿಸಿ</string>
+    <string name="menu_export_update">ನವೀಕರಣವನ್ನು ರಫ್ತು ಮಾಡು</string>
+    <string name="menu_show_changelog">ಬದಲಾವಣೆಗಳನ್ನು ತೋರಿಸು</string>
+    <string name="menu_ab_perf_mode">ನವೀಕರಣ ಪ್ರಕ್ರಿಯೆಗೆ ಆದ್ಯತೆ ನೀಡಿ</string>
+    <string name="menu_update_recovery">ರಿಕವರಿಯನ್ನು ನವೀಕರಿಸು</string>
+    <string name="toast_forced_update_recovery">ಈ ಸಾಧನದಲ್ಲಿ ಲಿನೇಜ್ ರಿಕವರಿ ನವೀಕರಣಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದು ಅಸಾಧ್ಯ.</string>
+    <string name="snack_updates_found">ಹೊಸ ನವೀಕರಣಗಳು ಕಂಡುಬಂದಿವೆ</string>
+    <string name="snack_no_updates_found">ಯಾವುದೇ ಹೊಸ ನವೀಕರಣೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="snack_updates_check_failed">ನವೀಕರಣೆ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ನಂತರ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="snack_download_failed">ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="snack_download_verification_failed">ನವೀಕರಣ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="snack_download_verified">ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ.</string>
+    <string name="snack_update_not_installable">ಪ್ರಸ್ತುತ ನವೀಕರಣದ ಮೇಲೆ ಈ ನವೀಕರಣವನ್ನು ಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="header_title_text">ಡಾಟ್ ಓ ಎಸ್\n%1$s</string>
+    <string name="header_android_version">ಆಂಡ್ರಾಯ್ಡ್ <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_last_updates_check">ಕೊನೆಯ ಪರಿಶೀಲನೆ: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="list_build_version">ಡಾಟ್ ಓ ಎಸ್ <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
-    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
-    <string name="apply_update_dialog_title">Apply update</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
-    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
-    <string name="dialog_export_title">Exporting update</string>
-    <string name="notification_export_success">Update exported</string>
-    <string name="notification_export_fail">Export error</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="list_no_updates">ಹೊಸ ಅಪ್ಡೇಟ್ಗಳು ಕಂಡುಬಂದಿಲ್ಲ. ಸ್ವತಃ ಹೊಸ ಅಪ್ಡೇಟ್ಗಳನ್ನು ಪರಿಶೀಲಿಸಲು, ರಿಫ್ರೆಶ್ ಬಟನ್ ಬಳಸಿ.</string>
+    <string name="action_download">ಡೌನ್‌ಲೋಡ್</string>
+    <string name="action_pause">ವಿರಾಮಗೊಳಿಸು</string>
+    <string name="action_resume">ಮುಂದುವರಿಸಿ</string>
+    <string name="action_install">ಸ್ಥಾಪಿಸಿ</string>
+    <string name="action_info">ಮಾಹಿತಿ</string>
+    <string name="action_delete">ಅಳಿಸು</string>
+    <string name="action_cancel">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="confirm_delete_dialog_title">ಫೈಲ್ ಅಳಿಸಿ</string>
+    <string name="confirm_delete_dialog_message">ಆಯ್ಕೆಮಾಡಿದ ನವೀಕರಣದ ಫೈಲ್ ಅಳಿಸುವುದೇ?</string>
+    <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
+    <string name="apply_update_dialog_message">ನೀವು ಈಗ <xliff:g id="update_name">%1$s</xliff:g>ಗೆ ಉನ್ನತೀಕರಿಸಲು ಹೋಗುತ್ತಿದ್ದೀರಿ.\n\nನೀವು <xliff:g id="ok">%2$s</xliff:g> ಒತ್ತಿದರೆ, ಸಾಧನವು ಹೊಸ ತಂತ್ರಾಂಶ ಸ್ಥಾಪಿಸಲು ಸ್ವಯಂ ಮರುಚೇತರಿಕೆ ರೀತಿಯಲ್ಲಿ ಪುನರಾರಂಭವಾಗುತ್ತದೆ.\n\nಸೂಚನೆ: ಈ ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಹೊಂದಿಕೊಳ್ಳುವ ಮರುಚೇತರಿಕೆ ಅಗತ್ಯವಿದೆ ಇಲ್ಲವಾದರೆ ಸ್ವತಃ ಉನ್ನತೀಕರಿಸಬೇಕಾಗುತ್ತದೆ.</string>
+    <string name="apply_update_dialog_message_ab">ನೀವು ಈಗ <xliff:g id="update_name">%1$s</xliff:g>ಗೆ ಉನ್ನತೀಕರಿಸಲು ಹೋಗುತ್ತಿದ್ದೀರಿ.\n\nನೀವು <xliff:g id="ok">%2$s</xliff:g> ಒತ್ತಿದರೆ, ಸಾಧನವು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪನೆ ಪ್ರಾರಂಭಿಸುತ್ತದೆ.\n\nಪೂರ್ಣಗೊಂಡಾಗ ಸಾಧನವನ್ನು ಮರುಹೂಡಲು ನಿಮಗೆ ಪ್ರೇರೇಪಿಸುವುದು.</string>
+    <string name="cancel_installation_dialog_message">ಸ್ಥಾಪನೆ ರದ್ದುಗೊಳಿಸುವುದೆ?</string>
+    <string name="label_download_url">ಡೌನ್‌ಲೋಡ್ URL</string>
+    <string name="toast_download_url_copied">URL ನಕಲಿಸಿದೆ</string>
+    <string name="dialog_export_title">ನವೀಕರಣವನ್ನು ಕಳಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="notification_export_success">ನವೀಕರಣವನ್ನು ಕಳಿಸಲಾಗಿದೆ</string>
+    <string name="notification_export_fail">ಕಳಿಸುವಿಕೆಯಲ್ಲಿ ದೋಷವಾಗಿದೆ</string>
+    <string name="toast_already_exporting">ಈಗಾಗಲೇ ನವೀಕರಣವನ್ನು ಕಳಿಸಲಾಗುತ್ತಿದೆ</string>
     <plurals name="eta_seconds">
-        <item quantity="one">1 second left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="one">೧ ಕ್ಷಣ ಉಳಿದಿದೆ
+<xliff:g id="count">%d</xliff:g> ಕ್ಷಣಗಳು ಉಳಿದಿದೆ</item>
+        <item quantity="other">೧ ಕ್ಷಣ ಉಳಿದಿದೆ
+<xliff:g id="count">%d</xliff:g> ಕ್ಷಣಗಳು ಉಳಿದಿದೆ</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">1 minute left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="one">೧ ನಿಮಿಷ ಉಳಿದಿದೆ
+<xliff:g id="count">%d</xliff:g> ನಿಮಿಷಗಳು ಉಳಿದಿದೆ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷಗಳು ಉಳಿದಿದೆ</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">1 hour left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="one">೧ ಗಂಟೆ ಉಳಿದಿದೆ
+<xliff:g id="count">%d</xliff:g> ಗಂಟೆಗಳು ಉಳಿದಿದೆ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆ ಉಳಿದಿದೆ</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
-    <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
-    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
-    <string name="export_channel_title">Export completion</string>
-    <string name="new_updates_channel_title">New updates</string>
-    <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
-    <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
-    <string name="misc">Miscellaneous</string>
-    <string name="maybe_later">Maybe later</string>
-    <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
-    <string name="hit">You got a hit.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
+    <string name="update_on_mobile_data_message">ನೀವೀಗ ನವೀಕರಣೆಯ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
+    <string name="checkbox_mobile_data_warning">ಮತ್ತೆ ತೋರಿಸಬೇಡ</string>
+    <string name="menu_mobile_data_warning">ಮೊಬೈಲ್ ಡೇಟಾ ಎಚ್ಚರಿಕೆ</string>
+    <string name="blocked_update_dialog_title">ನವೀಕರಣವನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ</string>
+    <string name="blocked_update_dialog_message">ಅಪ್‌ಡೇಟರ್ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿ ಈ ನವೀಕರಣವನ್ನು ಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ.  ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ದಯವಿಟ್ಟು <xliff:g id="info_url">%1$s</xliff:g> ಅನ್ನು ಓದಿ.</string>
+    <string name="export_channel_title">ಕಳಿಸುವಿಕೆ ಪೂರ್ಣವಾಗಿದೆ</string>
+    <string name="new_updates_channel_title">ಹೊಸ ನವೀಕರಣೆಗಳು</string>
+    <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಡೌನ್‌ಲೋಡ್‌ಗಳು</string>
+    <string name="update_failed_channel_title">ನವೀಕರಣ ವಿಫಲವಾಯಿತು</string>
+    <string name="update_available">ನವೀಕರಣ ಲಭ್ಯವಿದೆ</string>
+    <string name="system">ಸಿಸ್ಟಮ್</string>
+    <string name="security">ಭದ್ರತೆ</string>
+    <string name="settings">ಸೆಟ್ಟಿಂಗ್‍ಗಳು</string>
+    <string name="misc">ಇತರೆ</string>
+    <string name="maybe_later">ಬಹುಶಃ ನಂತರ</string>
+    <string name="bunny">ನೀವು ಎಂದಿಗೂ ಬೇಸರಗೊಳ್ಳುವುದಿಲ್ಲವೇ?</string>
+    <string name="nothing">ಇನ್ನೂ ಏನೂ ಇಲ್ಲ..</string>
+    <string name="hit">ನಿಮಗೆ ಹಿಟ್ ಸಿಕ್ಕಿದೆ.</string>
+    <string name="check_for_updates">ನವೀಕರಣೆಗಳಿಗಾಗಿ ಪರೀಕ್ಷಿಸಿ</string>
+    <string name="about_this_update">ಈ ನವೀಕರಣದ ಬಗ್ಗೆ</string>
+    <string name="close">ಮುಚ್ಚು</string>
+    <string name="changelog">ಬದಲಾವಣೆ ಪಟ್ಟಿ</string>
+    <string name="read_more">ಇನ್ನಷ್ಟು ಓದಿ</string>
+    <string name="notes">ಟಿಪ್ಪಣಿಗಳು</string>
+    <string name="update_notes">∘ನವೀಕರಣಗೊಳ್ಳುವವರೆಗೂ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕದಲ್ಲಿರಿಸಿಕೊಳ್ಳಿ.\n∘ ನಿಮ್ಮ ಸಾಧನವು ಕನಿಷ್ಠ 30% ಬ್ಯಾಟರಿಯನ್ನು ಹೊಂದಿದೆಯೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.\n∘ ನವೀಕರಣ ಪೂರ್ಣಗೊಳ್ಳುವವರೆಗೆ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಬಳಸಬೇಡಿ.</string>
+    <string name="changelog_error">ಬದಲಾವಣೆಯ ಪಟ್ಟಿ ದೊರೆಯಲಿಲ್ಲ</string>
 </resources>

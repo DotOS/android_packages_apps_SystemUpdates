@@ -116,12 +116,12 @@
     <string name="bunny">你不會感到厭倦嗎？</string>
     <string name="nothing">空空如也……</string>
     <string name="hit">賓果答對囉。</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">檢查更新</string>
+    <string name="about_this_update">關於此更新</string>
+    <string name="close">關閉​​​</string>
+    <string name="changelog">更新日誌</string>
+    <string name="read_more">了解更多</string>
+    <string name="notes">附註</string>
+    <string name="update_notes">在整個更新過程中保持您的手機連接到網絡。\n請確保您的設備至少有30%的電量。\n更新完成前請勿使用您的手機或設備。</string>
+    <string name="changelog_error">沒有找到更新日誌</string>
 </resources>

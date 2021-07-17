@@ -67,61 +67,61 @@
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
+    <string name="list_verifying_update">กำลังตรวจสอบการอัปเดต</string>
     <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
+    <string name="action_download">ดาวน์โหลด</string>
+    <string name="action_pause">หยุดชั่วคราว</string>
     <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
+    <string name="action_install">ติดตั้ง</string>
     <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
+    <string name="action_delete">ลบ</string>
+    <string name="action_cancel">ยกเลิก</string>
+    <string name="confirm_delete_dialog_title">ลบไฟล์</string>
     <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
     <string name="apply_update_dialog_title">Apply update</string>
     <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
     <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
     <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
+    <string name="label_download_url">ดาวน์โหลด URL</string>
     <string name="toast_download_url_copied">URL Copied</string>
     <string name="dialog_export_title">Exporting update</string>
     <string name="notification_export_success">Update exported</string>
     <string name="notification_export_fail">Export error</string>
     <string name="toast_already_exporting">Already exporting an update</string>
     <plurals name="eta_seconds">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="other">เหลืออีก <xliff:g id="count">%d</xliff:g> วินาที</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="other">เหลืออีก <xliff:g id="count">%d</xliff:g> นาที</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="other">เหลืออีก <xliff:g id="count">%d</xliff:g> ชั่วโมง</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_title">คำเตือน</string>
     <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
+    <string name="checkbox_mobile_data_warning">ไม่ต้องแสดงอีก</string>
     <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
     <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
     <string name="export_channel_title">Export completion</string>
     <string name="new_updates_channel_title">New updates</string>
     <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
+    <string name="update_failed_channel_title">การอัปเดตล้มเหลว</string>
     <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
+    <string name="system">ระบบ</string>
+    <string name="security">ความปลอดภัย</string>
+    <string name="settings">การตั้งค่า</string>
     <string name="misc">Miscellaneous</string>
     <string name="maybe_later">Maybe later</string>
-    <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
+    <string name="bunny">คุณไม่เคยเบื่อเลยหรอ?</string>
+    <string name="nothing">ตอนนี้ยังไม่มีอะไร...</string>
     <string name="hit">You got a hit.</string>
     <string name="check_for_updates">Check for updates</string>
     <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
+    <string name="close">ปิด</string>
     <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
+    <string name="read_more">อ่านเพิ่มเติม</string>
+    <string name="notes">หมายเหตุ</string>
     <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
     <string name="changelog_error">Changelog not found</string>
 </resources>

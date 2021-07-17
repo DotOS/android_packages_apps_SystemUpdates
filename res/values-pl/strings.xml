@@ -125,12 +125,12 @@
     <string name="bunny">Czy tobie się nudzi?</string>
     <string name="nothing">Na razie nic.</string>
     <string name="hit">Otrzymano prezent!</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Sprawdź dostępne aktualizacje</string>
+    <string name="about_this_update">O tej aktualizacji</string>
+    <string name="close">Zamknij</string>
+    <string name="changelog">Lista zmian</string>
+    <string name="read_more">Czytaj więcej</string>
+    <string name="notes">Notatki</string>
+    <string name="update_notes">&lt;unk&gt; Trzymaj swój telefon podłączony do sieci przez cały czas aktualizacji.\n&lt;unk&gt; Upewnij się, że urządzenie posiada co najmniej 30% baterii.\n&lt;unk&gt; Nie używaj telefonu lub urządzenia dopóki aktualizacja nie zostanie zakończona.</string>
+    <string name="changelog_error">Nie znaleziono dziennika zmian</string>
 </resources>

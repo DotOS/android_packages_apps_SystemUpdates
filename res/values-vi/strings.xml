@@ -116,12 +116,12 @@
     <string name="bunny">Bạn không bao giờ cảm thấy buồn chán?</string>
     <string name="nothing">Chưa có gì..</string>
     <string name="hit">Bạn nhận được một món quà.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Kiểm tra bản cập nhật</string>
+    <string name="about_this_update">Về bản cập nhật này</string>
+    <string name="close">Đóng</string>
+    <string name="changelog">Những thay đổi</string>
+    <string name="read_more">Đọc thêm</string>
+    <string name="notes">Chú ý</string>
+    <string name="update_notes">∘ Giữ điện thoại của bạn kết nối với mạng trong suốt quá trình cập nhật. \ N∘ Đảm bảo thiết bị của bạn còn ít nhất 30% pin. \ N∘ Không sử dụng điện thoại hoặc thiết bị của bạn cho đến khi quá trình cập nhật hoàn tất.</string>
+    <string name="changelog_error">Những thay đổi không tìm thấy</string>
 </resources>

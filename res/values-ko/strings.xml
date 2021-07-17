@@ -15,113 +15,113 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
-    <string name="downloading_notification">Downloading</string>
-    <string name="download_paused_notification">Download paused</string>
-    <string name="download_paused_error_notification">Download error</string>
-    <string name="download_completed_notification">Download completed</string>
-    <string name="download_starting_notification">Starting download</string>
-    <string name="update_failed_notification">Update failed</string>
-    <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="new_updates_found_title">New updates</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pause</string>
-    <string name="resume_button">Resume</string>
-    <string name="suspend_button">Suspend</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
-    <string name="preparing_ota_first_boot">Preparing for first boot</string>
-    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
-    <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_preferences">Preferences</string>
-    <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
-    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
-    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
-    <string name="menu_show_changelog">Show changelog</string>
-    <string name="menu_ab_perf_mode">Prioritize update process</string>
-    <string name="menu_update_recovery">Update recovery</string>
-    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
-    <string name="snack_updates_found">New updates found</string>
-    <string name="snack_no_updates_found">No new updates found</string>
-    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_verification_failed">The update verification failed.</string>
-    <string name="snack_download_verified">Download completed.</string>
-    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
+    <string name="verification_failed_notification">검증 실패</string>
+    <string name="verifying_download_notification">업데이트 검증 중</string>
+    <string name="downloading_notification">다운로드 중</string>
+    <string name="download_paused_notification">다운로드 일시 중지됨</string>
+    <string name="download_paused_error_notification">다운로드 오류</string>
+    <string name="download_completed_notification">다운로드 완료</string>
+    <string name="download_starting_notification">다운로드를 시작하는 중</string>
+    <string name="update_failed_notification">업데이트 실패</string>
+    <string name="installation_suspended_notification">설치가 보류됨</string>
+    <string name="new_updates_found_title">새 업데이트</string>
+    <string name="text_download_speed">%1$s,%2$s/초</string>
+    <string name="pause_button">일시 중지</string>
+    <string name="resume_button">재개</string>
+    <string name="suspend_button">보류</string>
+    <string name="installing_update">업데이트 패키지를 설치하는 중</string>
+    <string name="installing_update_error">설치 오류</string>
+    <string name="installing_update_finished">업데이트 설치됨</string>
+    <string name="finalizing_package">패키지 설치 마무리 중</string>
+    <string name="preparing_ota_first_boot">첫 번째 부팅을 준비하는 중</string>
+    <string name="dialog_prepare_zip_message">예비 업데이트 준비</string>
+    <string name="dialog_battery_low_title">배터리 부족</string>
+    <string name="dialog_battery_low_message_pct">배터리 수준이 너무 낮습니다. 설치를 계속하려면 배터리 잔량이 <xliff:g id="percent_discharging">%1$d</xliff:g>%%, 충전 중인 경우 <xliff:g id="percent_charging">%2$d</xliff:g>%% 이상이여야 합니다.</string>
+    <string name="reboot">다시 시작</string>
+    <string name="menu_refresh">새로 고침</string>
+    <string name="menu_preferences">설정</string>
+    <string name="menu_auto_updates_check">업데이트 자동 확인</string>
+    <string name="menu_auto_updates_check_interval_daily">매일</string>
+    <string name="menu_auto_updates_check_interval_weekly">매주</string>
+    <string name="menu_auto_updates_check_interval_monthly">매달</string>
+    <string name="menu_auto_updates_check_interval_never">안 함</string>
+    <string name="menu_auto_delete_updates">설치 후 업데이트 파일 삭제</string>
+    <string name="menu_delete_update">삭제</string>
+    <string name="menu_copy_url">URL 복사</string>
+    <string name="menu_export_update">업데이트 내보내기</string>
+    <string name="menu_show_changelog">변경 사항 보기</string>
+    <string name="menu_ab_perf_mode">업데이트 우선 순위 높이기</string>
+    <string name="menu_update_recovery">복구 모드 업데이트</string>
+    <string name="toast_forced_update_recovery">이 기기에서 Lineage 복구 모드를 비활성화할 수 없습니다.</string>
+    <string name="snack_updates_found">새 업데이트가 있습니다</string>
+    <string name="snack_no_updates_found">새 업데이트가 없습니다</string>
+    <string name="snack_updates_check_failed">업데이트를 확인하지 못했습니다. 인터넷이 연결되어 있는지 확인한 후 다시 시도하세요.</string>
+    <string name="snack_download_failed">다운로드에 실패했습니다. 인터넷 연결을 확인한 후 다시 시도해주세요.</string>
+    <string name="snack_download_verification_failed">업데이트 검증에 실패했습니다.</string>
+    <string name="snack_download_verified">다운로드 완료.</string>
+    <string name="snack_update_not_installable">현재 빌드에서는 이 업데이트를 설치할 수 없습니다.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="header_last_updates_check">마지막 확인: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
     <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
-    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
-    <string name="apply_update_dialog_title">Apply update</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
-    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
-    <string name="dialog_export_title">Exporting update</string>
-    <string name="notification_export_success">Update exported</string>
-    <string name="notification_export_fail">Export error</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">업데이트 검증 중</string>
+    <string name="list_no_updates">새 업데이트가 없습니다. 수동으로 새 업데이트를 확인하려면 새로 고침하세요.</string>
+    <string name="action_download">다운로드</string>
+    <string name="action_pause">일시 중지</string>
+    <string name="action_resume">재개</string>
+    <string name="action_install">설치</string>
+    <string name="action_info">정보</string>
+    <string name="action_delete">삭제</string>
+    <string name="action_cancel">취소</string>
+    <string name="confirm_delete_dialog_title">파일 삭제</string>
+    <string name="confirm_delete_dialog_message">선택된 업데이트 파일을 삭제하시겠습니까?</string>
+    <string name="apply_update_dialog_title">업데이트 적용</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> 버전으로 업그레이드 하려고 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 기기가 알아서 복구 모드로 다시 시작하여 업데이트를 설치합니다.\n\n참고: 이 기능을 지원하는 리커버리가 설치되지 않았다면 수동으로 설치하여야 합니다.</string>
+    <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> 버전으로 업그레이드 하려고 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 기기가 백그라운드에서 업데이트를 설치합니다.\n\n업데이트가 완료되면, 기기를 다시 시작해야 합니다.</string>
+    <string name="cancel_installation_dialog_message">설치를 취소하시겠습니까?</string>
+    <string name="label_download_url">URL 다운로드</string>
+    <string name="toast_download_url_copied">URL 복사됨</string>
+    <string name="dialog_export_title">업데이트를 내보내는 중</string>
+    <string name="notification_export_success">업데이트를 내보냈습니다</string>
+    <string name="notification_export_fail">내보내기 오류</string>
+    <string name="toast_already_exporting">이미 업데이트를 내보내고 있습니다</string>
     <plurals name="eta_seconds">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>초 남음</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>분 남음</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>시간 남음</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
-    <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
-    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
-    <string name="export_channel_title">Export completion</string>
-    <string name="new_updates_channel_title">New updates</string>
-    <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
-    <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
-    <string name="misc">Miscellaneous</string>
-    <string name="maybe_later">Maybe later</string>
-    <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
-    <string name="hit">You got a hit.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="update_on_mobile_data_title">경고</string>
+    <string name="update_on_mobile_data_message">모바일 데이터를 사용하여 업데이트 패키지를 다운로드하면 사용 중인 요금제에 따라 추가 요금이 부과될 수 있습니다. 계속 하시겠습니까?</string>
+    <string name="checkbox_mobile_data_warning">다시 보지 않음</string>
+    <string name="menu_mobile_data_warning">모바일 데이터 경고</string>
+    <string name="blocked_update_dialog_title">업데이트 차단됨</string>
+    <string name="blocked_update_dialog_message">이 업데이트는 업데이터 앱으로 설치할 수 없습니다. <xliff:g id="info_url">%1$s</xliff:g> 에서 정보를 볼 수 있습니다.</string>
+    <string name="export_channel_title">내보내기 완료</string>
+    <string name="new_updates_channel_title">새 업데이트</string>
+    <string name="ongoing_channel_title">진행 중인 다운로드</string>
+    <string name="update_failed_channel_title">업데이트 실패</string>
+    <string name="update_available">업데이트 가능</string>
+    <string name="system">시스템</string>
+    <string name="security">보안</string>
+    <string name="settings">설정</string>
+    <string name="misc">기타</string>
+    <string name="maybe_later">나중에</string>
+    <string name="bunny">지루하지 않아요?</string>
+    <string name="nothing">아직 아무 것도 없어요</string>
+    <string name="hit">시간 낭비에요</string>
+    <string name="check_for_updates">업데이트 확인</string>
+    <string name="about_this_update">기기 정보</string>
+    <string name="close">닫기</string>
+    <string name="changelog">변경 사항</string>
+    <string name="read_more">더 보기</string>
+    <string name="notes">참고</string>
+    <string name="update_notes">∘ 업데이트를 진행하는 동안 네트워크에 연결해주세요.\n∘ 적어도 배터리 수준이 30% 이상이어야 합니다.\n∘ 업데이트가 완료될 때까지 기기를 사용할 수 없습니다.</string>
+    <string name="changelog_error">변경 사항을 찾을 수 없음</string>
 </resources>

@@ -119,12 +119,12 @@
     <string name="bunny">Hiç sıkılmadın mı?</string>
     <string name="nothing">Henüz değil..</string>
     <string name="hit">Bir vuruşun var.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Güncellemeleri kontrol et</string>
+    <string name="about_this_update">Bu güncelleme hakkında</string>
+    <string name="close">Kapat</string>
+    <string name="changelog">Değişiklikler</string>
+    <string name="read_more">Daha fazla oku</string>
+    <string name="notes">Notlar</string>
+    <string name="update_notes">∘ Güncelleme boyunca telefonunuzu bir ağa bağlı tutun.\n∘ Cihazınızda en az %30 pil olduğundan emin olun.\n∘ Güncelleme tamamlanana kadar telefonunuzu veya cihazınızı kullanmayın.</string>
+    <string name="changelog_error">Değişiklik günlüğü bulunamadı</string>
 </resources>

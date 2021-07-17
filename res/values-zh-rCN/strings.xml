@@ -19,7 +19,7 @@
     <string name="verifying_download_notification">正在验证更新</string>
     <string name="downloading_notification">下载中</string>
     <string name="download_paused_notification">下载已暂停</string>
-    <string name="download_paused_error_notification">下载失败</string>
+    <string name="download_paused_error_notification">下载出错</string>
     <string name="download_completed_notification">下载完成</string>
     <string name="download_starting_notification">开始下载</string>
     <string name="update_failed_notification">更新失败</string>
@@ -116,12 +116,12 @@
     <string name="bunny">你永远不会感到枯燥吗?</string>
     <string name="nothing">空空如也......</string>
     <string name="hit">你赢了........</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">检查更新</string>
+    <string name="about_this_update">关于此更新</string>
+    <string name="close">关闭</string>
+    <string name="changelog">更新日志</string>
+    <string name="read_more">了解更多</string>
+    <string name="notes">备注：</string>
+    <string name="update_notes">在整个更新过程中保持您的手机连接到网络。\n请确保您的设备至少有30%的电量。\n更新完成前请勿使用您的手机或设备。</string>
+    <string name="changelog_error">没有找到更新日志</string>
 </resources>

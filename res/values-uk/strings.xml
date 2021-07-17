@@ -125,12 +125,12 @@
     <string name="bunny">Ви ніколи не починаєте нудьгувати?</string>
     <string name="nothing">Ще нічого..</string>
     <string name="hit">В точку.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Перевiрити наявнiсть оновлень</string>
+    <string name="about_this_update">Про це оновлення</string>
+    <string name="close">Закрити</string>
+    <string name="changelog">Список змін та нововведень</string>
+    <string name="read_more">Детальніше</string>
+    <string name="notes">Нотатки</string>
+    <string name="update_notes">Переконайтеся, що ваш телефон підключено до мережі протягом оновлення.\nПереконайтеся, що пристрій має щонайменше 30% заряду батареї.\n Не використовуйте ваш телефон або пристрій, поки оновлення не буде завершене.</string>
+    <string name="changelog_error">Список змін не знайдено</string>
 </resources>
