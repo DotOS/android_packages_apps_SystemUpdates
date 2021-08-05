@@ -37,6 +37,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -52,7 +53,6 @@ import com.dot.updater.misc.Utils;
 import com.dot.updater.model.UpdateInfo;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import org.json.JSONException;
 
@@ -319,10 +319,10 @@ public class UpdatesActivity extends UpdatesListActivity {
         View view = LayoutInflater.from(this).inflate(R.layout.preferences_dialog, null);
         Spinner autoCheckInterval =
                 view.findViewById(R.id.preferences_auto_updates_check_interval);
-        SwitchMaterial autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
-        SwitchMaterial dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
-        SwitchMaterial abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
-        SwitchMaterial updateRecovery = view.findViewById(R.id.preferences_update_recovery);
+        Switch autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
+        Switch dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
+        Switch abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
+        Switch updateRecovery = view.findViewById(R.id.preferences_update_recovery);
 
         if (!Utils.isABDevice()) {
             abPerfMode.setVisibility(View.GONE);

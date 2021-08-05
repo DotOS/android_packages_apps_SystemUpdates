@@ -6,6 +6,8 @@
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -13,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/colltoolbar_height"
         android:animateLayoutChanges="true"
-        android:background="@android:color/transparent"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
         app:elevation="0dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -21,14 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:background="?android:attr/colorPrimary"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
             app:collapsedTitleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
-            app:contentScrim="?android:attr/colorPrimary"
             app:expandedTitleMarginStart="32dp"
             app:expandedTitleTextAppearance="@style/Dashboard.Toolbar.Expanded"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:maxLines="2"
-            app:statusBarScrim="?android:attr/colorPrimary"
             app:toolbarId="@+id/action_bar">
 
             <Toolbar
@@ -40,6 +42,7 @@
                 android:theme="?android:attr/actionBarTheme"
                 android:title="@string/snack_no_updates_found"
                 android:titleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
+                android:background="@android:color/transparent"
                 app:layout_collapseMode="pin" />
 
             <LinearLayout

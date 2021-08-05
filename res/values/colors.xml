@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFF</color>
-    <color name="colorPrimaryDark">#FFF</color>
+    <color name="colorPrimary">@*android:color/monet_background_device_default</color>
+    <color name="colorPrimaryDark">@*android:color/monet_background_device_default</color>
     <color name="colorAccent">@*android:color/accent_device_default_light</color>
-    <color name="colorPrimaryBackground">#E6E6E6</color>
+    <color name="colorPrimaryBackground">@*android:color/monet_background_secondary_device_default</color>
     <color name="colorPrimaryTranslucent">#B3FFFFFF</color>
     <color name="colorPrimaryScrim">#59FFFFFF</color>
     <color name="colorError">#66F44336</color>
 
     <color name="ic_launcher_background">@color/colorPrimary</color>
 
-    <color name="cardBackground">@*android:color/background_device_default_light</color>
+    <color name="cardBackground">@*android:color/monet_background_secondary_device_default</color>
     <color name="cardBackgroundStroke">#1f000000</color>
 
     <!-- QS Custom Colors -->
@@ -24,6 +24,6 @@
     <color name="inverted">#212121</color>
     <color name="ic_background">#333333</color>
 
-    <color name="pillColor">#9E9E9E</color>
+    <color name="pillColor">@*android:color/monet_background_secondary_device_default</color>
 
 </resources>

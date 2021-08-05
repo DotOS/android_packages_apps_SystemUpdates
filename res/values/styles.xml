@@ -13,6 +13,8 @@
     </style>
 
     <style name="AlertDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
         <item name="buttonBarButtonStyle">@style/DialogButtonStyle</item>
@@ -61,6 +63,7 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">google-sans</item>
     </style>

@@ -13,6 +13,8 @@
     </style>
 
     <style name="AlertDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
         <item name="buttonBarButtonStyle">@style/DialogButtonStyle</item>
@@ -38,7 +40,7 @@
     </style>
 
     <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/sheet_background</item>
+        <item name="android:background">@drawable/sheet_background_inset</item>
     </style>
 
     <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.BottomSheetDialog">
@@ -51,6 +53,7 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
         <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">google-sans</item>
     </style>
