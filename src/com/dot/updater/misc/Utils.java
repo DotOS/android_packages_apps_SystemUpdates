@@ -105,32 +105,29 @@ public class Utils {
             changelog.setHasSystem(true);
             changelog.setSystemTitle(item.getString("systemTitle"));
             changelog.setSystemSummary(item.getString("systemSummary"));
-            Log.d("Changelog", "We have system changes");
         }
         if (!item.getString("securityTitle").equals("") || !item.getString("securitySummary").equals("")) {
             changelog.setHasSecurity(true);
             changelog.setSecurityTitle(item.getString("securityTitle"));
             changelog.setSecuritySummary(item.getString("securitySummary"));
-            Log.d("Changelog", "We have security changes");
         }
         if (!item.getString("settingsTitle").equals("") || !item.getString("settingsSummary").equals("")) {
             changelog.setHasSettings(true);
             changelog.setSettingsTitle(item.getString("settingsTitle"));
             changelog.setSettingsSummary(item.getString("settingsSummary"));
-            Log.d("Changelog", "We have settings changes");
         }
         if (!item.getString("miscTitle").equals("") || !item.getString("miscSummary").equals("")) {
             changelog.setHasMisc(true);
             changelog.setMiscTitle(item.getString("miscTitle"));
             changelog.setMiscSummary(item.getString("miscSummary"));
-            Log.d("Changelog", "We have misc changes");
         }
         update.setChangelog(changelog);
         return update;
     }
 
     public static boolean isCompatible(UpdateBaseInfo update) {
-        if (update.getVersion().compareTo(SystemProperties.get(Constants.PROP_DOT_VERSION)) < 0) {
+        if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) && 
+                update.getVersion().compareTo(SystemProperties.get(Constants.PROP_DOT_VERSION)) < 0) {
             Log.d(TAG, update.getName() + " is older than current Android version");
             return false;
         }
@@ -147,10 +144,7 @@ public class Utils {
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) ||
-                update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
-                update.getVersion().equalsIgnoreCase(
-                        SystemProperties.get(Constants.PROP_DOT_VERSION));
+        return (SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) || isCompatible(update));
     }
 
     public static List<UpdateInfo> parseJson(File file, boolean compatibleOnly)
