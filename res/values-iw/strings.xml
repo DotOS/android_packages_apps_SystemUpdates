@@ -15,33 +15,33 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
-    <string name="downloading_notification">Downloading</string>
-    <string name="download_paused_notification">Download paused</string>
-    <string name="download_paused_error_notification">Download error</string>
-    <string name="download_completed_notification">Download completed</string>
-    <string name="download_starting_notification">Starting download</string>
-    <string name="update_failed_notification">Update failed</string>
+    <string name="verification_failed_notification">האימות נכשל</string>
+    <string name="verifying_download_notification">מאמת עדכון</string>
+    <string name="downloading_notification">מוריד</string>
+    <string name="download_paused_notification">ההורדה מושהית</string>
+    <string name="download_paused_error_notification">שגיאת הורדה</string>
+    <string name="download_completed_notification">ההורדה הושלמה</string>
+    <string name="download_starting_notification">מתחיל הורדה</string>
+    <string name="update_failed_notification">העדכון נכשל</string>
     <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="new_updates_found_title">New updates</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pause</string>
-    <string name="resume_button">Resume</string>
+    <string name="new_updates_found_title">עדכון חדש</string>
+    <string name="text_download_speed">%2$s,%1$s לשניה</string>
+    <string name="pause_button">השהה</string>
+    <string name="resume_button">המשך</string>
     <string name="suspend_button">Suspend</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
-    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="installing_update">מתקין חבילת עדכון</string>
+    <string name="installing_update_error">ההתקנה נכשלה</string>
+    <string name="installing_update_finished">העדכון הותקן</string>
+    <string name="finalizing_package">משלים את התקנת החבילה</string>
+    <string name="preparing_ota_first_boot">מתכונן להפעלה ראשונה</string>
     <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
-    <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_preferences">Preferences</string>
-    <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
+    <string name="dialog_battery_low_title">סוללה חלשה</string>
+    <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>
+    <string name="reboot">הפעלה מחדש</string>
+    <string name="menu_refresh">רענן</string>
+    <string name="menu_preferences">העדפות</string>
+    <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
+    <string name="menu_auto_updates_check_interval_daily">פעם ביום</string>
     <string name="menu_auto_updates_check_interval_weekly">פעם בשבוע</string>
     <string name="menu_auto_updates_check_interval_monthly">פעם בחודש</string>
     <string name="menu_auto_updates_check_interval_never">אף פעם</string>
@@ -62,10 +62,10 @@
     <string name="snack_update_not_installable">אין אפשרות להתקין עדכון זה על גבי הגרסה הנוכחית.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="header_last_updates_check">בדיקה אחרונה: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
     <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">מאמת עדכון</string>
     <string name="list_no_updates">לא נמצאו עדכונים חדשים. כדי לבדוק אם יש עדכונים חדשים, לחץ על רענון.</string>
@@ -79,11 +79,11 @@
     <string name="confirm_delete_dialog_title">מחק קובץ</string>
     <string name="confirm_delete_dialog_message">למחוק את קובץ העדכון שנבחר?</string>
     <string name="apply_update_dialog_title">החל עדכון</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message">אתה עומד לשדרג אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תבחר <xliff:g id="ok">%2$s</xliff:g>, המכשיר יופעל מחדש למצב שחזור (Recovery) להתקנת העדכון.\n\nשים לב: תכונה זו דורשת ריקוברי תואם או שהעדכון לא יותקן אוטומטית, ותצטרך לשדרג ידנית.</string>
     <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
+    <string name="cancel_installation_dialog_message">לבטל את ההתקנה?</string>
+    <string name="label_download_url">כתובת ההורדה</string>
+    <string name="toast_download_url_copied">הכתובת הועתקה</string>
     <string name="dialog_export_title">Exporting update</string>
     <string name="notification_export_success">Update exported</string>
     <string name="notification_export_fail">Export error</string>
@@ -108,7 +108,7 @@
     </plurals>
     <string name="update_on_mobile_data_title">אזהרה</string>
     <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
+    <string name="checkbox_mobile_data_warning">אל תציג שוב</string>
     <string name="menu_mobile_data_warning">Mobile data warning</string>
     <string name="blocked_update_dialog_title">Update blocked</string>
     <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>

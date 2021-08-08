@@ -124,7 +124,7 @@
     <string name="close">Chiudi</string>
     <string name="changelog">Changelog</string>
     <string name="read_more">Leggi di più</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="notes">Note</string>
+    <string name="update_notes">∘ Mantieni il telefono connesso a una rete durante l\'aggiornamento.\n∘ Assicurati che il tuo dispositivo abbia almeno il 30% di batteria.\n∘ Non utilizzare il telefono o il dispositivo fino al completamento dell\'aggiornamento.</string>
+    <string name="changelog_error">Changelog non trovato</string>
 </resources>

@@ -35,59 +35,59 @@
     <string name="finalizing_package">Finalizing package installation</string>
     <string name="preparing_ota_first_boot">Preparing for first boot</string>
     <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
+    <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
-    <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_preferences">Preferences</string>
-    <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
-    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
-    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
-    <string name="menu_show_changelog">Show changelog</string>
-    <string name="menu_ab_perf_mode">Prioritize update process</string>
-    <string name="menu_update_recovery">Update recovery</string>
+    <string name="reboot">Reinicia</string>
+    <string name="menu_refresh">Refresca</string>
+    <string name="menu_preferences">Preferències</string>
+    <string name="menu_auto_updates_check">Comprova automàticament les actualitzacions</string>
+    <string name="menu_auto_updates_check_interval_daily">Un cop al dia</string>
+    <string name="menu_auto_updates_check_interval_weekly">Un cop per setmana</string>
+    <string name="menu_auto_updates_check_interval_monthly">Un cop al mes</string>
+    <string name="menu_auto_updates_check_interval_never">Mai</string>
+    <string name="menu_auto_delete_updates">Elimina les actualitzacions una vegada s\'hagin instal·lat</string>
+    <string name="menu_delete_update">Borrar</string>
+    <string name="menu_copy_url">Copiar URL</string>
+    <string name="menu_export_update">Exporta l\'actualització</string>
+    <string name="menu_show_changelog">Mostra el registre de canvis</string>
+    <string name="menu_ab_perf_mode">Prioritza el procés d\'actualització</string>
+    <string name="menu_update_recovery">Actualitza el Recovery</string>
     <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
-    <string name="snack_updates_found">New updates found</string>
-    <string name="snack_no_updates_found">No new updates found</string>
-    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_verification_failed">The update verification failed.</string>
-    <string name="snack_download_verified">Download completed.</string>
-    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
+    <string name="snack_updates_found">S\'han trobat noves actualitzacions</string>
+    <string name="snack_no_updates_found">No s\'han trobat noves actualitzacions</string>
+    <string name="snack_updates_check_failed">Ha fallat la comprovació d\'actualitzacions. Si us plau, verifiqueu la connexió d\'internet i comproveu una altra vegada.</string>
+    <string name="snack_download_failed">Ha fallat la la baixada. Verifiqueu la connexió a Internet i torneu-ho a provar més tard.</string>
+    <string name="snack_download_verification_failed">Ha fallat la verificació de l\'actualització.</string>
+    <string name="snack_download_verified">Baixada completada.</string>
+    <string name="snack_update_not_installable">Aquesta actualització no es pot instal·lar a sobre de la compilació actual.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
     <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
-    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
-    <string name="apply_update_dialog_title">Apply update</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">S\'està verificant l\'actualització</string>
+    <string name="list_no_updates">No s\'han trobat noves actualitzacions. Per comprovar manualment si hi ha noves actualitzacions, utilitza el botó Refresca.</string>
+    <string name="action_download">Baixa</string>
+    <string name="action_pause">Pausa</string>
+    <string name="action_resume">Reprèn</string>
+    <string name="action_install">Instal·la</string>
+    <string name="action_info">Informació</string>
+    <string name="action_delete">Esborrar</string>
+    <string name="action_cancel">Cancel·lar</string>
+    <string name="confirm_delete_dialog_title">Esborrar el fitxer</string>
+    <string name="confirm_delete_dialog_message">Vols esborrar l\'arxiu d\'actualització seleccionat?</string>
+    <string name="apply_update_dialog_title">Aplica l\'actualització</string>
     <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
     <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
-    <string name="dialog_export_title">Exporting update</string>
-    <string name="notification_export_success">Update exported</string>
-    <string name="notification_export_fail">Export error</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
+    <string name="cancel_installation_dialog_message">Voleu cancel·lar la instal·lació?</string>
+    <string name="label_download_url">URL de descàrrega</string>
+    <string name="toast_download_url_copied">URL copiada</string>
+    <string name="dialog_export_title">S\'està exportant l\'actualització</string>
+    <string name="notification_export_success">Actualització exportada</string>
+    <string name="notification_export_fail">Error d’exportació</string>
+    <string name="toast_already_exporting">Ja s\'està exportant una actualització</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 second left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
@@ -100,30 +100,30 @@
         <item quantity="one">1 hour left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
-    <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
+    <string name="update_on_mobile_data_title">Avís</string>
+    <string name="update_on_mobile_data_message">Estàs a punt de baixar un paquet d\'actualització amb dades mòbils que probablement generarà un gran ús de dades. Vols continuar?</string>
+    <string name="checkbox_mobile_data_warning">No ho tornis a mostrar</string>
+    <string name="menu_mobile_data_warning">Alerta d\'ús de dades</string>
+    <string name="blocked_update_dialog_title">Actualització bloquejada</string>
     <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
-    <string name="export_channel_title">Export completion</string>
-    <string name="new_updates_channel_title">New updates</string>
-    <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
-    <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
-    <string name="misc">Miscellaneous</string>
-    <string name="maybe_later">Maybe later</string>
+    <string name="export_channel_title">Exportació completada</string>
+    <string name="new_updates_channel_title">Noves actualitzacions</string>
+    <string name="ongoing_channel_title">Baixades en curs</string>
+    <string name="update_failed_channel_title">Actualització fallida</string>
+    <string name="update_available">Actualització disponible</string>
+    <string name="system">Sistema</string>
+    <string name="security">Seguretat</string>
+    <string name="settings">Configuració</string>
+    <string name="misc">Varis</string>
+    <string name="maybe_later">Potser més endavant</string>
     <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
+    <string name="nothing">Encara res..</string>
     <string name="hit">You got a hit.</string>
-    <string name="check_for_updates">Check for updates</string>
+    <string name="check_for_updates">Cercar actualitzacions</string>
     <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
+    <string name="close">Tancar</string>
+    <string name="changelog">Registre de canvis</string>
+    <string name="read_more">Llegir més</string>
     <string name="notes">Notes</string>
     <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
     <string name="changelog_error">Changelog not found</string>
