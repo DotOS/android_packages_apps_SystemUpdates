@@ -270,11 +270,21 @@ class UpdateView : LinearLayout {
                 item.summary = changelog.miscSummary
                 list.add(item)
             }
+            if (changelog.hasDevice) {
+                val item = ChangelogItem()
+                item.iconRes = R.drawable.ic_device
+                item.title = context.getString(R.string.device)
+                item.subtitle = "null"
+                item.summary = changelog.deviceChangelog
+                list.add(item)
+            }
             val adapter = ChangelogAdapter(list)
             var summaryChangelogText = ""
             for (item in list) {
-                summaryChangelogText += "${item.subtitle}. "
+                if (item.subtitle != "null" && item.subtitle != "")
+                    summaryChangelogText += "${item.subtitle}. "
             }
+            summaryChangelog.visibility = if (summaryChangelogText.isEmpty()) View.GONE else View.VISIBLE
             summaryChangelog.text = summaryChangelogText
             moreChangelog.isEnabled = true
             moreChangelog.setOnClickListener {

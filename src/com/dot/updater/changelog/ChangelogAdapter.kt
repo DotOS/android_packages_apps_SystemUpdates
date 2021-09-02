@@ -29,7 +29,7 @@ class ChangelogAdapter(private val items: ArrayList<ChangelogItem>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val changelog: ChangelogItem = items[position]
         holder.cTitle.text = changelog.title
-        if (changelog.subtitle == "") holder.cSubtitle.visibility = View.GONE
+        if (changelog.subtitle == "null" || changelog.subtitle == "") holder.cSubtitle.visibility = View.GONE
         else holder.cSubtitle.text = changelog.subtitle
         holder.cSummary.text = changelog.summary
     }

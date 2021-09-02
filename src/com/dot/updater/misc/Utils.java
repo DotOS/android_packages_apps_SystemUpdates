@@ -24,6 +24,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.os.SystemProperties;
 import android.os.storage.StorageManager;
@@ -39,7 +40,6 @@ import com.dot.updater.model.Update;
 import com.dot.updater.model.UpdateBaseInfo;
 import com.dot.updater.model.UpdateInfo;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -47,12 +47,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -86,47 +90,95 @@ public class Utils {
     // used to initialize UpdateInfo objects
     private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
         Update update = new Update();
-        update.setTimestamp(object.getLong("datetime"));
-        update.setName(object.getString("filename"));
-        update.setDownloadId(object.getString("id"));
-        update.setType(object.getString("romtype"));
-        update.setFileSize(object.getLong("size"));
+        if (object.has("error"))
+            return update;
+        Log.d("Dot", object.toString());
+        JSONObject updateInfo = object.getJSONArray("releases").getJSONObject(0);
+        update.setTimestamp(updateInfo.getLong("generatedAt"));
+        update.setName(updateInfo.getString("fileName"));
+        update.setDownloadId(updateInfo.getString("hash"));
+        update.setType(updateInfo.getString("type"));
+        update.setFileSize(updateInfo.getLong("size"));
         String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
                 SystemProperties.get(Constants.PROP_DEVICE));
         String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
         String downloadUrl = Constants.DOWNLOAD_URL.replace("${device}", device)
-                .replace("${type}", type.equals("gapps") ? "gapps" : "vanilla")
-                .replace("${file_name}", update.getName());
+                .replace("${type}", type.equals("gapps") ? "gapps" : "vanilla");
         update.setDownloadUrl(downloadUrl);
-        update.setVersion(object.getString("version"));
-        Changelog changelog = new Changelog();
-        JSONObject item = object.getJSONArray("changelog").getJSONObject(0);
-        if (!item.getString("systemTitle").equals("") || !item.getString("systemSummary").equals("")) {
-            changelog.setHasSystem(true);
-            changelog.setSystemTitle(item.getString("systemTitle"));
-            changelog.setSystemSummary(item.getString("systemSummary"));
+        update.setVersion(updateInfo.getString("version"));
+        try {
+            update.setChangelog(new parseChangelog().execute().get());
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
         }
-        if (!item.getString("securityTitle").equals("") || !item.getString("securitySummary").equals("")) {
-            changelog.setHasSecurity(true);
-            changelog.setSecurityTitle(item.getString("securityTitle"));
-            changelog.setSecuritySummary(item.getString("securitySummary"));
-        }
-        if (!item.getString("settingsTitle").equals("") || !item.getString("settingsSummary").equals("")) {
-            changelog.setHasSettings(true);
-            changelog.setSettingsTitle(item.getString("settingsTitle"));
-            changelog.setSettingsSummary(item.getString("settingsSummary"));
-        }
-        if (!item.getString("miscTitle").equals("") || !item.getString("miscSummary").equals("")) {
-            changelog.setHasMisc(true);
-            changelog.setMiscTitle(item.getString("miscTitle"));
-            changelog.setMiscSummary(item.getString("miscSummary"));
-        }
-        update.setChangelog(changelog);
         return update;
     }
 
+    private static class parseChangelog extends AsyncTask<Void, Void, Changelog> {
+
+        @Override
+        protected Changelog doInBackground(Void... voids) {
+            Changelog changelog = new Changelog();
+            BufferedReader bufferedReader = null;
+            try {
+                String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
+                        SystemProperties.get(Constants.PROP_DEVICE));
+                URL url = new URL(Constants.CHANGELOG_URL.replace("${device}", device));
+                URLConnection urlConn = url.openConnection();
+                bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    stringBuilder.append(line);
+                }
+                Log.d("Dot", stringBuilder.toString());
+                JSONObject changelogObject = new JSONObject(stringBuilder.toString());
+                if (changelogObject.has("romChangelog")) {
+                    JSONObject item = changelogObject.getJSONObject("romChangelog");
+                    if (!item.isNull("systemTitle") || !item.isNull("systemSummary")) {
+                        changelog.setHasSystem(true);
+                        changelog.setSystemTitle(item.getString("systemTitle"));
+                        changelog.setSystemSummary(item.getString("systemSummary"));
+                    }
+                    if (!item.isNull("securityTitle") || !item.isNull("securitySummary")) {
+                        changelog.setHasSecurity(true);
+                        changelog.setSecurityTitle(item.getString("securityTitle"));
+                        changelog.setSecuritySummary(item.getString("securitySummary"));
+                    }
+                    if (!item.isNull("settingsTitle") || !item.isNull("settingsSummary")) {
+                        changelog.setHasSettings(true);
+                        changelog.setSettingsTitle(item.getString("settingsTitle"));
+                        changelog.setSettingsSummary(item.getString("settingsSummary"));
+                    }
+                    if (!item.isNull("miscTitle") || !item.isNull("miscSummary")) {
+                        changelog.setHasMisc(true);
+                        changelog.setMiscTitle(item.getString("miscTitle"));
+                        changelog.setMiscSummary(item.getString("miscSummary"));
+                    }
+                }
+                if (!changelogObject.isNull("deviceChangelog")) {
+                    JSONObject itemDevice = changelogObject.getJSONObject("deviceChangelog");
+                    changelog.setHasDevice(true);
+                    changelog.setDeviceChangelog(itemDevice.getString("changes"));
+                }
+                return changelog;
+            } catch (JSONException | IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (bufferedReader != null) {
+                    try {
+                        bufferedReader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return changelog;
+        }
+    }
+
     public static boolean isCompatible(UpdateBaseInfo update) {
-        if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) && 
+        if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) &&
                 update.getVersion().compareTo(SystemProperties.get(Constants.PROP_DOT_VERSION)) < 0) {
             Log.d(TAG, update.getName() + " is older than current Android version");
             return false;
@@ -158,11 +210,10 @@ public class Utils {
             }
         }
 
-        JSONObject obj = new JSONObject(json.toString());
-        JSONArray updatesList = obj.getJSONArray("response");
         try {
-            UpdateInfo update = parseJsonUpdate(updatesList.getJSONObject(0));
-            if (!compatibleOnly || isCompatible(update)) {
+            JSONObject object = new JSONObject(json.toString());
+            UpdateInfo update = parseJsonUpdate(object);
+            if ((!compatibleOnly || isCompatible(update)) && !object.has("error")) {
                 updates.add(update);
             } else {
                 Log.d(TAG, "Ignoring incompatible update " + update.getName());

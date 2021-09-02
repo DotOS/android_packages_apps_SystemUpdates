@@ -57,6 +57,15 @@ android {
             keyPassword 'password'
         }
     }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
 }
 
 dependencies {

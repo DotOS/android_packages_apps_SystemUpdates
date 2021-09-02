@@ -7,6 +7,7 @@ class Changelog : Serializable {
     var hasSecurity = false
     var hasSettings = false
     var hasMisc = false
+    var hasDevice = false
 
     var systemTitle: String = ""
     var systemSummary: String = ""
@@ -16,4 +17,5 @@ class Changelog : Serializable {
     var settingsSummary: String = ""
     var miscTitle: String = ""
     var miscSummary: String = ""
+    var deviceChangelog: String? = null
 }

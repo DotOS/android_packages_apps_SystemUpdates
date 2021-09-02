@@ -48,7 +48,8 @@ public final class Constants {
     public static final String PREF_INSTALL_NOTIFIED = "install_notified";
     public static final String UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh";
     public static final String UPDATE_RECOVERY_PROPERTY = "persist.vendor.recovery_update";
-    public static final String DOWNLOAD_URL = "https://sourceforge.net/projects/dotos-downloads/files/dot11/${device}/${type}/${file_name}/download";
+    public static final String DOWNLOAD_URL = "https://api.droidontime.com/api/download/${device}/latest/${type}";
+    public static final String CHANGELOG_URL = "https://api.droidontime.com/api/ota/${device}/changelog?version=latest";
 
     private Constants() {
     }
