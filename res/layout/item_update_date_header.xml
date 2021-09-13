@@ -41,7 +41,7 @@
             android:id="@+id/chipDateTarget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="?android:attr/textColorPrimaryInverse"
             android:textSize="16sp"
             app:chipBackgroundColor="@color/colorAccent"
             app:chipEndPadding="8dp"
