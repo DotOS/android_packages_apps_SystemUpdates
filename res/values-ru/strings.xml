@@ -125,12 +125,12 @@
     <string name="bunny">Вам никогда не бывает скучно?</string>
     <string name="nothing">Пока ничего нет..</string>
     <string name="hit">У тебя хит.</string>
-    <string name="check_for_updates">Проверять наличие обновлений</string>
+    <string name="check_for_updates">Проверить обновления</string>
     <string name="about_this_update">Информация об обновлении</string>
     <string name="close">Закрыть</string>
     <string name="changelog">Список изменений</string>
     <string name="read_more">Подробнее</string>
     <string name="notes">Примечания</string>
-    <string name="update_notes">&lt;unk&gt; Держите ваш телефон подключенным к сети в течение всего периода обновления.\n&lt;unk&gt; Убедитесь, что на вашем устройстве есть как минимум 30% заряда батареи.\n&lt;unk&gt; Не используйте ваш телефон или устройство до завершения обновления.</string>
+    <string name="update_notes">∘ Держите ваш телефон подключенным к сети в течение всего периода обновления.\n∘  Убедитесь, что на вашем устройстве есть как минимум 30% заряда батареи.\n∘  Не используйте ваш телефон или устройство до завершения обновления.</string>
     <string name="changelog_error">Список изменений не найден</string>
 </resources>

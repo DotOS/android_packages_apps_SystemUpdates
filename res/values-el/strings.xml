@@ -41,7 +41,7 @@
     <string name="menu_refresh">Ανανέωση</string>
     <string name="menu_preferences">Προτιμήσεις</string>
     <string name="menu_auto_updates_check">Αυτόματος έλεγχος ενημερώσεων</string>
-    <string name="menu_auto_updates_check_interval_daily">Καθημερινά</string>
+    <string name="menu_auto_updates_check_interval_daily">Μία φορά την ημέρα</string>
     <string name="menu_auto_updates_check_interval_weekly">Μία φορά την εβδομάδα</string>
     <string name="menu_auto_updates_check_interval_monthly">Μία φορά το μήνα</string>
     <string name="menu_auto_updates_check_interval_never">Ποτέ</string>
@@ -119,12 +119,12 @@
     <string name="bunny">Ποτέ δεν βαριέστε;</string>
     <string name="nothing">Τίποτα ακόμα..</string>
     <string name="hit">Έχετε ένα χτύπημα.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Ελεγχος για ενημερώσεις</string>
+    <string name="about_this_update">Σχετικά με αυτήν την ενημέρωση</string>
+    <string name="close">Κλείσιμο</string>
+    <string name="changelog">Αρχείο καταγραφής αλλαγών</string>
+    <string name="read_more">Διαβάστε περισσότερα</string>
+    <string name="notes">Σημειώσεις</string>
+    <string name="update_notes">∘ Κρατήστε το τηλέφωνό σας συνδεδεμένο σε ένα δίκτυο κατά τη διάρκεια της ενημέρωσης.\n∘ Βεβαιωθείτε ότι η συσκευή σας έχει τουλάχιστον 30% μπαταρία.\n∘ Μην χρησιμοποιείτε το τηλέφωνο ή τη συσκευή σας μέχρι να ολοκληρωθεί η ενημέρωση.</string>
+    <string name="changelog_error">Το αρχείο καταγραφής αλλαγών δεν βρέθηκε</string>
 </resources>

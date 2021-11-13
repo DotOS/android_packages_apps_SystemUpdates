@@ -124,7 +124,7 @@
     <string name="close">Kapat</string>
     <string name="changelog">Değişiklikler</string>
     <string name="read_more">Daha fazla oku</string>
-    <string name="notes">Notlar</string>
+    <string name="notes">Not</string>
     <string name="update_notes">∘ Güncelleme boyunca telefonunuzu bir ağa bağlı tutun.\n∘ Cihazınızda en az %30 pil olduğundan emin olun.\n∘ Güncelleme tamamlanana kadar telefonunuzu veya cihazınızı kullanmayın.</string>
     <string name="changelog_error">Değişiklik günlüğü bulunamadı</string>
 </resources>

@@ -22,7 +22,7 @@
     <string name="download_paused_error_notification">Błąd pobierania</string>
     <string name="download_completed_notification">Zakończono pobieranie</string>
     <string name="download_starting_notification">Rozpoczynam pobieranie…</string>
-    <string name="update_failed_notification">Aktualiza nie powiodła się</string>
+    <string name="update_failed_notification">Aktualizacja nie powiodła się</string>
     <string name="installation_suspended_notification">Instalacja zatrzymana</string>
     <string name="new_updates_found_title">Znaleziono nowe aktualizacje</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
@@ -131,6 +131,6 @@
     <string name="changelog">Lista zmian</string>
     <string name="read_more">Czytaj więcej</string>
     <string name="notes">Notatki</string>
-    <string name="update_notes">&lt;unk&gt; Trzymaj swój telefon podłączony do sieci przez cały czas aktualizacji.\n&lt;unk&gt; Upewnij się, że urządzenie posiada co najmniej 30% baterii.\n&lt;unk&gt; Nie używaj telefonu lub urządzenia dopóki aktualizacja nie zostanie zakończona.</string>
+    <string name="update_notes">∘ Trzymaj swój telefon podłączony do internetu przez cały czas aktualizacji.\n∘ Upewnij się, że urządzenie posiada co najmniej 30% baterii.\n∘ Nie używaj telefonu lub urządzenia dopóki aktualizacja nie zostanie zakończona.</string>
     <string name="changelog_error">Nie znaleziono dziennika zmian</string>
 </resources>
