@@ -31,8 +31,8 @@
     <string name="suspend_button">挂起</string>
     <string name="installing_update">正在安装更新包</string>
     <string name="installing_update_error">安装失败</string>
-    <string name="installing_update_finished">已安装更新</string>
-    <string name="finalizing_package">正在完成更新包安装</string>
+    <string name="installing_update_finished">已完成更新</string>
+    <string name="finalizing_package">正在安装</string>
     <string name="preparing_ota_first_boot">正在为首次启动做准备</string>
     <string name="dialog_prepare_zip_message">正在准备更新</string>
     <string name="dialog_battery_low_title">电量不足</string>
@@ -112,6 +112,7 @@
     <string name="security">安全</string>
     <string name="settings">设置</string>
     <string name="misc">杂项</string>
+    <string name="device">设备</string>
     <string name="maybe_later">以后再说</string>
     <string name="bunny">你永远不会感到枯燥吗?</string>
     <string name="nothing">空空如也......</string>

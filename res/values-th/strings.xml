@@ -112,6 +112,7 @@
     <string name="security">ความปลอดภัย</string>
     <string name="settings">การตั้งค่า</string>
     <string name="misc">Miscellaneous</string>
+    <string name="device">Device</string>
     <string name="maybe_later">Maybe later</string>
     <string name="bunny">คุณไม่เคยเบื่อเลยหรอ?</string>
     <string name="nothing">ตอนนี้ยังไม่มีอะไร...</string>

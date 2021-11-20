@@ -115,6 +115,7 @@
     <string name="security">Güvenlik</string>
     <string name="settings">Ayarlar</string>
     <string name="misc">Çeşitli</string>
+    <string name="device">Cihaz</string>
     <string name="maybe_later">Belki daha sonra</string>
     <string name="bunny">Hiç sıkılmadın mı?</string>
     <string name="nothing">Henüz değil..</string>

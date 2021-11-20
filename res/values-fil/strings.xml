@@ -15,116 +15,117 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
-    <string name="downloading_notification">Downloading</string>
-    <string name="download_paused_notification">Download paused</string>
-    <string name="download_paused_error_notification">Download error</string>
-    <string name="download_completed_notification">Download completed</string>
-    <string name="download_starting_notification">Starting download</string>
-    <string name="update_failed_notification">Update failed</string>
-    <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="new_updates_found_title">New updates</string>
+    <string name="verification_failed_notification">Hindi naaprubahan</string>
+    <string name="verifying_download_notification">Bine-verify ang update</string>
+    <string name="downloading_notification">Nagda-download</string>
+    <string name="download_paused_notification">Naka-pause ang pag-download</string>
+    <string name="download_paused_error_notification">May error sa pag-download</string>
+    <string name="download_completed_notification">Kumpleto na ang pag-download</string>
+    <string name="download_starting_notification">Sinisimulan nang magdownload</string>
+    <string name="update_failed_notification">Hindi natuloy ang update</string>
+    <string name="installation_suspended_notification">Nasuspinde ang pag-install</string>
+    <string name="new_updates_found_title">Mga bagong update</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pause</string>
-    <string name="resume_button">Resume</string>
-    <string name="suspend_button">Suspend</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
-    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="pause_button">I-hinto</string>
+    <string name="resume_button">Ipagpatuloy</string>
+    <string name="suspend_button">Suspindihin</string>
+    <string name="installing_update">Nag-iinstall ng update package</string>
+    <string name="installing_update_error">May error sa pag install</string>
+    <string name="installing_update_finished">Nag-iinstall na ang update</string>
+    <string name="finalizing_package">Tinatapos ang pag-install ng package</string>
+    <string name="preparing_ota_first_boot">Paghahanda para sa unang boot</string>
     <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
-    <string name="dialog_battery_low_title">Low battery</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
+    <string name="dialog_battery_low_title">Mababa na ang baterya</string>
+    <string name="dialog_battery_low_message_pct">Ang antas ng baterya ay masyadong mababa, kailangan mo ng hindi bababa sa <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya upang magpatuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagcha-charge.</string>
     <string name="reboot">Reboot</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_preferences">Preferences</string>
     <string name="menu_auto_updates_check">Auto updates check</string>
-    <string name="menu_auto_updates_check_interval_daily">Once a day</string>
-    <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
-    <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
-    <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
-    <string name="menu_delete_update">Delete</string>
-    <string name="menu_copy_url">Copy URL</string>
-    <string name="menu_export_update">Export update</string>
-    <string name="menu_show_changelog">Show changelog</string>
-    <string name="menu_ab_perf_mode">Prioritize update process</string>
-    <string name="menu_update_recovery">Update recovery</string>
-    <string name="toast_forced_update_recovery">It is impossible to disable Lineage Recovery updates on this device.</string>
-    <string name="snack_updates_found">New updates found</string>
-    <string name="snack_no_updates_found">No new updates found</string>
-    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
-    <string name="snack_download_verification_failed">The update verification failed.</string>
-    <string name="snack_download_verified">Download completed.</string>
-    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
+    <string name="menu_auto_updates_check_interval_daily">Isang beses sa isang araw</string>
+    <string name="menu_auto_updates_check_interval_weekly">Isang beses sa isang linggo</string>
+    <string name="menu_auto_updates_check_interval_monthly">Isang beses sa isang buwan</string>
+    <string name="menu_auto_updates_check_interval_never">Hindi kailanman</string>
+    <string name="menu_auto_delete_updates">Tanggalin ang mga update kapag naka-install</string>
+    <string name="menu_delete_update">Tanggalin</string>
+    <string name="menu_copy_url">Kopyahin ang URL</string>
+    <string name="menu_export_update">I-export ang update</string>
+    <string name="menu_show_changelog">Ipakita ang changelog</string>
+    <string name="menu_ab_perf_mode">Unahin ang proseso ng pag-update</string>
+    <string name="menu_update_recovery">I-update ang recovery</string>
+    <string name="toast_forced_update_recovery">Imposibleng i-disable ang mga update ng Lineage Recovery sa loob device na ito.</string>
+    <string name="snack_updates_found">May bagong updates na nahanap</string>
+    <string name="snack_no_updates_found">Walang bagong updates na nahanap</string>
+    <string name="snack_updates_check_failed">Ang pagsusuri ng update ay nabigo. Pakisuri ang iyong koneksyon sa internet at subukang muli sa ibang pagkakataon.</string>
+    <string name="snack_download_failed">Nabigo ang pag-download. Mangyaring suriin ang iyong koneksyon sa internet at subukang muli mamaya.</string>
+    <string name="snack_download_verification_failed">Nabigo ang pag-verify ng update.</string>
+    <string name="snack_download_verified">Nakumpleto ang pag-download.</string>
+    <string name="snack_update_not_installable">Hindi ma-install ang update na ito sa itaas ng kasalukuyang build.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Last checked: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
+    <string name="header_last_updates_check">Huling nasuri: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
     <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
-    <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new updates found. To manually check for new updates, use the Refresh button.</string>
-    <string name="action_download">Download</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Resume</string>
-    <string name="action_install">Install</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Delete</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="confirm_delete_dialog_title">Delete file</string>
-    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
-    <string name="apply_update_dialog_title">Apply update</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
-    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
-    <string name="cancel_installation_dialog_message">Cancel the installation?</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
-    <string name="dialog_export_title">Exporting update</string>
-    <string name="notification_export_success">Update exported</string>
-    <string name="notification_export_fail">Export error</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> ng <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> ng <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
+    <string name="list_verifying_update">Bine-verify ang update</string>
+    <string name="list_no_updates">Walang nakitang bagong update. Upang manu-manong tingnan ang mga bagong update, gamitin ang Refresh button.</string>
+    <string name="action_download">I-download</string>
+    <string name="action_pause">I-hinto</string>
+    <string name="action_resume">Ipagpatuloy</string>
+    <string name="action_install">I-install</string>
+    <string name="action_info">Impormasyon</string>
+    <string name="action_delete">Tanggalin</string>
+    <string name="action_cancel">Kanselahin</string>
+    <string name="confirm_delete_dialog_title">Burahin ang file</string>
+    <string name="confirm_delete_dialog_message">Tanggalin ang napiling file ng pag-update?</string>
+    <string name="apply_update_dialog_title">I-apply ang update</string>
+    <string name="apply_update_dialog_message">Ikaw ay mag-upgrade sa <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf pindutin mo <xliff:g id="ok">%2$s</xliff:g>, ang device ay mag-sisimula ule ng sariling recovery mode para mai-install ang update.\n\nNote: itong feature ay kailangan sa compatible recovery o ang pag-update ay kailangan mai-install ng manually.</string>
+    <string name="apply_update_dialog_message_ab">Ikaw ay mag u-upgrade sa <xliff:g id="update_name">%1$s</xliff:g>.\n\nKung pinindot mo ang <xliff:g id="ok">%2$s</xliff:g>, magsisimulang mag-install ang device sa background.\n\nKapag nakumpleto na, sasabihan ka nang mag-reboot.</string>
+    <string name="cancel_installation_dialog_message">Kanselahin ang pag-install?</string>
+    <string name="label_download_url">I-download ang URL</string>
+    <string name="toast_download_url_copied">Nakopya na ang URL</string>
+    <string name="dialog_export_title">Ine-export na ang update</string>
+    <string name="notification_export_success">Na-export na ang update</string>
+    <string name="notification_export_fail">Hindi na export</string>
+    <string name="toast_already_exporting">Nag-e-export na ng update</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 second left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> mga segundong natitira</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">1 minute left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="one">1 minuto ang natitira</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutong natitira</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">1 hour left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="one">1 oras ang natitira</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> oras na natitira</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
-    <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
-    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
-    <string name="export_channel_title">Export completion</string>
-    <string name="new_updates_channel_title">New updates</string>
-    <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
-    <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
+    <string name="update_on_mobile_data_title">Babala</string>
+    <string name="update_on_mobile_data_message">Magda-download ka na ng update package gamit ang mobile data na malamang ay magdulot ng mataas na paggamit ng data. Gusto mo bang magpatuloy?</string>
+    <string name="checkbox_mobile_data_warning">Huwag ipakitang muli</string>
+    <string name="menu_mobile_data_warning">Babala sa mobile data</string>
+    <string name="blocked_update_dialog_title">Naka-block ang pag-update</string>
+    <string name="blocked_update_dialog_message">Hindi ma-install ang update na ito gamit ang updater app. Pakibasa ang <xliff:g id="info_url">%1$s</xliff:g> para sa higit pang impormasyon.</string>
+    <string name="export_channel_title">Pagkumpleto ng pag-export</string>
+    <string name="new_updates_channel_title">Mga bagong update</string>
+    <string name="ongoing_channel_title">Mga gumaganang download</string>
+    <string name="update_failed_channel_title">Hindi natuloy ang update</string>
+    <string name="update_available">Available ang update</string>
+    <string name="system">Sistema</string>
+    <string name="security">Seguridad</string>
+    <string name="settings">Mga Setting</string>
     <string name="misc">Miscellaneous</string>
-    <string name="maybe_later">Maybe later</string>
-    <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
-    <string name="hit">You got a hit.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
+    <string name="device">Device</string>
+    <string name="maybe_later">Mamaya siguro</string>
+    <string name="bunny">Di ka napapagod?</string>
+    <string name="nothing">Wala pa..</string>
+    <string name="hit">May tama ka.</string>
+    <string name="check_for_updates">Maghanap ng mga updates</string>
+    <string name="about_this_update">Tungkol sa update na ito</string>
+    <string name="close">Isara</string>
+    <string name="changelog">Mga Pagbabago</string>
+    <string name="read_more">Magbasa pa</string>
     <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="update_notes">∘ Panatilihing nakakonekta ang iyong telepono sa isang network sa buong pag-update.\n∘ Tiyaking may hindi bababa sa 30% na baterya ang iyong device.\n∘ Huwag gamitin ang iyong telepono o device hanggang sa makumpleto ang pag-update.</string>
+    <string name="changelog_error">Hindi nahanap ang pagbabago</string>
 </resources>

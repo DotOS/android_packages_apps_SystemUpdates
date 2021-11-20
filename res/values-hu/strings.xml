@@ -116,6 +116,7 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="security">Biztonság</string>
     <string name="settings">Beállítások</string>
     <string name="misc">Egyebek</string>
+    <string name="device">Készülék</string>
     <string name="maybe_later">Talán később</string>
     <string name="bunny">Te sosem unatkozol?</string>
     <string name="nothing">Még semmi..</string>

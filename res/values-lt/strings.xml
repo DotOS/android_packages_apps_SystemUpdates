@@ -15,25 +15,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Verification failed</string>
-    <string name="verifying_download_notification">Verifying update</string>
-    <string name="downloading_notification">Downloading</string>
-    <string name="download_paused_notification">Download paused</string>
-    <string name="download_paused_error_notification">Download error</string>
-    <string name="download_completed_notification">Download completed</string>
-    <string name="download_starting_notification">Starting download</string>
-    <string name="update_failed_notification">Update failed</string>
-    <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="new_updates_found_title">New updates</string>
+    <string name="verification_failed_notification">Patvirtinimas nepavyko</string>
+    <string name="verifying_download_notification">Tikrinamas atnaujinimas</string>
+    <string name="downloading_notification">Atsiunčiama</string>
+    <string name="download_paused_notification">Atsiuntimas pristabdytas</string>
+    <string name="download_paused_error_notification">Atsisiuntimo klaida</string>
+    <string name="download_completed_notification">Atsisiuntimas baigtas</string>
+    <string name="download_starting_notification">Pradedamas atsiuntimas</string>
+    <string name="update_failed_notification">Atnaujinti nepavyko</string>
+    <string name="installation_suspended_notification">Diegimas sustabdytas</string>
+    <string name="new_updates_found_title">Nauji atnaujinimai</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pause</string>
-    <string name="resume_button">Resume</string>
-    <string name="suspend_button">Suspend</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
-    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="pause_button">Pristabdyti</string>
+    <string name="resume_button">Tęsti</string>
+    <string name="suspend_button">Sustabdyta</string>
+    <string name="installing_update">Diegiamas atnaujinimo paketas</string>
+    <string name="installing_update_error">Įdiegimo klaida</string>
+    <string name="installing_update_finished">Įdiegtas naujinimas</string>
+    <string name="finalizing_package">Baigiamas paketo diegimas</string>
+    <string name="preparing_ota_first_boot">Pasiruošiama pirmam įkrovimui</string>
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas. Jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos įkrovos, kad galėtumėte tęsti, <xliff:g id="percent_charging">%2$d</xliff:g>%%, jei įkraunama.</string>
@@ -61,9 +61,9 @@
     <string name="snack_download_verified">Atsisiuntimas baigtas.</string>
     <string name="snack_update_not_installable">Šis atnaujinimas negali būti įdiegtas ant esamos versijos.</string>
     <string name="header_title_text">DotOS\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="11.0">%1$s</xliff:g></string>
+    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Paskutinis tikrinimas: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">DotOS <xliff:g id="version" example="5.0">%1$s</xliff:g></string>
+    <string name="list_build_version">Šios versijos atsiliepimas <xliff:g id="version" example="1.0">%1$s</xliff:g></string>
     <string name="list_build_version_date"><xliff:g id="version" example="5.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
@@ -82,55 +82,56 @@
     <string name="apply_update_dialog_message">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nPastaba: Ši funkcija reikalauja suderinamos atkūrimo programos, arba atnaujinimą teks diegti rankiniu būdu.</string>
     <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nPastaba: Ši funkcija reikalauja suderinamos atkūrimo programos, arba atnaujinimą teks diegti rankiniu būdu.</string>
     <string name="cancel_installation_dialog_message">Nutraukti diegimą</string>
-    <string name="label_download_url">Download URL</string>
+    <string name="label_download_url">Atsisiuntimo URL</string>
     <string name="toast_download_url_copied">URL nukopijuotas</string>
-    <string name="dialog_export_title">Exporting update</string>
-    <string name="notification_export_success">Update exported</string>
-    <string name="notification_export_fail">Export error</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
+    <string name="dialog_export_title">Eksportuojama naujinimą</string>
+    <string name="notification_export_success">Atnaujinimas eksportuotas</string>
+    <string name="notification_export_fail">Eksporto klaida</string>
+    <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
     <plurals name="eta_seconds">
-        <item quantity="one">1 second left</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="one">Liko 1sek</item>
+        <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
+        <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
+        <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">1 minute left</item>
+        <item quantity="one">Liko 1min</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> minutes left</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">1 hour left</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> hours left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> hours left</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="one">Liko 1val</item>
+        <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> val</item>
+        <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> val</item>
+        <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> val</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warning</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
-    <string name="checkbox_mobile_data_warning">Do not show again</string>
-    <string name="menu_mobile_data_warning">Mobile data warning</string>
-    <string name="blocked_update_dialog_title">Update blocked</string>
-    <string name="blocked_update_dialog_message">This update cannot be installed using the updater app.  Please read <xliff:g id="info_url">%1$s</xliff:g> for more information.</string>
-    <string name="export_channel_title">Export completion</string>
-    <string name="new_updates_channel_title">New updates</string>
-    <string name="ongoing_channel_title">Ongoing downloads</string>
-    <string name="update_failed_channel_title">Update failed</string>
-    <string name="update_available">Update Available</string>
-    <string name="system">System</string>
-    <string name="security">Security</string>
-    <string name="settings">Settings</string>
-    <string name="misc">Miscellaneous</string>
-    <string name="maybe_later">Maybe later</string>
-    <string name="bunny">You\'re never get bored?</string>
-    <string name="nothing">Nothing yet..</string>
-    <string name="hit">You got a hit.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="update_on_mobile_data_title">Įspėjimas</string>
+    <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris yra greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
+    <string name="checkbox_mobile_data_warning">Daugiau nerodyti</string>
+    <string name="menu_mobile_data_warning">Mobiliojo ryšio duomenų įspėjimas</string>
+    <string name="blocked_update_dialog_title">Atnaujinimas užblokuotas</string>
+    <string name="blocked_update_dialog_message">Šio naujinimo negalima įdiegti naudojant atnaujinimo programą.  Prašome atidžiai perskaityti <xliff:g id="info_url">%1$s </xliff:g> daugiau informacijos.</string>
+    <string name="export_channel_title">Eksportavimo užbaigimas</string>
+    <string name="new_updates_channel_title">Nauji atnaujinimai</string>
+    <string name="ongoing_channel_title">Vykstantys atsisiuntimai</string>
+    <string name="update_failed_channel_title">Atnaujinti nepavyko</string>
+    <string name="update_available">Galimi atnaujinimai</string>
+    <string name="system">Sistema</string>
+    <string name="security">Saugumas</string>
+    <string name="settings">Nustatymai</string>
+    <string name="misc">Įvairūs nustatymai</string>
+    <string name="device">Įrenginys</string>
+    <string name="maybe_later">Gal vėliau</string>
+    <string name="bunny">Ar tau niekada nenuobodu?</string>
+    <string name="nothing">Dar nieko..</string>
+    <string name="hit">Gavote smūgį.</string>
+    <string name="check_for_updates">Ieškoti atnaujinimų</string>
+    <string name="about_this_update">Patinka šie pakeitimai</string>
+    <string name="close">Uždaryti</string>
+    <string name="changelog">Keitimų žurnalas</string>
+    <string name="read_more">Skaityti daugiau</string>
+    <string name="notes">Užrašai</string>
+    <string name="update_notes">∘ Atnaujinimo metu laikykite telefoną prijungtą prie tinklo.\n∘ Įsitikinkite, kad įrenginio akumuliatoriaus įkrova yra bent 30 %.\n∘ Nenaudokite telefono ar įrenginio, kol nebus baigtas naujinimas.</string>
+    <string name="changelog_error">Pakeitimų žurnalas nerastas</string>
 </resources>

@@ -15,22 +15,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="verification_failed_notification">Xác thực thất bại</string>
-    <string name="verifying_download_notification">Đang xác thực bản cập nhật</string>
+    <string name="verification_failed_notification">Xác minh thất bại</string>
+    <string name="verifying_download_notification">Đang xác minh bản cập nhật</string>
     <string name="downloading_notification">Đang tải xuống</string>
-    <string name="download_paused_notification">Tạm ngưng tải xuống</string>
-    <string name="download_paused_error_notification">Lỗi tải xuống</string>
-    <string name="download_completed_notification">Tải xuống hoàn tất</string>
-    <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
+    <string name="download_paused_notification">Đã dừng tải xuống</string>
+    <string name="download_paused_error_notification">Tải xuống thất bại</string>
+    <string name="download_completed_notification">Tải xuống đã hoàn tất</string>
+    <string name="download_starting_notification">Bắt đầu tải xuống</string>
     <string name="update_failed_notification">Cập nhật thất bại</string>
-    <string name="installation_suspended_notification">Cài đặt đã ngừng</string>
+    <string name="installation_suspended_notification">Đã tạm dừng cài đặt</string>
     <string name="new_updates_found_title">Bản cập nhật mới</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="pause_button">Tạm ngừng</string>
     <string name="resume_button">Tiếp tục</string>
     <string name="suspend_button">Tạm hoãn</string>
-    <string name="installing_update">Đang cài gói cập nhật</string>
-    <string name="installing_update_error">Lỗi cài đặt</string>
+    <string name="installing_update">Đang cài đặt bản cập nhật</string>
+    <string name="installing_update_error">Lỗi trong quá trình cài đặt</string>
     <string name="installing_update_finished">Đã cài đặt bản cập nhật</string>
     <string name="finalizing_package">Đang hoàn tất cài đặt</string>
     <string name="preparing_ota_first_boot">Đang chuẩn bị cho lần khởi động đầu tiên</string>
@@ -112,7 +112,8 @@
     <string name="security">Bảo mật</string>
     <string name="settings">Cài đặt</string>
     <string name="misc">Khác</string>
-    <string name="maybe_later">Để sau</string>
+    <string name="device">Thiết bị</string>
+    <string name="maybe_later">Có lẽ lúc khác</string>
     <string name="bunny">Bạn không bao giờ cảm thấy buồn chán?</string>
     <string name="nothing">Chưa có gì..</string>
     <string name="hit">Bạn nhận được một món quà.</string>
@@ -121,7 +122,7 @@
     <string name="close">Đóng</string>
     <string name="changelog">Những thay đổi</string>
     <string name="read_more">Đọc thêm</string>
-    <string name="notes">Chú ý</string>
-    <string name="update_notes">∘ Giữ điện thoại của bạn kết nối với mạng trong suốt quá trình cập nhật. \ N∘ Đảm bảo thiết bị của bạn còn ít nhất 30% pin. \ N∘ Không sử dụng điện thoại hoặc thiết bị của bạn cho đến khi quá trình cập nhật hoàn tất.</string>
+    <string name="notes">Ghi chú</string>
+    <string name="update_notes">∘ Giữ điện thoại của bạn kết nối với mạng trong suốt quá trình cập nhật.\n∘ Đảm bảo rằng thiết bị của bạn còn ít nhất 30% pin.\n∘ Không sử dụng điện thoại hoặc thiết bị của bạn cho đến khi quá trình cập nhật hoàn tất.</string>
     <string name="changelog_error">Những thay đổi không tìm thấy</string>
 </resources>

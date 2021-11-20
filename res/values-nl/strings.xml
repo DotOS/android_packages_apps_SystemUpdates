@@ -115,16 +115,17 @@
     <string name="security">Beveiliging</string>
     <string name="settings">Instellingen</string>
     <string name="misc">Diversen</string>
+    <string name="device">Toestel</string>
     <string name="maybe_later">Misschien later</string>
     <string name="bunny">Je geraakt nooit verveeld?</string>
     <string name="nothing">Nog niets..</string>
     <string name="hit">Je hebt een cadeau gekregen!</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="about_this_update">About this update</string>
-    <string name="close">Close</string>
-    <string name="changelog">Changelog</string>
-    <string name="read_more">Read more</string>
-    <string name="notes">Notes</string>
-    <string name="update_notes">∘ Keep your phone connected to a network throughout the update.\n∘ Make sure your device has at least 30% battery.\n∘ Do not use your phone or device until the update is complete.</string>
-    <string name="changelog_error">Changelog not found</string>
+    <string name="check_for_updates">Controleer voor updates</string>
+    <string name="about_this_update">Over deze update</string>
+    <string name="close">Afsluiten</string>
+    <string name="changelog">Wijzigingslogboek</string>
+    <string name="read_more">Verder lezen</string>
+    <string name="notes">Notities</string>
+    <string name="update_notes">・Houd je telefoon verbonden met een netwerk tijdens de update.\n➜ Zorg ervoor dat je apparaat ten minste 30% batterij heeft.\n・Gebruik uw telefoon of apparaat niet totdat de update is voltooid.</string>
+    <string name="changelog_error">Wijzigingslogboek niet gevonden</string>
 </resources>
