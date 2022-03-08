@@ -2,116 +2,157 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/dashboardAppBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:outlineAmbientShadowColor="@android:color/transparent"
-        android:outlineSpotShadowColor="@android:color/transparent"
-        android:background="?android:attr/colorPrimary"
-        android:theme="@style/Theme.CollapsingToolbar.Settings">
+        android:layout_height="@dimen/colltoolbar_height"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        app:elevation="0dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            app:forceApplySystemWindowInsetTop="true"
-            app:extraMultilineHeightEnabled="true"
-            app:contentScrim="@color/toolbar_collapsed"
-            app:maxLines="3"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:scrimAnimationDuration="50"
-            app:scrimVisibleHeightTrigger="@dimen/settingslib_scrim_visible_height_trigger"
-            app:statusBarScrim="@null"
-            app:titleCollapseMode="fade"
-            app:collapsedTitleTextAppearance="@style/CollapsingToolbarTitle.Collapsed"
-            app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
-            app:expandedTitleMarginStart="@dimen/expanded_title_margin_start"
-            app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
-            app:toolbarId="@id/action_bar">
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            app:collapsedTitleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
+            app:expandedTitleMarginStart="32dp"
+            app:expandedTitleTextAppearance="@style/Dashboard.Toolbar.Expanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:maxLines="2"
+            app:toolbarId="@+id/action_bar">
 
-            <RelativeLayout
+            <Toolbar
+                android:id="@+id/appTitle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:animateLayoutChanges="true"
+                android:paddingStart="32dp"
+                android:theme="?android:attr/actionBarTheme"
+                android:title="@string/snack_no_updates_found"
+                android:titleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin" />
+
+            <LinearLayout
+                android:id="@+id/appblayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="86dp"
-                android:paddingBottom="16dp"
-                android:paddingEnd="16dp"
-                android:paddingStart="16dp"
-                app:layout_collapseMode="parallax">
+                android:animateLayoutChanges="true"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/header_title"
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/launchSettings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:paddingBottom="16dp"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="56sp" />
-
-                <TextView
-                    android:id="@+id/header_build_version"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/header_title"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/header_build_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/header_build_version"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/header_last_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/header_build_date"
-                    android:layout_marginTop="8dp"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="12sp" />
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="?android:attr/actionBarTheme"
-                android:transitionName="shared_element_view"
-                app:layout_collapseMode="pin"/>
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_margin="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="?android:attr/textColorPrimary"
+                    app:srcCompat="@drawable/ic_settings" />
+            </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/no_new_updates_view"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/updates_swipe_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="46dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/no_new_updates_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.libremobileos.updater.UpdateView
+                    android:id="@+id/updateView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/actionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true">
+
+        <include
+            layout="@layout/update_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true" />
+
+        <include
+            layout="@layout/update_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/update_option"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/list_no_updates"
-            android:textColor="?android:textColorSecondary" />
-    </androidx.core.widget.NestedScrollView>
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="5dp"
-        android:scrollbars="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <include
+            layout="@layout/update_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/update_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/update_reboot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/update_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

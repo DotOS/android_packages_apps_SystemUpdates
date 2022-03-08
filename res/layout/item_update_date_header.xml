@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/updateChipHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:requiresFadingEdge="horizontal"
+    android:fadingEdgeLength="156dp"
+    android:overScrollMode="always"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDateCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="16sp"
+            app:chipEndPadding="8dp"
+            app:chipMinHeight="38dp"
+            app:chipMinTouchTargetSize="38dp"
+            app:chipStartPadding="8dp"
+            app:chipStrokeColor="@color/cardBackgroundStroke"
+            app:chipStrokeWidth="1dp"
+            app:chipBackgroundColor="@color/cardBackground"
+            tools:text="31 Dec 20 | Beta" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_chevron_right"
+            app:tint="?android:attr/textColorSecondary" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDateTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorPrimaryInverse"
+            android:textSize="16sp"
+            app:chipBackgroundColor="@color/colorAccent"
+            app:chipEndPadding="8dp"
+            app:chipMinHeight="38dp"
+            app:chipMinTouchTargetSize="38dp"
+            app:chipStartPadding="8dp"
+            tools:text="16 Jan 21 | v5.0" />
+    </LinearLayout>
+
+</HorizontalScrollView>

@@ -6,7 +6,7 @@ Simple application to download and apply OTA packages.
 Server requirements
 -------------------
 The app sends `GET` requests to the URL defined by the `updater_server_url`
-resource (or the `lineage.updater.uri` system property) and expects as response
+resource (or the `lmodroid.updater.uri` system property) and expects as response
 a JSON with the following structure:
 ```json
 {
@@ -18,7 +18,7 @@ a JSON with the following structure:
       "romtype": "nightly",
       "size": 314572800,
       "url": "https://example.com/ota-package.zip",
-      "version": "15.1"
+      "version": "3.0"
     }
   ]
 }
@@ -27,10 +27,10 @@ a JSON with the following structure:
 The `datetime` attribute is the build date expressed as UNIX timestamp.  
 The `filename` attribute is the name of the file to be downloaded.  
 The `id` attribute is a string that uniquely identifies the update.  
-The `romtype` attribute is the string to be compared with the `ro.lineage.releasetype` property.  
+The `romtype` attribute is the string to be compared with the `ro.lmodroid.build_type` property.  
 The `size` attribute is the size of the update expressed in bytes.  
 The `url` attribute is the URL of the file to be downloaded.  
-The `version` attribute is the string to be compared with the `ro.lineage.build.version` property.  
+The `version` attribute is the string to be compared with the `ro.lmodroid.version` property.  
 
 Additional attributes are ignored.
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/no_updates"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_no_update" />
+
+    <TextView
+        android:id="@+id/easterBunny"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/maybe_later"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+</LinearLayout>

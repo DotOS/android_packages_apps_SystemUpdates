@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/updateProgressLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/header_gradient"
+    android:paddingStart="48dp"
+    android:paddingTop="64dp"
+    android:paddingEnd="48dp"
+    android:paddingBottom="48dp">
+
+    <TextView
+        android:id="@+id/updateStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="sans-serif-medium"
+        tools:text="512MB out of 1GB" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/updateProgressBarCard"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/updateStats"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@id/updatePause"
+        app:cardCornerRadius="@dimen/dot_radius"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/cardBackgroundStroke"
+        app:strokeWidth="1dp">
+
+        <ProgressBar
+            android:id="@+id/updateProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_bg" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/updateProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateStats"
+        android:layout_alignTop="@id/updateProgressBarCard"
+        android:layout_alignEnd="@id/updateProgressBarCard"
+        android:layout_alignBottom="@id/updateProgressBarCard"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:textColor="?android:attr/textColorPrimary"
+        tools:text="50%" />
+
+    <ImageButton
+        android:id="@+id/updatePause"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/updateStats"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_bg"
+        android:backgroundTint="@color/deep_orange_A200"
+        app:srcCompat="@drawable/ic_pause" />
+
+</RelativeLayout>
