@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Bateria e ulët</string>
     <string name="dialog_battery_low_message_pct">Niveli i baterië është shumë i ulët, për të vazhduar duhet të jetë të paktën <xliff:g id="percent_discharging">%1$d</xliff:g>%% e baterisë, ose <xliff:g id="percent_charging">%2$d</xliff:g>%% nëse po karikohet.</string>
     <string name="reboot">Rindiz</string>
-    <string name="menu_refresh">Rifresko</string>
-    <string name="menu_preferences">Preferencat</string>
     <string name="menu_auto_updates_check">Kontroll automatik të përditësimeve</string>
     <string name="menu_auto_updates_check_interval_daily">Njëherë në ditë</string>
     <string name="menu_auto_updates_check_interval_weekly">Njëherë në javë</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Fshije</string>
     <string name="menu_copy_url">Kopjo URL</string>
     <string name="menu_export_update">Eksporto përditësimin</string>
-    <string name="menu_show_changelog">Shfaq ndryshimet</string>
     <string name="menu_ab_perf_mode">Jepi përparësi përditësimit</string>
     <string name="menu_update_recovery">Përditëso rikuperimin</string>
     <string name="toast_forced_update_recovery">Është e pamundur të çaktivizoni përditësimet e rikuperimit të Lineages në këtë pajisje.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Verifikim i përditësimit dështoi.</string>
     <string name="snack_download_verified">Shkarkimi përfundoi.</string>
     <string name="snack_update_not_installable">Ky përditësim nuk mund të instalohet mbi këtë version aktual.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Kontrolli i fundit: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> e <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> e <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Duke verifikuar përditësimin</string>
-    <string name="list_no_updates">Nuk ka përditësime të reja. Për të kërkuar manualisht për përditësime të reja, përdor butonin Rifresko.</string>
     <string name="action_download">Shkarko</string>
-    <string name="action_pause">Pezullo</string>
-    <string name="action_resume">Rinis</string>
     <string name="action_install">Instalo</string>
-    <string name="action_info">Informacion</string>
-    <string name="action_delete">Fshi</string>
     <string name="action_cancel">Anullo</string>
     <string name="confirm_delete_dialog_title">Fshi skedarin</string>
     <string name="confirm_delete_dialog_message">Dëshiron të fshish skedarin e zgjedhur të përditësimit?</string>

@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Batería baxa</string>
     <string name="dialog_battery_low_message_pct">El nivel de batería ye perbaxu, precises polo menos<xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería pa siguir, <xliff:g id="percent_charging">%2$d</xliff:g>%% si ta en carga.</string>
     <string name="reboot">Reaniciar</string>
-    <string name="menu_refresh">Refrescar</string>
-    <string name="menu_preferences">Preferencies</string>
     <string name="menu_auto_updates_check">Comprobación automática d\'anovamientos</string>
     <string name="menu_auto_updates_check_interval_daily">Una vegada al día</string>
     <string name="menu_auto_updates_check_interval_weekly">Una vegada per selmana</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Desaniciar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Esportar anovamientu</string>
-    <string name="menu_show_changelog">Amosar el rexistru de cambeos</string>
     <string name="menu_ab_perf_mode">Priorizar el procesu d\'anovamientu</string>
     <string name="menu_update_recovery">Anovar el recovery</string>
     <string name="toast_forced_update_recovery">Ye imposible desactivar los anovamientos del recovery de Lineage nesti preséu.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Falló la verificación del anovamientu.</string>
     <string name="snack_download_verified">Descarga completada.</string>
     <string name="snack_update_not_installable">Esti anovamientu nun pue instalase enriba de la compilación actual.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Anovamientu caberu\'l <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Verificando anovamientu</string>
-    <string name="list_no_updates">Nun s\'alcontraron anovamientos. Pa comprobalos a mano, usa\'l botón Refrescar.</string>
     <string name="action_download">Baxar</string>
-    <string name="action_pause">Posar</string>
-    <string name="action_resume">Siguir</string>
     <string name="action_install">Instalar</string>
-    <string name="action_info">Información</string>
-    <string name="action_delete">Desaniciar</string>
     <string name="action_cancel">Encaboxar</string>
     <string name="confirm_delete_dialog_title">Desaniciar ficheru</string>
     <string name="confirm_delete_dialog_message">¿Desaniciar l\'anovamientu esbilláu?</string>

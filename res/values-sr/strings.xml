@@ -38,14 +38,11 @@
     <string name="dialog_battery_low_title">Слаба батерија</string>
     <string name="dialog_battery_low_message_pct">Ниво батерије је пренизак, треба вам барем <xliff:g id="percent_discharging">%1$d</xliff:g>%% батерије да наставите, <xliff:g id="percent_charging">%2$d</xliff:g>%% ако се пуни.</string>
     <string name="reboot">Покрени поново</string>
-    <string name="menu_refresh">Оcвежи</string>
-    <string name="menu_preferences">Подешавања</string>
     <string name="menu_auto_updates_check">Аутоматски провери ажурирања</string>
     <string name="menu_auto_delete_updates">Обриши ажурирања након инсталације</string>
     <string name="menu_delete_update">Обриши</string>
     <string name="menu_copy_url">Копирај URL</string>
     <string name="menu_export_update">Извези ажурирања</string>
-    <string name="menu_show_changelog">Прикажи дневник измена</string>
     <string name="menu_ab_perf_mode">Приоритет процеса ажурирања</string>
     <string name="snack_updates_found">Ново ажурирање пронађено</string>
     <string name="snack_no_updates_found">Нису пронађена нова ажурирања</string>
@@ -54,21 +51,12 @@
     <string name="snack_download_verification_failed">Неуспешна провера ажурирања.</string>
     <string name="snack_download_verified">Преузимање је завршено.</string>
     <string name="snack_update_not_installable">Није могуће инсталирати ово анжурирање преко ваше верзије система.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="верзија" example="7.1.2">%1$s </xliff:g></string>
-    <string name="header_last_updates_check">Последњи пут проверено: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s </xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s </xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> од <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> од <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Верификација анжурирања</string>
-    <string name="list_no_updates">Нема нових ажурирања. Да ручно провериш нова ажурирања користи дугме освежи.</string>
     <string name="action_download">Преузми</string>
-    <string name="action_pause">Паузирај</string>
-    <string name="action_resume">Настави</string>
     <string name="action_install">Инсталирај</string>
-    <string name="action_info">Информације</string>
-    <string name="action_delete">Избриши</string>
     <string name="action_cancel">Откажи</string>
     <string name="confirm_delete_dialog_title">Обриши фајл</string>
     <string name="confirm_delete_dialog_message">Избриши изабрани фајл за ажурирање?</string>

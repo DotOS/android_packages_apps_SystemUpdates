@@ -36,8 +36,6 @@
     <string name="dialog_battery_low_title">Lavt batteriniveau</string>
     <string name="dialog_battery_low_message_pct">Du har for lidt strøm på dit batteri. Du skal mindst bruge <xliff:g id="percent_discharging">%1$d</xliff:g>%% for at installere opdateringen, <xliff:g id="percent_charging">%2$d</xliff:g>%% hvis din enhed oplader.</string>
     <string name="reboot">Genstart</string>
-    <string name="menu_refresh">Genopfrisk</string>
-    <string name="menu_preferences">Præferencer</string>
     <string name="menu_auto_updates_check">Auto-opdateringskontrol</string>
     <string name="menu_auto_updates_check_interval_never">Aldrig</string>
     <string name="menu_auto_delete_updates">Slet opdateringer, når installeret</string>
@@ -54,20 +52,11 @@
     <string name="snack_download_verification_failed">Opdateringsbekræftelsen fejlede.</string>
     <string name="snack_download_verified">Overførsel fuldført.</string>
     <string name="snack_update_not_installable">Denne opdatering kan ikke installeres ovenpå det nuværende build.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Sidst tjekket: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> af <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_verifying_update">Verificerer opdatering</string>
-    <string name="list_no_updates">Ingen nye opdateringer fundet. Brug Genopfrisk-knappen, for manuel kontrol af nye opdateringer.</string>
     <string name="action_download">Hent</string>
-    <string name="action_pause">Pause</string>
-    <string name="action_resume">Genoptag</string>
     <string name="action_install">Installér</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Slet</string>
     <string name="action_cancel">Afbryd</string>
     <string name="confirm_delete_dialog_title">Slet fil</string>
     <string name="confirm_delete_dialog_message">Slet den valgte opdateringsfil?</string>

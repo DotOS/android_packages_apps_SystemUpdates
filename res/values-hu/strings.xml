@@ -41,8 +41,6 @@
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
 illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <string name="reboot">Újraindítás</string>
-    <string name="menu_refresh">Frissítés</string>
-    <string name="menu_preferences">Testreszabás</string>
     <string name="menu_auto_updates_check">Automatikus frissítésellenőrzés</string>
     <string name="menu_auto_updates_check_interval_daily">Naponta egyszer</string>
     <string name="menu_auto_updates_check_interval_weekly">Hetente egyszer</string>
@@ -52,7 +50,6 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="menu_delete_update">Törlés</string>
     <string name="menu_copy_url">A webcím másolása</string>
     <string name="menu_export_update">A frissítés exportálása</string>
-    <string name="menu_show_changelog">A változások listájának megjelenítése</string>
     <string name="menu_ab_perf_mode">Állítsa fontossági sorrendbe a frissítési folyamatot</string>
     <string name="menu_update_recovery">Recovery-frissítés</string>
     <string name="toast_forced_update_recovery">Ezen a készüléken nem lehet letiltani a Lineage Recovery frissítéseket.</string>
@@ -63,21 +60,12 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="snack_download_verification_failed">A frissítés ellenőrzése sikertelen.</string>
     <string name="snack_download_verified">A letöltés befejeződött.</string>
     <string name="snack_update_not_installable">Ez a frissítés nem telepíthető a jelenlegi verzióra.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Utolsó ellenőrzés: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g>-ból - <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> a <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g>-ból (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Frissítésellenőrzés</string>
-    <string name="list_no_updates">Nem található új frissítés. A manuális ellenőrzéshez használja a Frissítés gombot.</string>
     <string name="action_download">Letöltés</string>
-    <string name="action_pause">Szüneteltetés</string>
-    <string name="action_resume">Folytatás</string>
     <string name="action_install">Telepítés</string>
-    <string name="action_info">Információ</string>
-    <string name="action_delete">Törlés</string>
     <string name="action_cancel">Mégse</string>
     <string name="confirm_delete_dialog_title">Fájltörlés</string>
     <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a letöltött frissítőfájlt?</string>

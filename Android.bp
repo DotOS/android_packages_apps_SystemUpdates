@@ -15,7 +15,7 @@
 //
 
 android_app {
-    name: "Updater",
+    name: "SystemUpdates",
 
     // Include SettingsLib and its dependencies
     defaults: ["SettingsLibDefaults"],
@@ -24,7 +24,7 @@ android_app {
         "src/**/*.kt",
         "src/**/*.java",
     ],
-    resource_dirs: ["res"],
+    resource_dirs: ["res", "res-dot"],
 
     static_libs: [
         "com.google.android.material_material",
@@ -44,15 +44,15 @@ android_app {
         proguard_flags_files: ["proguard.flags"],
     },
 
-    required: ["privapp_whitelist_com.libremobileos.updater.xml"],
+    required: ["privapp_whitelist_com.dot.systemupdates.xml"],
 
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_com.libremobileos.updater.xml",
+    name: "privapp_whitelist_com.dot.systemupdates.xml",
 
     system_ext_specific: true,
-    src: "privapp_whitelist_com.libremobileos.updater.xml",
+    src: "privapp_whitelist_com.dot.systemupdates.xml",
     sub_dir: "permissions",
 
 }

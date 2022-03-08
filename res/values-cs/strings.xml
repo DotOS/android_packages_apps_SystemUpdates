@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Slabá baterie</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabití baterie je příliš nízká, potřebujete alespoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterie pro pokračování, <xliff:g id="percent_charging">%2$d</xliff:g>%% při nabíjení.</string>
     <string name="reboot">Reboot</string>
-    <string name="menu_refresh">Obnovit</string>
-    <string name="menu_preferences">Předvolby</string>
     <string name="menu_auto_updates_check">Automatická kontrola aktualizací</string>
     <string name="menu_auto_updates_check_interval_daily">Jednou denně</string>
     <string name="menu_auto_updates_check_interval_weekly">Jednou týdně</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Odstranit</string>
     <string name="menu_copy_url">Kopírovat URL</string>
     <string name="menu_export_update">Export aktualizace</string>
-    <string name="menu_show_changelog">Zobrazit seznam změn</string>
     <string name="menu_ab_perf_mode">Upřednostňovat proces aktualizace</string>
     <string name="menu_update_recovery">Aktualizovat recovery oddíl</string>
     <string name="toast_forced_update_recovery">Na tomto zařízení není možné zakázat aktualizace oddílu Lineage recovery</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Ověření aktualizace se nezdařilo.</string>
     <string name="snack_download_verified">Stahování úspěšné.</string>
     <string name="snack_update_not_installable">Tuto aktualizaci nelze nainstalovat přes aktuální sestavení.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Poslední kontrola: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Ověření aktualizace</string>
-    <string name="list_no_updates">Nebyly nalezeny žádné nové aktualizace. Chcete-li ručně vyhledat nové aktualizace, použijte tlačítko „Obnovit“.</string>
     <string name="action_download">Stáhnout</string>
-    <string name="action_pause">Pozastavit</string>
-    <string name="action_resume">Pokračovat</string>
     <string name="action_install">Instalovat</string>
-    <string name="action_info">Informace</string>
-    <string name="action_delete">Odstranit</string>
     <string name="action_cancel">Zrušit</string>
     <string name="confirm_delete_dialog_title">Smazat soubor</string>
     <string name="confirm_delete_dialog_message">Smazat zvolený soubor aktualizace?</string>

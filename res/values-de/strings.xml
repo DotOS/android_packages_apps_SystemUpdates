@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="dialog_battery_low_message_pct">Dein Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
     <string name="reboot">Neustart</string>
-    <string name="menu_refresh">Aktualisieren</string>
-    <string name="menu_preferences">Voreinstellungen</string>
     <string name="menu_auto_updates_check">Automatisch nach Updates suchen</string>
     <string name="menu_auto_updates_check_interval_daily">Einmal am Tag</string>
     <string name="menu_auto_updates_check_interval_weekly">Einmal pro Woche</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Löschen</string>
     <string name="menu_copy_url">URL in Zwischenablage kopieren</string>
     <string name="menu_export_update">Update exportieren</string>
-    <string name="menu_show_changelog">Changelog anzeigen</string>
     <string name="menu_ab_perf_mode">Updateprozess priorisieren</string>
     <string name="menu_update_recovery">Recovery aktualisieren</string>
     <string name="toast_forced_update_recovery">Es ist nicht möglich, die Updates vom Lineage-Recovery auf diesem Gerät zu deaktivieren.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Die Update-Überprüfung ist fehlgeschlagen.</string>
     <string name="snack_download_verified">Herunterladen abgeschlossen.</string>
     <string name="snack_update_not_installable">Dieses Update kann nicht auf die bestehende Installation angewendet werden.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Zuletzt geprüft: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> von <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> von <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Update wird geprüft</string>
-    <string name="list_no_updates">Keine neuen Updates gefunden. Um manuell nach neuen Updates zu suchen, verwende die Schaltfläche \"Aktualisieren\".</string>
     <string name="action_download">Herunterladen</string>
-    <string name="action_pause">Anhalten</string>
-    <string name="action_resume">Fortsetzen</string>
     <string name="action_install">Installieren</string>
-    <string name="action_info">Information</string>
-    <string name="action_delete">Löschen</string>
     <string name="action_cancel">Abbrechen</string>
     <string name="confirm_delete_dialog_title">Datei löschen</string>
     <string name="confirm_delete_dialog_message">Soll die ausgewählte Update-Datei gelöscht werden?</string>

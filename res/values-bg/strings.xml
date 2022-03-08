@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Изтощена батерия</string>
     <string name="dialog_battery_low_message_pct">Нивото на батерията е прекалено ниско, необходимо е най-малко <xliff:g id="percent_discharging">%1$d</xliff:g>%% за да продължите, <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="reboot">Рестартиране</string>
-    <string name="menu_refresh">Опресняване</string>
-    <string name="menu_preferences">Настройки</string>
     <string name="menu_auto_updates_check">Автоматична проверка за актуализациите</string>
     <string name="menu_auto_updates_check_interval_daily">Ежедневно</string>
     <string name="menu_auto_updates_check_interval_weekly">Ежеседмично</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_copy_url">Копирай адреса</string>
     <string name="menu_export_update">Експортиране на актуализация</string>
-    <string name="menu_show_changelog">Покажи промените</string>
     <string name="menu_ab_perf_mode">Приоритет на процеса на актуализиране</string>
     <string name="menu_update_recovery">Актуализиране на recovery</string>
     <string name="toast_forced_update_recovery">Невъзможно е да деактивирате актуализациите на Lineage Recovery на това устройство.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Проверката на актуализацията е неуспешна.</string>
     <string name="snack_download_verified">Изтеглянето приключи.</string>
     <string name="snack_update_not_installable">Тази актуализация не може да бъде инсталирана на текущата версия.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Последна проверка: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> от <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Проверка на актуализацията</string>
-    <string name="list_no_updates">Не са намерени нови актуализации. За да проверите ръчно за нови актуализации, използвайте бутона за обновяване.</string>
     <string name="action_download">Изтегли</string>
-    <string name="action_pause">Пауза</string>
-    <string name="action_resume">Възобнови</string>
     <string name="action_install">Инсталиране</string>
-    <string name="action_info">Информация</string>
-    <string name="action_delete">Изтриване</string>
     <string name="action_cancel">Отказ</string>
     <string name="confirm_delete_dialog_title">Изтриване на файл</string>
     <string name="confirm_delete_dialog_message">Да бъде ли изтрит файлът на избраната актуализация?</string>

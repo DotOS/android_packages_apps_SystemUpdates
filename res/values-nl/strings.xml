@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Batterij bijna leeg</string>
     <string name="dialog_battery_low_message_pct">Uw batterijniveau is te laag, u moet op zijn minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% batterijcapaciteit hebben om door te gaan of <xliff:g id="percent_charging">%2$d</xliff:g>%% tijdens het opladen.</string>
     <string name="reboot">Herstarten</string>
-    <string name="menu_refresh">Vernieuwen</string>
-    <string name="menu_preferences">Instellingen</string>
     <string name="menu_auto_updates_check">Automatisch controleren op updates</string>
     <string name="menu_auto_updates_check_interval_daily">Een keer per dag</string>
     <string name="menu_auto_updates_check_interval_weekly">Een keer per week</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Verwijderen</string>
     <string name="menu_copy_url">URL kopiëren</string>
     <string name="menu_export_update">Update exporteren</string>
-    <string name="menu_show_changelog">Changelog weergeven</string>
     <string name="menu_ab_perf_mode">Geef prioriteit aan het updateproces</string>
     <string name="menu_update_recovery">Recovery bijwerken</string>
     <string name="toast_forced_update_recovery">Het is onmogelijk om Lineage Recovery updates op dit apparaat uit te schakelen.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Verificatie van de update mislukt.</string>
     <string name="snack_download_verified">Downloaden voltooid.</string>
     <string name="snack_update_not_installable">Deze update kan niet worden geïnstalleerd bovenop de huidige versie.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Laatst gecontroleerd: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> van <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> van <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Update verifiëren</string>
-    <string name="list_no_updates">Geen nieuwe updates gevonden. Gebruik de knop Vernieuwen om handmatig te controleren op nieuwe updates.</string>
     <string name="action_download">Downloaden</string>
-    <string name="action_pause">Pauzeren</string>
-    <string name="action_resume">Hervatten</string>
     <string name="action_install">Installeren</string>
-    <string name="action_info">Informatie</string>
-    <string name="action_delete">Verwijderen</string>
     <string name="action_cancel">Annuleren</string>
     <string name="confirm_delete_dialog_title">Bestand verwijderen</string>
     <string name="confirm_delete_dialog_message">Geselecteerde update-bestand verwijderen?</string>

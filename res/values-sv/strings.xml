@@ -30,7 +30,6 @@
     <string name="installing_update_finished">Uppdateringen har installerats</string>
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <string name="reboot">Starta om</string>
-    <string name="menu_refresh">Uppdatera</string>
     <string name="menu_auto_updates_check">Sök efter uppdateringar automatiskt</string>
     <string name="menu_auto_updates_check_interval_daily">En gång om dagen</string>
     <string name="menu_auto_updates_check_interval_weekly">En gång i veckan</string>
@@ -38,23 +37,14 @@
     <string name="menu_auto_updates_check_interval_never">Aldrig</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
-    <string name="menu_show_changelog">Visa ändringslogg</string>
     <string name="snack_updates_found">Nya uppdateringar hittades</string>
     <string name="snack_no_updates_found">Inga nya uppdateringar hittades</string>
     <string name="snack_download_verified">Nedladdningen är slutförd.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Senaste kontrollen utfördes: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> – <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> av <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_verifying_update">Verifierar uppdateringen</string>
     <string name="action_download">Ladda ner</string>
-    <string name="action_pause">Pausa</string>
-    <string name="action_resume">Återuppta</string>
     <string name="action_install">Installera</string>
-    <string name="action_info">Info</string>
-    <string name="action_delete">Radera</string>
     <string name="action_cancel">Avbryt</string>
     <string name="confirm_delete_dialog_title">Ta bort fil</string>
     <string name="label_download_url">Nedladdningsadress</string>

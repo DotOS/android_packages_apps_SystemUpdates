@@ -35,13 +35,11 @@
     <string name="preparing_ota_first_boot">Priprema za prvo pokretanje</string>
     <string name="dialog_prepare_zip_message">Preliminarna priprema ažuriranja</string>
     <string name="reboot">Ponovno pokreni</string>
-    <string name="menu_refresh">Osvježi</string>
     <string name="menu_auto_updates_check">Provjeri ažuriranja automatski</string>
     <string name="menu_auto_delete_updates">Izbriši ažuriranja nakon instalacije</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
-    <string name="menu_show_changelog">Prikaži promjene</string>
     <string name="menu_update_recovery">Ažuriraj recovery</string>
     <string name="toast_forced_update_recovery">Nemoguće je onemogućiti ažuriranja Lineage Recovery na ovom uređaju.</string>
     <string name="snack_updates_found">Pronađena su nova ažuriranja</string>
@@ -51,13 +49,8 @@
     <string name="snack_download_verification_failed">Provjera ažuriranja nije uspjela.</string>
     <string name="snack_download_verified">Preuzimanje je završeno.</string>
     <string name="snack_update_not_installable">Ovo se ažuriranje ne može instalirati na trenutnu verziju.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Zadnja provjera: <xliff:g id="date" example="1 January 1970">%1$s </xliff:g> (<xliff:g id="time" example="01:23">%2$s </xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s </xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s </xliff:g></string>
     <string name="list_verifying_update">Provjera ažuriranja</string>
-    <string name="list_no_updates">Nema pronađenih novih ažuriranja. Za ručnu provjeru novih ažuriranja upotrijebite gumb Osvježi.</string>
     <string name="action_download">Preuzmi</string>
     <string name="confirm_delete_dialog_title">Izbriši datoteku</string>
     <string name="confirm_delete_dialog_message">Želite li izbrisati odabranu datoteku ažuriranja?</string>

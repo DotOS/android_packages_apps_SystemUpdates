@@ -38,8 +38,6 @@
     <string name="dialog_battery_low_title">Batería baja</string>
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
     <string name="reboot">Reiniciar</string>
-    <string name="menu_refresh">Actualizar</string>
-    <string name="menu_preferences">Preferencias</string>
     <string name="menu_auto_updates_check">Comprobación de actualizaciones automática</string>
     <string name="menu_auto_updates_check_interval_daily">Una vez al día</string>
     <string name="menu_auto_updates_check_interval_weekly">Semanal</string>
@@ -49,7 +47,6 @@
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
-    <string name="menu_show_changelog">Mostrar registro de cambios</string>
     <string name="menu_ab_perf_mode">Priorizar el proceso de actualización</string>
     <string name="snack_updates_found">Se encontraron nuevas actualizaciones</string>
     <string name="snack_no_updates_found">No se encontraron nuevas actualizaciones</string>
@@ -58,21 +55,12 @@
     <string name="snack_download_verification_failed">La verificación de la actualización falló.</string>
     <string name="snack_download_verified">Descarga completada.</string>
     <string name="snack_update_not_installable">Esta actualización no puede instalarse encima de la versión actual.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Última comprobación: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Verificando actualización</string>
-    <string name="list_no_updates">Sin nuevas actualizaciones disponibles. Para comprobar manualmente, pulsa el botón «Actualizar».</string>
     <string name="action_download">Descargar</string>
-    <string name="action_pause">Pausar</string>
-    <string name="action_resume">Reanudar</string>
     <string name="action_install">Instalar</string>
-    <string name="action_info">Información</string>
-    <string name="action_delete">Borrar</string>
     <string name="action_cancel">Cancelar</string>
     <string name="confirm_delete_dialog_title">Borrar archivo</string>
     <string name="confirm_delete_dialog_message">¿Borrar el archivo de actualización seleccionado?</string>

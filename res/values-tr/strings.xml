@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Düşük pil</string>
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <string name="reboot">Yeniden başlat</string>
-    <string name="menu_refresh">Yenile</string>
-    <string name="menu_preferences">Tercihler</string>
     <string name="menu_auto_updates_check">Otomatik güncelleme kontrolü</string>
     <string name="menu_auto_updates_check_interval_daily">Günde bir defa</string>
     <string name="menu_auto_updates_check_interval_weekly">Haftada bir defa</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Sil</string>
     <string name="menu_copy_url">URL adresini kopyala</string>
     <string name="menu_export_update">Güncellemeyi dışarı aktar</string>
-    <string name="menu_show_changelog">Değişiklikleri göster</string>
     <string name="menu_ab_perf_mode">Güncelleme sürecini öncelikli hale getir</string>
     <string name="menu_update_recovery">Kurtarma modunu güncelle</string>
     <string name="toast_forced_update_recovery">Bu cihazda Lineage Kurtarma Modu güncellemelerini devre dışı bırakmak imkansızdır.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Güncelleme doğrulaması başarısız oldu.</string>
     <string name="snack_download_verified">İndirme tamamlandı.</string>
     <string name="snack_update_not_installable">Bu güncelleştirme mevcut yapı üstüne kurulamaz.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Son kontrol zamanı: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Güncelleme doğrulanıyor</string>
-    <string name="list_no_updates">Yeni güncelleme bulunamadı. El ile yeni güncellemeleri kontrol etmek için Yenile tuşunu kullanın.</string>
     <string name="action_download">İndir</string>
-    <string name="action_pause">Duraklat</string>
-    <string name="action_resume">Devam et</string>
     <string name="action_install">Yükle</string>
-    <string name="action_info">Bilgi</string>
-    <string name="action_delete">Sil</string>
     <string name="action_cancel">İptal</string>
     <string name="confirm_delete_dialog_title">Dosya sil</string>
     <string name="confirm_delete_dialog_message">Seçilen güncelleme dosyası silinsin mi?</string>

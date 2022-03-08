@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">البطارية منخفضة</string>
     <string name="dialog_battery_low_message_pct">مستوى شحن البطارية منخفض للغاية؛ وتحتاج على الأقل <xliff:g id="percent_discharging">%1$d</xliff:g>%% من البطارية للمتابعة، <xliff:g id="percent_charging">%2$d</xliff:g>%% في حالة الشحن.</string>
     <string name="reboot">إعادة التشغيل</string>
-    <string name="menu_refresh">تحديث</string>
-    <string name="menu_preferences">التفضيلات</string>
     <string name="menu_auto_updates_check">التحقق من التحديثات التلقائية</string>
     <string name="menu_auto_updates_check_interval_daily">مرة في اليوم</string>
     <string name="menu_auto_updates_check_interval_weekly">مرة في الأسبوع</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">حذف</string>
     <string name="menu_copy_url">نسخ الرابط</string>
     <string name="menu_export_update">تصدير التحديث</string>
-    <string name="menu_show_changelog">إظهار التغييرات</string>
     <string name="menu_ab_perf_mode">إعطاء الأولوية لعملية التحديث</string>
     <string name="menu_update_recovery">تحديث وضع الاسترداد</string>
     <string name="toast_forced_update_recovery">من المستحيل تعطيل تحديثات Lineage Recovery على هذا الجهاز</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">فشل التحقق من التحديث.</string>
     <string name="snack_download_verified">اكتمل التنزيل.</string>
     <string name="snack_update_not_installable">لا يمكن تثبيت هذا التحديث على الاصدار الحالي.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">أندرويد <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">آخر تحقق: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> من <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">جارٍ التحقق من التحديث</string>
-    <string name="list_no_updates">لا توجد تحديثات جديدة. للبحث عن تحديثات جديدة يدويًا، استخدم الزر تحديث.</string>
     <string name="action_download">تنزيل</string>
-    <string name="action_pause">إيقاف مؤقت</string>
-    <string name="action_resume">استئناف</string>
     <string name="action_install">تثبيت</string>
-    <string name="action_info">معلومات</string>
-    <string name="action_delete">حذف</string>
     <string name="action_cancel">إلغاء</string>
     <string name="confirm_delete_dialog_title">حذف الملف</string>
     <string name="confirm_delete_dialog_message">حذف ملف التحديث المحدد؟</string>

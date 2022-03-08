@@ -1,0 +1,92 @@
+<resources>
+
+    <style name="Theme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorPrimary</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="fontFamily">google-sans</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:switchStyle">@style/Switch.SettingsLib</item>
+        <item name="android:textAppearanceListItem">
+            @style/TextAppearance.PreferenceTitle.SettingsLib
+        </item>
+        <item name="android:listPreferredItemPaddingStart">24dp</item>
+        <item name="android:listPreferredItemPaddingLeft">24dp</item>
+        <item name="android:listPreferredItemPaddingEnd">16dp</item>
+        <item name="android:listPreferredItemPaddingRight">16dp</item>
+        <item name="preferenceTheme">@style/PreferenceTheme.SettingsLib</item>
+        <item name="android:progressBarStyleHorizontal">@style/HorizontalProgressBar.SettingsLib
+        </item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorControlNormal">?android:attr/colorControlNormal</item>
+        <item name="alertDialogTheme">@style/Theme.AlertDialog.SettingsLib</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="fontFamily">google-sans</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Expanded" parent="CollapsingToolbarTitle.Collapsed">
+        <item name="android:textSize">36dp</item>
+    </style>
+
+    <style name="Switch.SettingsLib" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">@dimen/settingslib_preferred_minimum_touch_target</item>
+        <item name="android:track">@drawable/settingslib_switch_track</item>
+        <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
+    </style>
+
+    <style name="Theme.CollapsingToolbar.Settings" parent="@style/Theme.MaterialComponents.DayNight">
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="elevationOverlayColor">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DashboardV2.TabLayout.Item" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">google-sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="SwitchBar.Switch.Settingslib" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:trackTint">@color/settingslib_switchbar_switch_track_tint</item>
+        <item name="android:thumbTint">@color/settingslib_switchbar_switch_thumb_tint</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <style name="TextAppearance.PreferenceTitle.SettingsLib" parent="@*android:style/TextAppearance.DeviceDefault.ListItem">
+        <item name="fontFamily">google-sans</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.CategoryTitle.SettingsLib" parent="@*android:style/TextAppearance.DeviceDefault.Body2" />
+
+    <style name="HorizontalProgressBar.SettingsLib" parent="android:style/Widget.Material.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/settingslib_progress_horizontal</item>
+    </style>
+
+    <style name="Theme.AlertDialog.SettingsLib" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@color/settingslib_dialog_accent</item>
+        <item name="android:colorError">@color/settingslib_dialog_colorError</item>
+        <item name="android:colorBackground">@color/settingslib_dialog_background</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:clipChildren">true</item>
+
+        <item name="dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+    </style>
+
+    <style name="MainSwitchText.Settingslib" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">google-sans</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

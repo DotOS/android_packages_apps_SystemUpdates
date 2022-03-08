@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">電量不足</string>
     <string name="dialog_battery_low_message_pct">電池電量過低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的電量才能繼續；如果正在充電，則需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的電量才能繼續。</string>
     <string name="reboot">重新啟動</string>
-    <string name="menu_refresh">重新整理</string>
-    <string name="menu_preferences">使用偏好</string>
     <string name="menu_auto_updates_check">自動更新檢查</string>
     <string name="menu_auto_updates_check_interval_daily">每天一次</string>
     <string name="menu_auto_updates_check_interval_weekly">每週一次</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">移除</string>
     <string name="menu_copy_url">複製網址</string>
     <string name="menu_export_update">匯出更新</string>
-    <string name="menu_show_changelog">顯示更新日誌</string>
     <string name="menu_ab_perf_mode">優先更新過程</string>
     <string name="menu_update_recovery">更新 Recovery</string>
     <string name="toast_forced_update_recovery">無法停用此裝置上的 Lineage Recovery 更新。</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">更新驗證失敗。</string>
     <string name="snack_download_verified">下載已完成。</string>
     <string name="snack_update_not_installable">此更新無法安裝在目前版本上。</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">上次檢查：<xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g>-<xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">正在驗證更新</string>
-    <string name="list_no_updates">沒有找到新的更新。若要手動檢查新的更新，請使用「重新整理」按鍵。</string>
     <string name="action_download">下載</string>
-    <string name="action_pause">暫停</string>
-    <string name="action_resume">恢復</string>
     <string name="action_install">安裝</string>
-    <string name="action_info">資訊</string>
-    <string name="action_delete">刪除</string>
     <string name="action_cancel">取消</string>
     <string name="confirm_delete_dialog_title">刪除檔案</string>
     <string name="confirm_delete_dialog_message">刪除已選擇的更新檔案？</string>

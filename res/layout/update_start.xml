@@ -15,7 +15,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        app:cardBackgroundColor="@color/colorAccent"
+        app:cardBackgroundColor="@color/colorAccentSecondary"
         app:cardCornerRadius="@dimen/dot_radius">
 
         <RelativeLayout
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-medium"
+                android:text="@string/action_download"
                 android:textColor="?android:attr/textColorPrimaryInverse"
-                android:textSize="18sp"
-                android:text="@string/action_download" />
+                android:textSize="18sp" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

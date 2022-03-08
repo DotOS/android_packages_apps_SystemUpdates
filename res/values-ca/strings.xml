@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">El nivell de la bateria és massa baix, necessiteu com a mínim <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria per continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositiu s\'està carregant.</string>
     <string name="reboot">Reinicia</string>
-    <string name="menu_refresh">Recarrega</string>
-    <string name="menu_preferences">Preferències</string>
     <string name="menu_auto_updates_check">Comprova automàticament les actualitzacions</string>
     <string name="menu_auto_updates_check_interval_daily">Un cop al dia</string>
     <string name="menu_auto_updates_check_interval_weekly">Un cop per setmana</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia l\'URL</string>
     <string name="menu_export_update">Exporta l\'actualització</string>
-    <string name="menu_show_changelog">Mostra el registre de canvis</string>
     <string name="menu_ab_perf_mode">Prioritza el procés d\'actualització</string>
     <string name="menu_update_recovery">Actualitza el recuperador</string>
     <string name="toast_forced_update_recovery">No és possible desactivar les actualitzacions del recuperador del Lineage en aquest dispositiu.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Ha fallat la verificació de l\'actualització.</string>
     <string name="snack_download_verified">Baixada completada.</string>
     <string name="snack_update_not_installable">Aquesta actualització no es pot instal·lar a sobre de la compilació actual.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Darrera comprovació: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">S\'està verificant l\'actualització</string>
-    <string name="list_no_updates">No s\'han trobat noves actualitzacions. Per comprovar manualment si hi ha noves actualitzacions, utilitzeu el botó Refresca.</string>
     <string name="action_download">Baixa</string>
-    <string name="action_pause">Pausa</string>
-    <string name="action_resume">Reprèn</string>
     <string name="action_install">Instal·la</string>
-    <string name="action_info">Informació</string>
-    <string name="action_delete">Suprimeix</string>
     <string name="action_cancel">Cancel·la</string>
     <string name="confirm_delete_dialog_title">Esborra el fitxer</string>
     <string name="confirm_delete_dialog_message">Vols esborrar el fitxer d\'actualització seleccionat?</string>

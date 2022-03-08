@@ -16,4 +16,20 @@
 -->
 <resources>
     <bool name="config_hideRecoveryUpdate">false</bool>
+    
+    <!-- Directory where the update files will be downloaded and stored.
+         WARNING: The application can and will delete any unknown file. -->
+    <string name="download_path" translatable="false">/data/dot_updates/</string>
+
+    <!-- Directory where the downloads will be exported to.
+         The path is relative to the root of the external storage.-->
+    <string name="export_path" translatable="false">Dot Updates/</string>
+
+    <!--
+        Optional placeholders replaced at runtime:
+          {device} - Device name
+          {type} - Build type
+    -->
+    <string name="updater_server_url" translatable="false">https://api.droidontime.com/api/ota/{device}/releases/vanilla?version=latest</string>
+    <string name="updater_server_url_gapps" translatable="false">https://api.droidontime.com/api/ota/{device}/releases/gapps?version=latest</string>
 </resources>

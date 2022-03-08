@@ -2,11 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingEnd="24dp"
     android:paddingStart="24dp"
-    android:paddingTop="16dp">
+    android:paddingEnd="24dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="pill"
+        android:src="@drawable/pin" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,10 +32,11 @@
 
         <Spinner
             android:id="@+id/preferences_auto_updates_check_interval"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/menu_auto_updates_check_interval_entries" />
+            android:background="@android:color/transparent"
+            android:entries="@array/menu_auto_updates_check_interval_entries"
+            android:gravity="clip_vertical|end" />
     </LinearLayout>
 
     <Switch
@@ -37,6 +46,7 @@
         android:layout_marginBottom="32dp"
         android:checked="true"
         android:text="@string/menu_auto_delete_updates"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp" />
 
     <Switch
@@ -45,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/menu_mobile_data_warning"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp" />
 
     <Switch
@@ -53,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/menu_ab_perf_mode"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp" />
 
     <Switch
@@ -61,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/menu_update_recovery"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp"
         android:visibility="gone" />
 </LinearLayout>

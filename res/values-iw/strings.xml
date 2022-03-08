@@ -38,14 +38,11 @@
     <string name="dialog_battery_low_title">סוללה חלשה</string>
     <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>
     <string name="reboot">הפעלה מחדש</string>
-    <string name="menu_refresh">ריענון</string>
-    <string name="menu_preferences">העדפות</string>
     <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
     <string name="menu_auto_delete_updates">מחק קובצי עדכון לאחר התקנתם</string>
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
-    <string name="menu_show_changelog">הצג רשימת שינויים</string>
     <string name="menu_ab_perf_mode">תעדף תהליכי עדכון</string>
     <string name="snack_updates_found">נמצאו עדכונים חדשים</string>
     <string name="snack_no_updates_found">לא נמצאו עדכונים חדשים</string>
@@ -54,21 +51,12 @@
     <string name="snack_download_verification_failed">אימות העדכון נכשל.</string>
     <string name="snack_download_verified">ההורדה הושלמה.</string>
     <string name="snack_update_not_installable">אין אפשרות להתקין עדכון זה מהגרסה הקיימת.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">אנדרואיד <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">בדיקה אחרונה: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">מאמת עדכון</string>
-    <string name="list_no_updates">לא נמצאו עדכונים חדשים. בכדי לבדוק אם יש עדכונים חדשים, לחץ על רענון.</string>
     <string name="action_download">הורד</string>
-    <string name="action_pause">השהה</string>
-    <string name="action_resume">המשך</string>
     <string name="action_install">התקן</string>
-    <string name="action_info">מידע</string>
-    <string name="action_delete">מחיקה</string>
     <string name="action_cancel">ביטול</string>
     <string name="confirm_delete_dialog_title">מחק קובץ</string>
     <string name="confirm_delete_dialog_message">למחוק את קבצי העדכון שנבחרו?</string>

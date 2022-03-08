@@ -1,24 +1,22 @@
-repositories {
-    google()
-    mavenCentral()
-}
-
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.6.20-M1'
     repositories {
         google()
         mavenCentral()
     }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -27,10 +25,9 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 27
+        minSdkVersion 31
         targetSdkVersion 31
     }
-
 
     sourceSets {
         main {
@@ -41,18 +38,37 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     signingConfigs {
-        debug {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
+        defaultConfig {
+            storeFile file('../platform.keystore')
+            storePassword 'password'
+            keyAlias 'platform'
+            keyPassword 'password'
+        }
+
+        debugConfig {
+            storeFile file('../platform.keystore')
+            storePassword 'password'
+            keyAlias 'platform'
+            keyPassword 'password'
         }
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.defaultConfig
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+
     lint {
         ignore 'ProtectedPermissions', 'ExtraTranslation', 'ImpliedQuantity', 'MissingQuantity', 'MissingTranslation'
     }

@@ -9,98 +9,112 @@
     <include
         layout="@layout/no_updates"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:visibility="gone" />
 
     <include
         layout="@layout/item_update_date_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:visibility="gone"
         tools:visibility="visible" />
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:id="@+id/update_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
         android:visibility="gone"
-        app:cardBackgroundColor="@color/cardBackground"
-        app:cardCornerRadius="@dimen/dot_radius"
-        app:cardElevation="0dp"
-        app:strokeColor="@color/cardBackgroundStroke"
-        app:strokeWidth="1dp"
         tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <include
-                layout="@layout/update_banner"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:contentDescription="updateBannerCard" />
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:text="@string/about_this_update"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fullChangelog"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="@string/about_this_update"
-                    android:textAppearance="?android:attr/textAppearanceListItem"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/fullChangelog"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:text="@string/menu_show_changelog"
-                    android:textAllCaps="false"
-                    android:textAppearance="?android:attr/textAppearanceListItemSecondary"
-                    android:textColor="?android:attr/colorAccent" />
-            </LinearLayout>
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:elevation="0dp"
+                android:text="@string/read_more"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                android:textColor="@color/colorAccent"
+                app:cornerRadius="32dp"
+                app:elevation="0dp"
+                app:rippleColor="@color/colorAccent" />
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@android:id/summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="A summary of update changelog."
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/notesTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="32dp"
+        android:paddingStart="24dp"
         android:paddingTop="16dp"
-        android:paddingEnd="32dp"
+        android:paddingEnd="24dp"
         android:paddingBottom="16dp"
         android:text="@string/notes"
-        android:textAppearance="?android:attr/textAppearanceListItem"
         android:textColor="?attr/colorAccent"
         android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/notesSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="10"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
         android:paddingBottom="16dp"
         android:text="@string/update_notes"
         android:textAppearance="?android:attr/textAppearanceListItemSecondary"
         android:textColor="?android:attr/textColorSecondary"
-        android:textSize="12sp"
-        android:visibility="gone" />
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="∘ System Updates Settings"
+        android:textAppearance="@style/DashboardV2.TabLayout.Item"
+        android:textColor="?attr/colorAccent" />
 
 </LinearLayout>

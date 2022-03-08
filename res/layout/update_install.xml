@@ -13,7 +13,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        app:cardBackgroundColor="@color/blue_A700"
+        app:cardBackgroundColor="@color/colorAccentTertiary"
         app:cardCornerRadius="@dimen/dot_radius">
 
         <RelativeLayout

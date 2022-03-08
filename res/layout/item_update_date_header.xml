@@ -22,13 +22,11 @@
             android:layout_marginStart="16dp"
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="16sp"
-            app:chipEndPadding="8dp"
-            app:chipMinHeight="38dp"
-            app:chipMinTouchTargetSize="38dp"
-            app:chipStartPadding="8dp"
-            app:chipStrokeColor="@color/cardBackgroundStroke"
-            app:chipStrokeWidth="1dp"
-            app:chipBackgroundColor="@color/cardBackground"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="46dp"
+            app:chipMinTouchTargetSize="46dp"
+            app:chipStartPadding="16dp"
+            app:chipBackgroundColor="@color/colorPrimaryBackground"
             tools:text="31 Dec 20 | Beta" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -44,11 +42,11 @@
             android:textColor="?android:attr/textColorPrimaryInverse"
             android:textSize="16sp"
             app:chipBackgroundColor="@color/colorAccent"
-            app:chipEndPadding="8dp"
-            app:chipMinHeight="38dp"
-            app:chipMinTouchTargetSize="38dp"
-            app:chipStartPadding="8dp"
-            tools:text="16 Jan 21 | v5.0" />
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="46dp"
+            app:chipMinTouchTargetSize="46dp"
+            app:chipStartPadding="16dp"
+            tools:text="16 Jan 21 | v6.0" />
     </LinearLayout>
 
 </HorizontalScrollView>

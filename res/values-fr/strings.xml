@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
     <string name="reboot">Redémarrer</string>
-    <string name="menu_refresh">Actualiser</string>
-    <string name="menu_preferences">Préférences</string>
     <string name="menu_auto_updates_check">Vérification des mises à jour automatique</string>
     <string name="menu_auto_updates_check_interval_daily">Une fois par jour</string>
     <string name="menu_auto_updates_check_interval_weekly">Une fois par semaine</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_copy_url">Copier l\'URL</string>
     <string name="menu_export_update">Exporter la mise à jour</string>
-    <string name="menu_show_changelog">Afficher l\'historique des modifications</string>
     <string name="menu_ab_perf_mode">Privilégier le processus de mise à jour</string>
     <string name="menu_update_recovery">Mettre à jour la récupération</string>
     <string name="toast_forced_update_recovery">Il est impossible de désactiver les mises à jour de la récupération de Lineage sur cet appareil.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">La vérification de la mise à jour a échoué.</string>
     <string name="snack_download_verified">Téléchargement terminé.</string>
     <string name="snack_update_not_installable">Cette mise à jour ne peut pas être installée sur votre version actuelle.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Dernière vérification : <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> sur <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> sur <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Vérification de la mise à jour en cours</string>
-    <string name="list_no_updates">Aucune nouvelle mise à jour trouvée. Pour vérifier manuellement la présence de mises à jour, utiliser le bouton Actualiser.</string>
     <string name="action_download">Télécharger</string>
-    <string name="action_pause">Mettre en pause</string>
-    <string name="action_resume">Reprendre</string>
     <string name="action_install">Installer</string>
-    <string name="action_info">Informations</string>
-    <string name="action_delete">Supprimer</string>
     <string name="action_cancel">Annuler</string>
     <string name="confirm_delete_dialog_title">Supprimer le fichier</string>
     <string name="confirm_delete_dialog_message">Supprimer le fichier de mise à jour sélectionné ?</string>

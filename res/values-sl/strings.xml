@@ -40,8 +40,6 @@
     <string name="dialog_battery_low_title">Nizko stanje baterije</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti baterije je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nadaljevanje, <xliff:g id="percent_charging">%2$d</xliff:g>%% med polnjenjem.</string>
     <string name="reboot">Vnovično zaženi</string>
-    <string name="menu_refresh">Osveži</string>
-    <string name="menu_preferences">Nastavitve</string>
     <string name="menu_auto_updates_check">Samodejno preverjanje za posodobitve</string>
     <string name="menu_auto_updates_check_interval_daily">Enkrat na dan</string>
     <string name="menu_auto_updates_check_interval_weekly">Enkrat na teden</string>
@@ -51,7 +49,6 @@
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvozi posodobitev</string>
-    <string name="menu_show_changelog">Prikaži dnevnik sprememb</string>
     <string name="menu_ab_perf_mode">Daj prednost posodobitvenemu procesu</string>
     <string name="menu_update_recovery">Posodobi obnovitev</string>
     <string name="toast_forced_update_recovery">Ni mogoče onemogočiti posodobitev obnovitve Lineage na tej napravi.</string>
@@ -62,21 +59,12 @@
     <string name="snack_download_verification_failed">Preverjanje posodobitve je spodletelo.</string>
     <string name="snack_download_verified">Prenos končan.</string>
     <string name="snack_update_not_installable">Te posodobitve ni mogoče namestiti preko trenutne izgradnje.</string>
-    <string name="header_title_text">LMODroid\n%1$s</string>
-    <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
-    <string name="header_last_updates_check">Zadnje preverjanje: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g></string>
     <string name="list_build_version_date">LMODroid <xliff:g id="version" example="3.0">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> od <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> od <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Preverjanje posodobitve</string>
-    <string name="list_no_updates">Ni najdenih novih posodobitev. Za ročno preverjanje novih posodobitev, uporabite gumb Osveži.</string>
     <string name="action_download">Prenesi</string>
-    <string name="action_pause">Premor</string>
-    <string name="action_resume">Nadaljuj</string>
     <string name="action_install">Namesti</string>
-    <string name="action_info">Podatki</string>
-    <string name="action_delete">Izbriši</string>
     <string name="action_cancel">Prekliči</string>
     <string name="confirm_delete_dialog_title">Izbriši datoteko</string>
     <string name="confirm_delete_dialog_message">Izbriši izbrano posodobitveno datoteko?</string>
